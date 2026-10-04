@@ -9,6 +9,9 @@
   - 頁尾文字：新頁照新寫法；舊頁改版時順便更新
 - 2026-10-04｜registry v1.1.1、story v1.2｜Alison｜莫斯科紳士上線 /books/a-gentleman-in-moscow/，registry 改已上線；story §3-1 定案：作品頁都載入 hy-story.js，需帶參數的 CTA 用頁面自己的屬性避免重複，interaction 元素加 data-interact；§5 補互動元件慣例；§6、§8 更新｜統一互動頁追蹤條件，books 與 drama 共用同一支追蹤
 
+- 2026-10-04｜games v1.2｜Zoe｜§2 頁面結構加「0. 編織日和品牌列」、§3-5 CTA 表加 `brand_hub`｜品牌列已套到全部 7 款遊戲與 `_template/`，各頁 spec-version 改 `core-v1.1/games-v1.2`；遊戲頁被截圖或嵌入時仍看得到品牌，點了回主頁
+  - **改版日 2026-10-04**：之前沒有 `brand_hub`，看「從遊戲回主頁」的總量要合併 `about_hub`＋`brand_hub`
+
 - 2026-10-04｜core v1.1、registry v1.1、story v1.1、games v1.1、tools v2.2.1、poem v0.1.1、blog v1.0.1｜Zoe＋Alison｜重新分工＋絕對音感三語，兩份更新包合併成同一批發布｜兩份交接都要升 core v1.1，同日都未 push，合併避免撞號
   - 分工：games、poem、追劇、漫畫歸 Zoe，tools、小說歸 Alison，blog 兩人共管；只有 Zoe 合併進 main，Alison 用網頁版 Claude Code 開分支和 PR；core §0 新增分工表、不越界、放錯位置要轉移、存檔流程（含 DELIVERY 五項、合併方式、確認身份）；各 repo 的 CLAUDE.md 精簡成約 20 行，規則只寫在 core §0；5 部原創故事改列追劇（registry 狀態改「待修」，自動廣告改成不開）；story 新增漫畫類型與 page_title 格式，hub 分三區；season_booking、concert_trip 修正為規劃中（實際尚未上線）；tools 新增 wp-src/｜分工明確、main 只有一個出口，桌機與 GitHub 都保有完整檔案
   - 依實際 repo 更正交接文件：story 首頁與 5 部原創追劇都在 `story` repo（沒有 `happyfamilyintaiwan-bot.github.io` repo，原創追劇也不是獨立 repo）；core §1 GitHub 帳號一列改成實際做法：兩人共用同一個帳號，靠 `alison/` 分支與「Alison:」區分，tools 的 main 設保護
