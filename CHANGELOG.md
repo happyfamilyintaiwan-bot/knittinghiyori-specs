@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-04｜games v1.3｜Zoe｜新增 §6-1 成績卡圖片（1080×1350、浮水印＋金色品牌列、分享／下載／複製連結與追蹤值）；絕對音感試點上線，三頁 spec-version 改 `core-v1.2/games-v1.3`、頁尾改 core v1.2 新文字｜讓玩家把成績帶著遊戲網址分享出去，圖被轉傳也找得回來
+  - 其他 6 款仍是 `core-v1.1/games-v1.2.1`，頁尾與聯盟 cta_type 在下一批（registry 待修）一起改
+
 - 2026-10-04｜core v1.2、registry v1.1.1｜Alison 提案、Zoe 定案｜core §7 新增「頁首品牌列」、§9 驗收加一項；registry 莫斯科紳士補上線紀錄、待修清單加「既有頁面補品牌列」｜讀者從任何作品／工具／遊戲頁進來都知道是編織日和做的；和 Zoe 的 v1.2 同日都未合併，併成同一批發布避免撞號
   - 寫法對齊已上線的 games 品牌列：cta_id 統一 `brand_hub`、點了回該子網域首頁、cta_type 填該站類型（Alison 草案原為 `header_brand`／`other`、連主站，Zoe 定案改成和 games 一致，GA4 一次篩得出全部子網域）
   - logo 用正式 logo `logo-knitting-120.webp`（40px），不用分頁圖示

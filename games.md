@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.2.1｜2026-10-04｜Zoe**（v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.3｜2026-10-04｜Zoe**（v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -138,6 +138,23 @@ body 底部放標準 hyGame 追蹤碼：
 
 ---
 
+### 6-1 成績卡圖片（結算畫面，2026-10-04 起；試點：absolute_pitch）
+
+玩家完成一局／驗收後，結果區放「做成績卡圖片」按鈕，在瀏覽器用 canvas 畫圖，不經伺服器。
+
+| 項目 | 規定 |
+|---|---|
+| 尺寸 | 1080×1350（4:5 直式，IG／Threads／X 不裁切） |
+| 內容 | 遊戲名＋日期、主要成績大字（例：正確率）、一句依成績分級的短評、2～3 個輔助數字、細項圖（例：各音正確率）；不放玩家姓名或任何個資 |
+| 品牌 | 中央一個大而淡的斜放浮水印（「編織日和」＋`games.knittinghiyori.com`，透明度約 8%，英文頁用 Knitting Hiyori，字太長自動縮小）＋底部金色品牌列（正式 logo `/icons/logo-knitting-240.webp`、品牌名、**該語言的遊戲網址**、「免費玩 →」） |
+| 按鈕 | 手機支援分享檔案時「分享圖片」（`navigator.share` 帶圖＋分享文字＋`?ref=share` 網址）；一律有「下載圖片」與「複製連結」（很多 App 分享圖片時會丟掉文字，網址要靠玩家貼上才點得到） |
+| 追蹤 | 分享圖片 `share {method:native, content_type:result}`；取消 `share_cancel`；下載 `export {method:image, content_type:result}`；複製連結 `share {method:copy_link, content_type:result}` |
+| 字型 | 先 `document.fonts.load(字型, 卡上文字)`，最多等 1.5 秒，沒載完的字用系統字型補（中文 Google Fonts 分片第一次載入可能要數秒） |
+| 檔案 | JPEG 品質 0.92（PNG 編碼 1080×1350 要 1～2 秒；社群會再壓縮），檔名 `<slug>-YYYY-MM-DD.jpg` |
+| 驗收 | 中英日各產生一張檢查排版；手機實機按「分享圖片」確認分享選單出現；390 寬無橫向溢出 |
+
+---
+
 ## 7. 主頁交接（新遊戲上線時）
 
 遊戲主頁加卡片，交接內容：
@@ -195,3 +212,4 @@ core §9 全部，再加：
 - 遊戲主頁的 game_id
 - flower_shop、東西腔道場的事件寫法（DebugView）
 - 遊戲重要事件
+- 成績卡套到其他遊戲（absolute_pitch 試點上線後看 `export`／`share content_type=result` 數據再排）
