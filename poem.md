@@ -1,7 +1,7 @@
 # poem.knittinghiyori.com 規範
 
-**版本：poem-v0.1｜2026-10-03｜由 subdomain-monetization-notes（2026-09-28）整理，待 Alison 補完**
-負責人：Alison。先讀 `core.md`；本檔只寫 poem 專屬的部分。
+**版本：poem-v0.1.1｜2026-10-04｜由 subdomain-monetization-notes（2026-09-28）整理，待 Zoe 補完**
+負責人：Zoe。先讀 `core.md`；本檔只寫 poem 專屬的部分。
 
 > 目前只有變現與 repo 的紀錄，GA4 追蹤寫法尚未整理。標 ⚠ 處待補，補完升 v1.0。
 

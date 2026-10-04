@@ -1,7 +1,7 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.0｜2026-10-03｜Alison**（由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.0.1）
-負責人：Alison。先讀 `core.md`；本檔只寫 games 專屬的部分。
+**版本：games-v1.1｜2026-10-04｜Zoe**（由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
 
@@ -11,10 +11,11 @@
 |---|---|
 | repo | `happyfamilyintaiwan-bot/games`（GitHub Pages） |
 | 網址 | `games.knittinghiyori.com/<slug>/`，資料夾＋`index.html`（＋`og.png` 1200×630） |
+| 多語 | 英日放在遊戲資料夾裡：`/<slug>/en/`、`/<slug>/ja/`（core §7 例外）；三語共用同一個 localStorage key；交付 zip 的最外層就是中文版 |
 | slug／game_id | 資料夾用連字號、`game_id` 用底線，兩者對應（`jlpt-mishitsu` ↔ `jlpt_mishitsu`） |
 | 品牌圖示 | `/icons/`（全站 favicon 以此為準，core §7） |
 | 介紹文 | 每款遊戲在部落格有一篇 SEO 介紹文，英文代稱；遊戲頁與文章互連 |
-| 工具型內容 | 放 tools 子網域；已在 games 的工具（season_booking）用 `tool_id`，見 tools.md |
+| 工具型內容 | 放 tools 子網域，不放 games（例：季節訂房倒數 season_booking 由 Alison 直接在 tools 製作） |
 
 開工前先在 `registry.md` 登記 `game_id` 與前綴。
 
@@ -51,6 +52,7 @@ gtag('set',{content_group:'game',game_id:'sql_detective',page_lang:'zh-Hant',pag
 body 底部放標準 hyGame 追蹤碼：
 - `HY_GAME_ID`＝game_id
 - `HY_GAME_ROOT`＝遊戲區的選擇器（**不含**聯盟區與分享列），例：`'#app'`、`'#stage, #finale'`
+- `HY_GAME_LANG`＝回傳 `zh`／`en`／`ja`（多語遊戲每頁不同）；頁首語言切換送 `lang_switch`（`source=header`、`from_lang`＝目前 page_lang）
 
 ### 3-2 遊戲共用事件（hyGame）
 
@@ -157,7 +159,7 @@ body 底部放標準 hyGame 追蹤碼：
 | coding | sql | sql_detective |
 | coding | swiftui | swiftui_detective |
 | music | ear_training | absolute_pitch |
-| travel | planning | shun_tabi／season_booking |
+| travel | planning | shun_tabi（擱置） |
 
 ---
 

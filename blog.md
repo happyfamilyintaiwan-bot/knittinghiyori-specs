@@ -1,7 +1,7 @@
 # knittinghiyori.com（WordPress 部落格）規範
 
-**版本：blog-v1.0｜2026-10-03｜Zoe**
-負責人：Zoe。先讀 `core.md`。
+**版本：blog-v1.0.1｜2026-10-04**
+負責人：Zoe＋Alison（兩人都會寫文章；改本檔規則時通知對方）。先讀 `core.md`。
 
 ---
 

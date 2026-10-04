@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.0｜2026-10-03｜Zoe＋Alison 合併定版**（標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.0.1）
+**版本：core-v1.1｜2026-10-04｜Zoe＋Alison**（v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem 四個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -12,7 +12,26 @@
 - 開工前先讀本檔＋對應站別檔案，第一句回報兩個檔案的版本號，以及 `CHANGELOG.md` 最新一筆的日期與內容。
 - 讀不到檔案時直接說讀不到，**不可以憑記憶或舊副本工作**。
 - 對話中若決定修改規範，結束前輸出：要改的檔案段落（可直接貼上）＋一筆 CHANGELOG 條目。
-- 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.0/tools-v2.2">`（換成實際版本）。
+- 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.1/tools-v2.2.1">`（換成實際版本）。
+
+### 負責分工（2026-10-04 起）
+| 範圍 | 負責人 | 規範檔 |
+|---|---|---|
+| tools 子網域（含還沒搬家的 WordPress 工具） | Alison | tools.md |
+| story：小說（novel） | Alison | story.md |
+| story：追劇（drama）、漫畫（comics），含 5 部原創追劇 | Zoe | story.md |
+| games 子網域 | Zoe | games.md |
+| poem 子網域 | Zoe | poem.md |
+| 部落格文章 | 兩人 | blog.md |
+| core.md、registry.md、story 首頁 hub 外框、story.md 共用段落 | 兩人共管 | — |
+| GitHub 存檔與管理（合併進 main、本規範 repo） | Zoe | — |
+
+- **不越界**：AI 發現這次工作會動到對方範圍時，先停下來提醒，確認要不要繼續。原則上只有「自己做完、請對方 check」時才跨範圍。
+- **放錯位置要轉移**：內容依類型歸負責人，不依放在哪個 repo。放錯子網域或 repo 的內容要提出來，由負責人搬到自己的範圍。
+- **存檔流程**：只有 Zoe 合併進 main。Alison 用網頁版 Claude Code 在 `alison/<主題>` 分支工作（從最新的 main 開），不直接推 main，做完開 PR。PR 說明要有 DELIVERY 五項：① 改了什麼、為什麼 ② 檔案清單（新增／修改／刪除）③ 驗收方式：合併前要跑的 build 與驗收，以及已經跑過的結果 ④ 規範更新包（改到共管部分時，PR 最上面標「需 Zoe 確認」）⑤ 合併後 Alison 還要自己做的事（例：WordPress 301、GSC）。沒有推分支的權限時，把改過的檔案和這份說明整理成 zip 傳給 Zoe。
+- **合併**：Zoe 的 AI 檢查越界、衝突並驗收後合併（squash，訊息開頭「Alison:」，合併後刪除分支），再套用規範更新包。Zoe 只負責存檔，不改 Alison 範圍的內容；有問題就在 PR 留言退回。
+- **確認身份**：Zoe 的桌機預設是 Zoe；網頁版沒說是誰時先問。開始改任何 repo 前先 `git pull`。
+- 負責人可以直接決定自己範圍的規範，並寫 CHANGELOG；共管的部分要對方確認。
 
 ### 版本號規則
 - **中版號**（v1.0→v1.1）：影響追蹤數據或上線頁面的改動，例：事件名稱、參數、page_title 格式、廣告位置、固定值。
@@ -28,7 +47,7 @@
 | AdSense 發布商 ID | `ca-pub-2022028565680247` |
 | ads.txt | 主站根目錄，子網域沿用，不另外放 |
 | 隱私權政策 | `https://knittinghiyori.com/privacy-policy/`（各子網域頁尾都連到這裡） |
-| GitHub 帳號 | `happyfamilyintaiwan-bot`（網頁編輯，未 clone） |
+| GitHub 帳號 | `happyfamilyintaiwan-bot`，**Zoe 與 Alison 共用同一個帳號**：GitHub 分不出是誰，靠分支名 `alison/<主題>` 與合併訊息開頭「Alison:」區分。Zoe 桌機 clone 在 `~/Sites/knittinghiyori/`；tools 的 main 設保護，只能經 PR 合併 |
 
 ### 各子網域的值（不可混用，混用報表會分不出收益來源）
 
@@ -37,7 +56,7 @@
 | tools | `3114811513` | `emrld.ltd/NTc5OTI2.js?t=579926` | 不開 |
 | games | `5316670118` | `emrld.ltd/NTc4NjIz.js?t=578623` | 不開 |
 | poem | `6629751780` | `emrld.ltd/NTc4NjIw.js?t=578620` | 不開 |
-| story | `2285424505` | `emrld.ltd/NTc4NjI0.js?t=578624` | 首頁與原創故事頁開；**小說／追劇頁不開**（不帶 `?client=`＋AdSense 後台網頁排除，見 story.md） |
+| story | `2285424505` | `emrld.ltd/NTc4NjI0.js?t=578624` | 首頁開；小說、追劇、漫畫頁（含 5 部原創追劇）**不開**（不帶 `?client=`＋AdSense 後台網頁排除，見 story.md） |
 
 ---
 
@@ -160,7 +179,7 @@
 
 - **分頁圖示**：所有子網域用編織日和系列的 favicon（米色底、白色拱窗），檔案以 games 的 `/icons/` 為準。
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
-- 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同；互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
+- 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
 - FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
 - 中文內容使用全形標點；版面以手機閱讀為優先（390px 先做對）。
 
