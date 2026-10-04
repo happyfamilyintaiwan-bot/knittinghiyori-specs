@@ -1,13 +1,13 @@
 # study.knittinghiyori.com 規範
 
-**版本：study-v0.1｜2026-10-04｜Alison 提案、Zoe 定案**
+**版本：study-v0.2｜2026-10-04｜Zoe**（v0.2：設計改中性專業調性、首頁加「目次」`toc_link`。v0.1：Alison 提案、Zoe 定案）
 內容負責人：Alison；上架：Zoe（見 core §0）。先讀 `core.md`；本檔只寫 study 專屬的部分。
 
 ## 1. 網址與檔案
 
 | 項目 | 規則 |
 |---|---|
-| 首頁 | `study.knittinghiyori.com/`，依 kind 分「公開課」「自學」「上過的課」三區，最下面「想學清單」 |
+| 首頁 | `study.knittinghiyori.com/`，開頭右側「目次」（桌機才顯示，編號＝卡片左上的 01～）；依 kind 分「公開課」「自學」「上過的課」三區，最下面「想學清單」 |
 | 主題卡 | 目前直接連該主題的部落格主力文章（`topics.json` 的 `blog`）；該主題有筆記後改連主題頁 |
 | 主題頁 | `/<topic>/`，topic＝`topics.json` 的 id＝`notes/` 底下的資料夾名；沒有筆記時放「先讀部落格文章」按鈕 |
 | 筆記頁 | `/<topic>/<英文-slug>/`，slug＝筆記檔名 |
@@ -15,7 +15,7 @@
 | 產生頁面 | `python3 build.py` 產生全部 HTML、sitemap、404，並做上線前檢查；產生的檔案不手改 |
 | 頁首品牌列 | core §7：正式 logo＋「編織日和・學習筆記」，連 study 首頁 |
 | 404 頁 | `404.html`：品牌列＋說明＋「回學習筆記首頁」＋最近更新＋全部主題卡；`noindex`、有 GA4（page_title `筆記\|404\|找不到頁面`） |
-| 設計 | 日系清新筆記風：紙張米白底、方格／橫線筆記紙紋理、紙膠帶與便利貼點綴；色彩與字型寫在 `assets/study.css` 開頭的變數 |
+| 設計 | 日系筆記本骨架＋中性專業調性（照顧男女讀者）：點陣方格底、明朝體標題（Noto Serif TC）、等寬編號（IBM Plex Mono）、方正卡片＋左上索引標籤、筆記頁左側紅色邊線；不用紙膠帶、便利貼、手寫字、歪斜卡片這類偏可愛的元素。色彩與字型寫在 `assets/study.css` 開頭的變數 |
 | 語言 | 目前只有中文 |
 
 ## 2. 廣告
@@ -36,6 +36,7 @@
 | cta_id | 位置 | cta_type |
 |---|---|---|
 | `brand_hub` | 頁首品牌列 | study |
+| `toc_link` | 首頁「目次」（桌機） | 同 `topic_card` |
 | `topic_card` | 首頁主題卡（目前連部落格文章） | article（改連主題頁後用 study） |
 | `blog_link` | 主題頁「先讀部落格文章」按鈕 | article |
 | `course_link` | 主題頁「課程官網」按鈕 | other |
