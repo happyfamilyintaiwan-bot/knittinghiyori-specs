@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-04｜core v1.2、registry v1.1.1｜Alison 提案、Zoe 定案｜core §7 新增「頁首品牌列」、§9 驗收加一項；registry 莫斯科紳士補上線紀錄、待修清單加「既有頁面補品牌列」｜讀者從任何作品／工具／遊戲頁進來都知道是編織日和做的；和 Zoe 的 v1.2 同日都未合併，併成同一批發布避免撞號
+  - 寫法對齊已上線的 games 品牌列：cta_id 統一 `brand_hub`、點了回該子網域首頁、cta_type 填該站類型（Alison 草案原為 `header_brand`／`other`、連主站，Zoe 定案改成和 games 一致，GA4 一次篩得出全部子網域）
+  - logo 用正式 logo `logo-knitting-120.webp`（40px），不用分頁圖示
 - 2026-10-04｜core v1.2、story v1.2｜Zoe｜hy-story.js 預設送 content_group=story、work（story_id 過渡期一起送），interaction_id 不送畫面文字、page_lang 只送值域內的值；首頁卡片 cta_type story_card → story，core §3-3 值域加 story；core §6 頁尾改「部分連結為聯盟連結」（英日同步）；追劇 4 部 8 頁的舊內嵌追蹤改送 story／work｜Alison 建議，追劇與小說報表一致；小說頁的聯盟是蝦皮
   - **改版日 2026-10-04**：追劇的 content_group 之前是 `interactive-story`，看長期趨勢要合併
   - 頁尾文字：新頁照新寫法；舊頁改版時順便更新
