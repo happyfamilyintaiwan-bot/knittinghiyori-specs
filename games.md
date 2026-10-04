@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.2｜2026-10-04｜Zoe**（v1.2：頂端品牌列＋`brand_hub`。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.2.1｜2026-10-04｜Zoe**（v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -23,7 +23,7 @@
 
 ## 2. 頁面結構（由上到下）
 
-0. **編織日和品牌列**（頁面最上方）：拱窗 logo＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），點了回遊戲主頁（`data-cta="brand_hub"`、`data-cta-type="game"`）；多語遊戲的語言切換放在同一列右側。寫法照 `_template/`（`.kh-brand-row`、`.kh-brand`），`max-width` 對齊該遊戲本體寬度；遊戲名放在品牌列下方
+0. **編織日和品牌列**（頁面最上方）：正式 logo（方形「編織日和 Knitting Hiyori」，`/icons/logo-knitting-120.webp`，顯示 40px）＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），點了回遊戲主頁（`data-cta="brand_hub"`、`data-cta-type="game"`）；多語遊戲的語言切換放在同一列右側，400px 以下藏起「・小遊戲」（`.kh-brand-sub`）避免橫向溢出。寫法照 `_template/`（`.kh-brand-row`、`.kh-brand`），`max-width` 對齊該遊戲本體寬度；遊戲名放在品牌列下方
 1. **遊戲**（首屏就是遊戲，不先放長說明）
 2. 聯盟區（常駐，在遊戲區**外**）
 3. 分享列
