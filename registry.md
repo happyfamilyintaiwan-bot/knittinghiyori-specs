@@ -55,7 +55,7 @@
 | `jlpt_mishitsu` | ⚠ 待補 | `jlpt_` | 已上線 | 目前無專屬事件；前綴保留，日後加專屬事件就用它 |
 | `katsuyo_escape` | ⚠ 待補 | `katsuyo_` | 已上線 | |
 | `swiftui_detective` | ⚠ 待補 | `swiftui_` | 已上線 | 專屬事件 `swiftui_hint_open`、`swiftui_solution_view` |
-| `absolute_pitch` | 絕對音感養成所（en：Absolute Pitch Trainer／ja：絶対音感養成所） | `ap_` | 已上線 | 三語：/absolute-pitch/、/absolute-pitch/en/、/absolute-pitch/ja/；專屬事件 `ap_daily_goal`、`ap_pair_fixed`、`ap_progress_reset`；無聯盟 |
+| `absolute_pitch` | 絕對音感養成所（en：Absolute Pitch Trainer／ja：絶対音感養成所） | `ap_` | 已上線 | 三語：/absolute-pitch/、/absolute-pitch/en/、/absolute-pitch/ja/；專屬事件 `ap_daily_goal`、`ap_pair_fixed`、`ap_progress_reset`；聯盟：中文頁蝦皮練習用耳機（`below_game`／shopee，2026-10-04 起）；介紹文 knittinghiyori.com/absolute-pitch-training-game/（2026-10-04 發布） |
 | `flower_shop` | ひより花店 | `flower_` | 已上線 | ⚠ 事件名稱待確認 |
 | ⚠ `tozai_dojo` | 東西腔道場 | `tozai_` | 已上線 | ⚠ game_id 與事件待確認 |
 | `shun_tabi` | 旬之旅（遊戲版） | — | 擱置 | 改做 season_booking（見工具表） |

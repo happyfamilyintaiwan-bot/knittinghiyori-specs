@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.4.1｜2026-10-04｜Zoe**（v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.5｜2026-10-04｜Zoe**（v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -129,7 +129,9 @@ body 底部放標準 hyGame 追蹤碼：
 - games Drive 放 head 第一個 script（core §1）。
 - 手動連結 `rel="sponsored nofollow noopener"` ＋揭露文字（舊遊戲為 `sponsored noopener`，改版時補 `nofollow`，見 registry 待修清單）。
 - 連結集中在設定物件（`LINKS`／`AFF`），找不到時按鈕自動隱藏。
-- 遊戲主題與旅遊無關時可不放聯盟（例：絕對音感），只放回主頁與介紹文。
+- **每款遊戲都可以放 AdSense 與 Travelpayouts／聯盟，但要少量、不影響玩**：聯盟每頁最多 1～2 個位置，放遊戲區外；主題和旅遊無關時，找主題相符的商品（例：絕對音感中文頁放蝦皮「練習用耳機」，`cta_id=below_game`、`cta_type=shopee`）。
+- 蝦皮只放中文頁；英日頁用 Klook 或不放。
+- 聯盟網址放進 HTML 時，和號寫成 `&amp;`；能用聯盟後台的短網址（`s.shopee.tw/…`）就用短網址。
 - 演唱會、音樂會票券只連官方。
 
 ---
