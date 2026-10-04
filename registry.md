@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.1｜2026-10-04｜Zoe＋Alison**
+**版本：registry-v1.1.1｜2026-10-04｜Zoe＋Alison**
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -68,7 +68,7 @@
 
 | work | 類型 | 網址 | 前綴 | 狀態 | 備註 |
 |---|---|---|---|---|---|
-| `a-gentleman-in-moscow` | 小說分析 | story /books/a-gentleman-in-moscow/ | — | 規劃中 | Alison 製作；尚未上線，直接照 story.md 寫法建立 |
+| `a-gentleman-in-moscow` | 小說分析 | story /books/a-gentleman-in-moscow/ | — | 已上線 | Alison；2026-10-04 上線（story `d02d488`），GSC 已送索引；用 hy-story.js＋story.md §3 小說事件；⚠ GA4 DebugView 待 Alison 核對 |
 | `around-the-world-in-80-days-route` | 小說 | WP /around-the-world-in-80-days-route/ | — | 已上線 | 不搬；story 首頁外連 |
 | `the-little-prince` | 小說分析 | story /books/the-little-prince/ | — | 規劃中 | |
 | `pride-and-prejudice` | 小說分析 | story /books/pride-and-prejudice/ | — | 規劃中 | |
@@ -92,6 +92,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | `jr_pass` | `affiliate_click`＋`platform`、`tool` 參數 | 同上 |
 | 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（trip_hall、trip_result、trip_article）→ `trip`；sql、katsuyo（below_game、room_clear、escape_room）、swiftui（dadaocheng_*、escape_room_*）→ `klook`。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
-| 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 開著自動廣告；沒有 spec-version；追蹤寫法未核對；網址還在第一層 | 搬到 /drama/、舊網址留轉址頁；不帶 `?client=`＋AdSense 後台網頁排除；補 spec-version；依 story.md 核對追蹤 |
+| story 首頁與作品頁、tools、poem 既有頁面（games 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
+| 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 4 部 8 頁仍用舊的內嵌追蹤（已改送 content_group=story、work）；page_title 不是 `追劇\|…` 格式 | 改用 hy-story.js、page_title 改成 story.md 格式，重驗 DebugView（搬資料夾、關自動廣告、spec-version 已於 2026-10-04 完成） |
 
 （`trip_planner`、`jr_pass` 依 Project 裡 2026-09-22 的原始碼判斷，線上版本若已更新請改狀態。）

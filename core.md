@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.1｜2026-10-04｜Zoe＋Alison**（v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.2｜2026-10-04｜Zoe＋Alison**（v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem 四個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -12,7 +12,7 @@
 - 開工前先讀本檔＋對應站別檔案，第一句回報兩個檔案的版本號，以及 `CHANGELOG.md` 最新一筆的日期與內容。
 - 讀不到檔案時直接說讀不到，**不可以憑記憶或舊副本工作**。
 - 對話中若決定修改規範，結束前輸出：要改的檔案段落（可直接貼上）＋一筆 CHANGELOG 條目。
-- 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.1/tools-v2.2.1">`（換成實際版本）。
+- 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.2/tools-v2.2.1">`（換成實際版本）。
 
 ### 負責分工（2026-10-04 起）
 | 範圍 | 負責人 | 規範檔 |
@@ -110,8 +110,8 @@
 | 參數 | 允許的值 |
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
-| `content_type` | result、tool、game（⚠ 故事／詩待補） |
-| `cta_type` | tool、article、game、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
+| `content_type` | result、tool、game、story（⚠ 詩待補） |
+| `cta_type` | tool、article、game、story、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja |
 
@@ -169,15 +169,20 @@
 
 每頁頁尾一行，依頁面語言：
 
-- 中：本站使用 Cookie 進行流量分析（Google Analytics）與顯示廣告（Google AdSense），部分連結為旅遊聯盟連結。隱私權政策
-- en：This site uses cookies for analytics (Google Analytics) and ads (Google AdSense), and some links are travel affiliate links. Privacy
-- ja：当サイトはアクセス解析（Google Analytics）と広告配信（Google AdSense）のためにCookieを使用し、一部に旅行系アフィリエイトリンクを含みます。プライバシーポリシー
+- 中：本站使用 Cookie 進行流量分析（Google Analytics）與顯示廣告（Google AdSense），部分連結為聯盟連結。隱私權政策
+- en：This site uses cookies for analytics (Google Analytics) and ads (Google AdSense), and some links are affiliate links. Privacy
+- ja：当サイトはアクセス解析（Google Analytics）と広告配信（Google AdSense）のためにCookieを使用し、一部にアフィリエイトリンクを含みます。プライバシーポリシー
 
 ---
 
 ## 7. 品牌與 SEO 基本項
 
-- **分頁圖示**：所有子網域用編織日和系列的 favicon（米色底、白色拱窗），檔案以 games 的 `/icons/` 為準。
+- **分頁圖示**：所有子網域用編織日和系列的 favicon（米色底、白色拱窗），檔案以 games 的 `/icons/` 為準。分頁圖示只用在分頁，不當品牌 logo。
+- **頁首品牌列**（2026-10-04 起）：所有子網域（story、tools、games、poem）的每一頁，**最上方**都放「正式 logo＋『編織日和・站名』文字」，點了回**該子網域的首頁**。作品／工具／遊戲名稱放在品牌列下方，不取代品牌。寫法以 games 的 `_template/` 為準（`.kh-brand-row`、`.kh-brand`）。
+  - logo 用正式 logo（方形「編織日和 Knitting Hiyori」棒針底圖），檔案以 games 的 `/icons/logo-knitting-120.webp` 為準（高解析度用 `logo-knitting-240.webp`），顯示 40px；旁邊已寫出「編織日和」時 `alt=""`。
+  - 文字用靜態 HTML（§8-1），不能只放在圖片裡。站名例：小遊戲、工具、故事（英：編織日和 · Games；日：編織日和・ミニゲーム）。窄螢幕放不下時，先藏站名，「編織日和」不藏。
+  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`；poem ⚠ 待補值域）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
+  - 既有頁面列在 registry 待修清單，改版時補上。
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
 - FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
@@ -207,3 +212,4 @@
 - `?hy_debug=1` 操作一輪，參數值沒有中文、讀者輸入的文字或 (not set)
 - 追蹤碼「和號」字元數為 0
 - `spec-version` meta 存在且是目前版本
+- 頁首最上方有品牌列：正式 logo＋「編織日和」文字，連到該子網域首頁（§7）
