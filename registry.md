@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.1.1｜2026-10-04｜Zoe＋Alison**
+**版本：registry-v1.2｜2026-10-04｜Zoe＋Alison**（v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -83,6 +83,19 @@
 story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁特有互動才登記前綴（例：`ep_`）。
 
 ---
+
+## 學習筆記（content_group=study，id 參數 `topic`）
+
+`topic` 直接用主題資料夾名，**用連字號**（同 story 的例外）。首頁主題卡目前直接連各主題的部落格主力文章（`topics.json` 的 `blog`），筆記上線後再改回主題頁。
+
+| topic | 名稱 | 網址 | 狀態 | 備註 |
+|---|---|---|---|---|
+| `hub` | 學習筆記首頁 | study / | 已上線 | |
+| `cs50` | 哈佛 CS50 計算機科學概論 | study /cs50/ | 已上線 | 公開課；卡片連 `/harvard-cs50-courses/` |
+| `claude-ai` | Claude AI 與 AI 分身 | study /claude-ai/ | 已上線 | 自學；卡片連 `/claude-beginner-guide-anthropic-academy-courses/` |
+| `minerva-mda` | Minerva MDA | study /minerva-mda/ | 已上線 | 上過的課；卡片連 `/minerva-university-mda-master-degree-guide/`；⚠ 正式課程名稱待 Alison 補 |
+| `japanese` | 日文學習 | study /japanese/ | 已上線 | 自學；卡片連 `/japanese-verb-conjugation-six-forms-five-types/` |
+| `chess` | 西洋棋 | study /chess/ | 已上線 | 自學；卡片連 `/chess-for-beginners/` |
 
 ## 待修清單（改版時處理，修完把狀態改回「已上線」並寫 CHANGELOG）
 

@@ -1,9 +1,9 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.2｜2026-10-04｜Zoe＋Alison**（v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.3｜2026-10-04｜Zoe＋Alison**（v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
-適用：部落格（knittinghiyori.com）與 tools／games／story／poem 四個子網域。
-各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
+適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
+各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
 
 ---
 
@@ -15,22 +15,31 @@
 - 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.2/tools-v2.2.1">`（換成實際版本）。
 
 ### 負責分工（2026-10-04 起）
-| 範圍 | 負責人 | 規範檔 |
+| 範圍 | 內容負責人 | 規範檔 |
 |---|---|---|
 | tools 子網域（含還沒搬家的 WordPress 工具） | Alison | tools.md |
 | story：小說（novel） | Alison | story.md |
 | story：追劇（drama）、漫畫（comics），含 5 部原創追劇 | Zoe | story.md |
+| study 子網域（學習筆記） | Alison | study.md |
 | games 子網域 | Zoe | games.md |
 | poem 子網域 | Zoe | poem.md |
 | 部落格文章 | 兩人 | blog.md |
 | core.md、registry.md、story 首頁 hub 外框、story.md 共用段落 | 兩人共管 | — |
-| GitHub 存檔與管理（合併進 main、本規範 repo） | Zoe | — |
+| 上架：repo、分支、PR、build、驗收、合併、發布、DNS／GA4／GSC／AdSense 後台、本規範 repo | Zoe | — |
 
-- **不越界**：AI 發現這次工作會動到對方範圍時，先停下來提醒，確認要不要繼續。原則上只有「自己做完、請對方 check」時才跨範圍。
-- **放錯位置要轉移**：內容依類型歸負責人，不依放在哪個 repo。放錯子網域或 repo 的內容要提出來，由負責人搬到自己的範圍。
-- **存檔流程**：只有 Zoe 合併進 main。Alison 用網頁版 Claude Code 在 `alison/<主題>` 分支工作（從最新的 main 開），不直接推 main，做完開 PR。PR 說明要有 DELIVERY 五項：① 改了什麼、為什麼 ② 檔案清單（新增／修改／刪除）③ 驗收方式：合併前要跑的 build 與驗收，以及已經跑過的結果 ④ 規範更新包（改到共管部分時，PR 最上面標「需 Zoe 確認」）⑤ 合併後 Alison 還要自己做的事（例：WordPress 301、GSC）。沒有推分支的權限時，把改過的檔案和這份說明整理成 zip 傳給 Zoe。
-- **合併**：Zoe 的 AI 檢查越界、衝突並驗收後合併（squash，訊息開頭「Alison:」，合併後刪除分支），再套用規範更新包。Zoe 只負責存檔，不改 Alison 範圍的內容；有問題就在 PR 留言退回。
-- **確認身份**：Zoe 的桌機預設是 Zoe；網頁版沒說是誰時先問。開始改任何 repo 前先 `git pull`。
+```
+Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
+  決定寫什麼、寫成怎樣                 檢查規範、build、驗收、PR、合併、發布
+```
+
+- **內容負責人**決定寫什麼、寫成怎樣；**上架全部由 Zoe 的 Claude Code 處理**（所有子網域）。Alison 不碰 repo、分支、PR。
+- **Alison 交件 4 項**（在 claude.ai 寫好交給 Zoe）：① 放哪（站、主題／作品，例：study／cs50）② 完整內容（Markdown）③ 英文網址（例：`week-0-scratch`）④ 特別要求（聯盟連結、圖片、要不要上首頁）。缺項時先問，不要猜。
+- **上架不改意思**：上架 Alison 的內容時，只修格式、規範、錯字與技術問題；要改文字的意思、觀點或結構，先問 Alison。
+- **不越界**：AI 發現這次工作會改到另一位負責的「內容」（不是上架動作）時，先停下來提醒，確認要不要繼續。
+- **放錯位置要轉移**：內容依類型歸負責人，不依放在哪個 repo。放錯子網域或 repo 的內容要提出來，由負責人決定放哪。
+- **存檔流程**：Zoe 的 AI 從最新的 main 開 `zoe/<主題>` 分支，`build` 0 問題、驗收後開 PR，squash 合併（有保護的 main 一律走 PR）。內容來自 Alison 時，合併訊息開頭寫「Alison:」，之後查得到是誰的內容。
+- **舊流程收尾**：v1.3 之前已開的 `alison/<主題>` PR 照舊由 Zoe 檢查越界、衝突並驗收後合併；不再開新的。
+- **確認身份**：Zoe 的桌機預設是 Zoe。開始改任何 repo 前先 `git pull`。
 - 負責人可以直接決定自己範圍的規範，並寫 CHANGELOG；共管的部分要對方確認。
 
 ### 版本號規則
@@ -57,6 +66,7 @@
 | games | `5316670118` | `emrld.ltd/NTc4NjIz.js?t=578623` | 不開 |
 | poem | `6629751780` | `emrld.ltd/NTc4NjIw.js?t=578620` | 不開 |
 | story | `2285424505` | `emrld.ltd/NTc4NjI0.js?t=578624` | 首頁開；小說、追劇、漫畫頁（含 5 部原創追劇）**不開**（不帶 `?client=`＋AdSense 後台網頁排除，見 story.md） |
+| study | ⚠ 待建立 | ⚠ 待建立 | 不開 |
 
 ---
 
@@ -77,8 +87,8 @@
 
 ### 3-1 設計原則
 1. 一個參數名稱＝一種意思，全站通用。
-2. 內容 id 各用各的：工具 `tool_id`、遊戲 `game_id`、故事／小說／追劇 `work`，不互相借用。工具與遊戲的 id 用**底線**（`travel_split`）；**story 的 `work` 例外用連字號**，直接等於作品資料夾名（`a-gentleman-in-moscow`），不要改成底線。工具若放在 games 子網域，仍送 `tool_id`。
-3. `content_group`：工具＝`tool`、遊戲＝`game`、故事＝`story`（⚠ 待核對既有作品）、詩＝⚠ 待確認。
+2. 內容 id 各用各的：工具 `tool_id`、遊戲 `game_id`、故事／小說／追劇 `work`，不互相借用。工具與遊戲的 id 用**底線**（`travel_split`）；**story 的 `work` 例外用連字號**，直接等於作品資料夾名（`a-gentleman-in-moscow`），不要改成底線。**study 的 `topic` 同樣用連字號**，直接等於主題資料夾名（`claude-ai`）。工具若放在 games 子網域，仍送 `tool_id`。
+3. `content_group`：工具＝`tool`、遊戲＝`game`、故事＝`story`（⚠ 待核對既有作品）、學習筆記＝`study`、詩＝⚠ 待確認。
 4. **參數值只能是固定的英文代碼**：不送讀者輸入的文字、中文句子或個資。
 5. 不逐次送高頻動作（按鍵、輸入），結果彙總在一個事件。
 6. 名稱 40 字元內；參數值 100 字元內；每事件 25 個參數內。
@@ -111,7 +121,7 @@
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
 | `content_type` | result、tool、game、story（⚠ 詩待補） |
-| `cta_type` | tool、article、game、story、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
+| `cta_type` | tool、article、game、story、study、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja |
 
@@ -121,6 +131,7 @@
 |---|---|---|
 | `tool_id` | 哪個工具 | 工具規範 |
 | `work` | 哪部作品（story） | ⚠ 待註冊（story.md §3-3） |
+| `topic` | 哪個學習主題（study） | ⚠ 待註冊（study.md §3） |
 | `page_lang` | 介面語言 | 故事規範 |
 | `cta_id`、`cta_type` | 點的位置、去哪裡 | 故事規範 |
 | `entry_point` | 從哪裡開始用 | 故事規範 |
@@ -178,10 +189,10 @@
 ## 7. 品牌與 SEO 基本項
 
 - **分頁圖示**：所有子網域用編織日和系列的 favicon（米色底、白色拱窗），檔案以 games 的 `/icons/` 為準。分頁圖示只用在分頁，不當品牌 logo。
-- **頁首品牌列**（2026-10-04 起）：所有子網域（story、tools、games、poem）的每一頁，**最上方**都放「正式 logo＋『編織日和・站名』文字」，點了回**該子網域的首頁**。作品／工具／遊戲名稱放在品牌列下方，不取代品牌。寫法以 games 的 `_template/` 為準（`.kh-brand-row`、`.kh-brand`）。
+- **頁首品牌列**（2026-10-04 起）：所有子網域（story、tools、games、poem、study）的每一頁，**最上方**都放「正式 logo＋『編織日和・站名』文字」，點了回**該子網域的首頁**。作品／工具／遊戲名稱放在品牌列下方，不取代品牌。寫法以 games 的 `_template/` 為準（`.kh-brand-row`、`.kh-brand`）。
   - logo 用正式 logo（方形「編織日和 Knitting Hiyori」棒針底圖），檔案以 games 的 `/icons/logo-knitting-120.webp` 為準（高解析度用 `logo-knitting-240.webp`），顯示 40px；旁邊已寫出「編織日和」時 `alt=""`。
-  - 文字用靜態 HTML（§8-1），不能只放在圖片裡。站名例：小遊戲、工具、故事（英：編織日和 · Games；日：編織日和・ミニゲーム）。窄螢幕放不下時，先藏站名，「編織日和」不藏。
-  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`；poem ⚠ 待補值域）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
+  - 文字用靜態 HTML（§8-1），不能只放在圖片裡。站名例：小遊戲、工具、故事、學習筆記（英：編織日和 · Games；日：編織日和・ミニゲーム）。窄螢幕放不下時，先藏站名，「編織日和」不藏。
+  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`、study `study`；poem ⚠ 待補值域）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
   - 既有頁面列在 registry 待修清單，改版時補上。
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。

@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-04｜core v1.3、registry v1.2、study v0.1（新增）｜Alison 提案、Zoe 定案｜新增 study 子網域（學習筆記），id 參數 `topic`（連字號）、content_group=`study`、cta_type 加 `study`、§7 品牌列加 study；core §0 分工改成「Alison 只交內容（4 項），所有上架由 Zoe 的 Claude Code 處理」，表格欄名改「內容負責人」，存檔流程改 `zoe/<主題>` 分支；Alison 原提的「兩人皆可編寫」因新分工不需要，未採用｜Alison 要整理課程與自學筆記，分開子網域報表才分得清楚；Alison 改用 claude.ai 寫內容，不再操作 repo
+  - study 首頁主題卡暫時直接連各主題的部落格主力文章，筆記上線後改回主題頁；404 的 cta_id 對齊 games（`notfound_hub`、`notfound_topic`）
+
 - 2026-10-04｜games v1.4｜Zoe｜§1 新增分頁圖示（正式 logo 整組＋根目錄 favicon.ico、apple-touch-icon.png、`?v=N`）與 404 頁規格；§3-5 加 `notfound_hub`、`notfound_game`；遊戲主頁補品牌列；所有 games 頁 spec-version 的 games 段改 v1.4｜Zoe 指定分頁圖示用統一品牌 logo；根目錄缺 favicon 會顯示灰色地球；404 要引導讀者回主頁看更多遊戲
   - ⚠ core §7「分頁圖示：米色底、白色拱窗」與 games 現況不同，待兩人確認後改 core（共管）
 
