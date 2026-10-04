@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.1｜2026-10-04｜Zoe＋Alison**（v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.2｜2026-10-04｜Zoe＋Alison**（v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem 四個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -12,7 +12,7 @@
 - 開工前先讀本檔＋對應站別檔案，第一句回報兩個檔案的版本號，以及 `CHANGELOG.md` 最新一筆的日期與內容。
 - 讀不到檔案時直接說讀不到，**不可以憑記憶或舊副本工作**。
 - 對話中若決定修改規範，結束前輸出：要改的檔案段落（可直接貼上）＋一筆 CHANGELOG 條目。
-- 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.1/tools-v2.2.1">`（換成實際版本）。
+- 每個頁面 `<head>` 放 `<meta name="spec-version" content="core-v1.2/tools-v2.2.1">`（換成實際版本）。
 
 ### 負責分工（2026-10-04 起）
 | 範圍 | 負責人 | 規範檔 |
@@ -110,8 +110,8 @@
 | 參數 | 允許的值 |
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
-| `content_type` | result、tool、game（⚠ 故事／詩待補） |
-| `cta_type` | tool、article、game、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
+| `content_type` | result、tool、game、story（⚠ 詩待補） |
+| `cta_type` | tool、article、game、story、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja |
 
@@ -169,9 +169,9 @@
 
 每頁頁尾一行，依頁面語言：
 
-- 中：本站使用 Cookie 進行流量分析（Google Analytics）與顯示廣告（Google AdSense），部分連結為旅遊聯盟連結。隱私權政策
-- en：This site uses cookies for analytics (Google Analytics) and ads (Google AdSense), and some links are travel affiliate links. Privacy
-- ja：当サイトはアクセス解析（Google Analytics）と広告配信（Google AdSense）のためにCookieを使用し、一部に旅行系アフィリエイトリンクを含みます。プライバシーポリシー
+- 中：本站使用 Cookie 進行流量分析（Google Analytics）與顯示廣告（Google AdSense），部分連結為聯盟連結。隱私權政策
+- en：This site uses cookies for analytics (Google Analytics) and ads (Google AdSense), and some links are affiliate links. Privacy
+- ja：当サイトはアクセス解析（Google Analytics）と広告配信（Google AdSense）のためにCookieを使用し、一部にアフィリエイトリンクを含みます。プライバシーポリシー
 
 ---
 

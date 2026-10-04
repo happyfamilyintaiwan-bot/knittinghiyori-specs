@@ -1,6 +1,6 @@
 # story.knittinghiyori.com 規範
 
-**版本：story-v1.1｜2026-10-04｜v1.1：分工改為追劇／漫畫 Zoe、小說 Alison；新增漫畫類型；原創追劇不開自動廣告**
+**版本：story-v1.2｜2026-10-04｜v1.2：作品頁統一用 hy-story.js，送 content_group=story、work；莫斯科紳士上線。v1.1：分工改為追劇／漫畫 Zoe、小說 Alison；新增漫畫類型；原創追劇不開自動廣告**
 負責人：追劇（drama）與漫畫（comics）由 Zoe 負責，小說（novel）由 Alison 負責；story 首頁 hub 外框與本檔共用段落由兩人共管，改的時候兩人都要確認，各區卡片由該區負責人維護。先讀 `core.md`；本檔只寫 story 專屬的部分。
 
 > 整合時有 7 處和 core 衝突，已依 core 改寫並經 Alison 確認，原寫法與理由見 §9。
@@ -46,12 +46,18 @@
 | 項目 | 值 |
 |---|---|
 | 內容 id 參數 | **`work`**（作品資料夾名，英文小寫＋連字號） |
-| `content_group` | `story`（⚠ 待與《故事 GA4 v1.5》核對既有作品送的值） |
+| `content_group` | `story`（2026-10-04 起 hy-story.js 預設送；之前追劇送 `interactive-story`，看長期趨勢要合併） |
 | `page_title` | `小說\|作品名\|這頁在做什麼`、`追劇\|劇名\|這頁在做什麼`、`漫畫\|作品名\|這頁在做什麼`，例：`小說\|莫斯科紳士\|中英版本怎麼選` |
 
 ```js
 gtag("set",{content_group:"story",work:"a-gentleman-in-moscow",page_lang:"zh-Hant",page_title:"小說|莫斯科紳士|中英版本怎麼選"});
 ```
+
+- 所有作品頁（books／drama／comics）都載入 `/hy-story.js`，它負責：`gtag('set')` 的 `content_group=story`、`work`、`page_lang`（只送 zh-Hant／en／ja），以及互動頁共用事件 story_start、story_progress、section_view、interaction、story_complete、story_exit 和一般 `[data-cta]` 的 cta_click。`story_id` 是舊名稱，過渡期一起送，值和 `work` 相同。
+- 頁面只需在 hy-story.js **之後**補 `page_title`（可以照上面的範例整行重設，值要一致）。
+- 需要多帶參數的 CTA（例：購書要帶 `option`）用頁面自己的屬性（莫斯科紳士用 `data-gm-cta`），不要同時加 `data-cta`，避免 cta_click 重複。
+- 會送 `interaction` 的元素（summary、按鈕）加 `data-interact="英文代碼"`；沒有的話 hy-story.js 只送元素 id 或標籤名，不送畫面文字。
+- 首頁作品卡片：`cta_click`、`cta_type=story`、`cta_id`＝卡片 id 或作品名。
 
 ### 3-2 小說頁事件
 
@@ -98,6 +104,7 @@ gtag("set",{content_group:"story",work:"a-gentleman-in-moscow",page_lang:"zh-Han
 - `<title>`（SEO 標題）與 H1 不同。
 - JSON-LD：小說頁 `Article`（about → Book）＋`Book`＋`FAQPage`（與頁面逐字一致）＋`BreadcrumbList`（Story. → 作品）；追劇頁 `TVSeries`。漫畫頁 ⚠ 待 Zoe 決定（例：`ComicSeries`）。
 - 子網域沒有 WordPress 的改寫問題，頁面 JS 可以正常寫；**GA4 追蹤碼仍不含「和號」字元**（core §3-1 #7）。
+- 互動元件慣例：閱讀進度地圖有 JS 時只顯示選中那一段（`.gm-map-js`），沒有 JS 時全部段落顯示；版本自測有 JS 時答完才顯示唯一一個對應結果（`.gm-quiz-js`），沒有 JS 時所有結果顯示。兩者都讓爬蟲讀得到全部文字。
 
 ---
 
@@ -108,7 +115,7 @@ core §9 全部，再加：
 - 390px／1200px × 初始／互動後（自測作答、拉桿、FAQ）。
 - 未填 ID 時廣告位 0 個顯示。
 
-莫斯科紳士 v1 已驗：兩種寬度橫向溢出 0、自測計分正常、JSON-LD 與 JS 可解析、未填 ID 時廣告位 0 個顯示。**改成本檔寫法後需重驗 DebugView**（§9 的事件改名）。
+莫斯科紳士（2026-10-04，/books/）已驗：390／1200 溢出 0、進度地圖只顯示 1 段、自測直接給唯一結果、dataLayer 事件無重複且無中文、和號 0、JSON-LD 可解析、廣告距互動元件 ≥150px。上線後補 DebugView 實測。
 
 ---
 
@@ -128,8 +135,6 @@ core §9 全部，再加：
 
 ## 8. 待補
 
-- `assets/a-gentleman-in-moscow/og.png`
-- 確認蝦皮中文版連結是 2019 或 2025 版
 - 既有原創故事（the-early-spring、confession、when-i-meet-the-moon、hidden-love、the-first-frost）的追蹤寫法：依《故事 GA4 v1.5》，原文未找到；用 DebugView 核對後補進本檔
 - `content_group` 確認是 `story`
 
