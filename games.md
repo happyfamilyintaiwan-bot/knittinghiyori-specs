@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.3｜2026-10-04｜Zoe**（v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.3.1｜2026-10-04｜Zoe**（v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -10,7 +10,8 @@
 | 項目 | 規則 |
 |---|---|
 | repo | `happyfamilyintaiwan-bot/games`（GitHub Pages） |
-| 網址 | `games.knittinghiyori.com/<slug>/`，資料夾＋`index.html`（＋`og.png` 1200×630） |
+| 網址 | `games.knittinghiyori.com/<slug>/`，資料夾＋`index.html`（＋og 圖 1200×630） |
+| og 圖 | 左上角品牌列：正式 logo（約 56px）＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），和頁面頂端品牌列一致；圖上網址寫到該遊戲（含語言）路徑，例 `games.knittinghiyori.com/absolute-pitch/en`。**換圖一律用新檔名**（`og-2.png`、`og-3.png`…，FB／LINE 才會重抓），og:image、twitter:image、JSON-LD 三處一起改；`og:image:alt` 開頭寫品牌名 |
 | 多語 | 英日放在遊戲資料夾裡：`/<slug>/en/`、`/<slug>/ja/`（core §7 例外）；三語共用同一個 localStorage key；交付 zip 的最外層就是中文版 |
 | slug／game_id | 資料夾用連字號、`game_id` 用底線，兩者對應（`jlpt-mishitsu` ↔ `jlpt_mishitsu`） |
 | 品牌圖示 | `/icons/`（全站 favicon 以此為準，core §7） |
