@@ -1,7 +1,7 @@
 # tools.knittinghiyori.com 規範
 
-**版本：tools-v2.2｜2026-10-03｜Zoe**（由 tools-guideline v2.1 拆出；共用部分已移到 `core.md`，這裡只寫 tools 專屬）
-負責人：Zoe（改本檔的規則需 Zoe 確認）；兩邊都可以依本檔新增工具，新增時在 `registry.md` 登記。先讀 `core.md`。
+**版本：tools-v2.2.1｜2026-10-04**（由 tools-guideline v2.1 拆出；共用部分已移到 `core.md`，這裡只寫 tools 專屬）
+負責人：Alison（改本檔的規則需 Alison 確認）；新增工具時在 `registry.md` 登記；合併進 main 由 Zoe 統一處理（見 core §0）。先讀 `core.md`。
 
 ---
 
@@ -21,12 +21,13 @@
 /tool_pages.py         工具頁產生器
 /<slug>/  /en/<slug>/  /ja/<slug>/   工具頁三語版   ← build.py 產生
 /_src/<工具>/          工具頁原始檔（robots.txt 已擋）
+/wp-src/<slug>/        還沒搬家的 WordPress 工具原始檔與載入器產生腳本（robots.txt 要擋）
 ```
 
 - **改總覽頁只改 `tools.json` 或 `build.py`**，再跑 `python3 build.py`；直接改 index.html 會被覆蓋。
 - 新工具一定要在 `tools.json` 加一筆（圖示加在 `build.py` 的 `ICONS`），sitemap、llms.txt 自動收錄。
 - 還沒搬家的 WordPress 工具，總覽頁卡片直接連回 WP 原網址。
-- 放在 games 子網域的工具（`season_booking`）：仍是工具，送 `tool_id`、`content_group=tool`；是否搬到 tools 待 Alison 決定，搬之前網址不動。
+- 季節訂房倒數（`season_booking`）：原規劃放 games，改由 Alison 直接在 tools 製作（/season-booking/），games 不上線。
 
 ## 2. 本站固定值與 `<head>` 範例
 
@@ -156,5 +157,5 @@ gtag("config","G-ZQZHTYTRMQ");</script>
 
 1. 放 `/<slug>/index.html`（或 `_src/`）→ 本機 `python3 -m http.server 8000` 跑驗收。
 2. `tools.json` 加一筆、`ICONS` 加圖示 → `python3 build.py`。
-3. GitHub 網頁上傳工具頁＋重新產生的三語 index、sitemap。
+3. 推到 `alison/<主題>` 分支並開 PR（工具頁、重新產生的三語 index、sitemap 都要包含），由 Zoe 合併。
 4. GSC 要求索引；§3-2 登記；有新參數才註冊自訂維度；Travelpayouts 後台確認 Drive。

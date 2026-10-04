@@ -1,7 +1,7 @@
 # story.knittinghiyori.com 規範
 
-**版本：story-v1.0｜2026-10-03｜由《story 子網域 小說與追劇 追蹤與版型規範 v1》整合，已對齊 core.md，Alison 已確認**
-負責人：Alison。先讀 `core.md`；本檔只寫 story 專屬的部分。
+**版本：story-v1.1｜2026-10-04｜v1.1：分工改為追劇／漫畫 Zoe、小說 Alison；新增漫畫類型；原創追劇不開自動廣告**
+負責人：追劇（drama）與漫畫（comics）由 Zoe 負責，小說（novel）由 Alison 負責；story 首頁 hub 外框與本檔共用段落由兩人共管，改的時候兩人都要確認，各區卡片由該區負責人維護。先讀 `core.md`；本檔只寫 story 專屬的部分。
 
 > 整合時有 7 處和 core 衝突，已依 core 改寫並經 Alison 確認，原寫法與理由見 §9。
 
@@ -11,10 +11,10 @@
 
 | 項目 | 規則 |
 |---|---|
-| 網址 | `story.knittinghiyori.com/<英文作品名>/`，資料夾＋`index.html` |
-| 前綴 | 網址不用 `book-`／`drama-`，子網域本身就是分類 |
-| Hub | story 首頁（`happyfamilyintaiwan-bot.github.io` repo）就是 hub，分「小說」「追劇」兩區卡片；不另做 WordPress hub 文章 |
-| 新作品放哪 | **小說與追劇頁**：上傳到既有 story 首頁 repo 的資料夾，**不開新 repo**。既有的原創故事（the-early-spring 等）維持各自獨立 repo，不搬 |
+| 網址 | `story.knittinghiyori.com/<類別>/<英文作品名>/`，資料夾＋`index.html`；英日版放作品資料夾裡（`/en/`、`/ja/`） |
+| 類別資料夾 | `books/`＝書與小說（Alison）、`drama/`＝影視劇集，含原創追劇（Zoe）、`comics/`＝漫畫（Zoe）。資料夾就代表負責人；作品名本身不加 `book-`／`drama-` 前綴 |
+| Hub | story 首頁（`story` repo）就是 hub，分「小說」「追劇」「漫畫」三區卡片：小說區由 Alison 維護，追劇區、漫畫區由 Zoe 維護；hub 外框（版型、頁首頁尾、追蹤碼）兩人共管。不另做 WordPress hub 文章 |
+| 新作品放哪 | 上傳到 `story` repo 對應的類別資料夾，**不開新 repo**。2026-10-04 起既有 7 部追劇（含 5 部原創）搬進 `drama/`，舊網址保留轉址頁（canonical＋meta refresh＋一行文字連結），不要刪 |
 | assets | `assets/<作品名>/`（og.png 等） |
 | 既有 WordPress 頁 | 《環遊世界八十天》維持 `knittinghiyori.com/around-the-world-in-80-days-route/` 不搬，story 首頁小說區放外連卡片 |
 
@@ -28,7 +28,7 @@
 
 | 欄位 | 填什麼 |
 |---|---|
-| `work` | 作品資料夾名，例：`a-gentleman-in-moscow`（必填，每個事件都帶） |
+| `work` | 作品資料夾名（不含類別），例：`a-gentleman-in-moscow`（必填，每個事件都帶） |
 | `ga4` | **`G-ZQZHTYTRMQ`**（全站共用，見 core §1；不另建 story 資源） |
 | `adsense` | `ca-pub-2022028565680247` |
 | `adSlots.top`／`.mid` | 都填 story 的 `2285424505`（同 tools 做法：所有版位共用一個 slot） |
@@ -47,7 +47,7 @@
 |---|---|
 | 內容 id 參數 | **`work`**（作品資料夾名，英文小寫＋連字號） |
 | `content_group` | `story`（⚠ 待與《故事 GA4 v1.5》核對既有作品送的值） |
-| `page_title` | `小說\|作品名\|這頁在做什麼`、`追劇\|劇名\|這頁在做什麼`，例：`小說\|莫斯科紳士\|中英版本怎麼選` |
+| `page_title` | `小說\|作品名\|這頁在做什麼`、`追劇\|劇名\|這頁在做什麼`、`漫畫\|作品名\|這頁在做什麼`，例：`小說\|莫斯科紳士\|中英版本怎麼選` |
 
 ```js
 gtag("set",{content_group:"story",work:"a-gentleman-in-moscow",page_lang:"zh-Hant",page_title:"小說|莫斯科紳士|中英版本怎麼選"});
@@ -96,7 +96,7 @@ gtag("set",{content_group:"story",work:"a-gentleman-in-moscow",page_lang:"zh-Han
 - 中文內文走系統字，標題可載 Noto Serif TC（用 `&text=` 子集）。
 - favicon 用編織日和系列（core §7）。
 - `<title>`（SEO 標題）與 H1 不同。
-- JSON-LD：小說頁 `Article`（about → Book）＋`Book`＋`FAQPage`（與頁面逐字一致）＋`BreadcrumbList`（Story. → 作品）；追劇頁 `TVSeries`。
+- JSON-LD：小說頁 `Article`（about → Book）＋`Book`＋`FAQPage`（與頁面逐字一致）＋`BreadcrumbList`（Story. → 作品）；追劇頁 `TVSeries`。漫畫頁 ⚠ 待 Zoe 決定（例：`ComicSeries`）。
 - 子網域沒有 WordPress 的改寫問題，頁面 JS 可以正常寫；**GA4 追蹤碼仍不含「和號」字元**（core §3-1 #7）。
 
 ---
@@ -115,7 +115,7 @@ core §9 全部，再加：
 ## 7. 部署（新作品）
 
 1. 在 `registry.md` 登記 `work`。
-2. 作品資料夾上傳到 story 首頁 repo（不開新 repo）。
+2. 作品資料夾放進 story repo 對應的類別資料夾（`books/`／`drama/`／`comics/`），不開新 repo。
 3. 本機測：`python3 -m http.server 8000`，跑 §6 驗收。
 4. 填 `window.HIYORI`。
 5. `sitemap.xml` 加一筆。
@@ -142,7 +142,7 @@ core §9 全部，再加：
 | 1 | `ga4` 填「story 子網域的 GA4 評估 ID」，主站不涵蓋要另建 | 填 `G-ZQZHTYTRMQ` | 全站共用一個資源，跨站導流與比較才看得到；子網域 cookie 共用 |
 | 2 | `affiliate_click`＋`network`、`partner` | `cta_click`＋`cta_id=buy_book`、`cta_type=shopee`、`option=zh/en` | core 統一聯盟點擊寫法；省下 2 個自訂維度名額 |
 | 3 | `faq_open` 帶 `question` | 帶 `option` | 全站同一參數 |
-| 4 | 未寫自動廣告；core 舊紀錄寫 story「開自動廣告」 | 小說／追劇頁**不帶 `?client=`**、只放手動單元 | 自動廣告無法保證避開自測與購書按鈕；不帶 `?client=` 的頁面不會跑自動廣告，不影響 story 首頁 |
+| 4 | 未寫自動廣告；core 舊紀錄寫 story「開自動廣告」 | 小說、追劇、漫畫頁（含 5 部原創追劇）**不帶 `?client=`**、只放手動單元 | 自動廣告無法保證避開自測與購書按鈕；不帶 `?client=` 的頁面不會跑自動廣告，不影響 story 首頁 |
 | 5 | `source_click`＋`source_domain` | `cta_click`＋`cta_id=source_link` | 不多開事件與參數；網域可從 link_url 看 |
 | 6 | `progress_check` 帶 `segment` | 帶 `option`＝seg0–seg3 | 不多佔自訂維度 |
 | 7 | 註冊 3 個自訂維度（work、partner、result） | 只註冊 `work` | 其他已註冊或已改用既有參數 |

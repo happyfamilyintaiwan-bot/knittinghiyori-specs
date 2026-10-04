@@ -4,6 +4,12 @@
 
 ---
 
+- 2026-10-04｜core v1.1、registry v1.1、story v1.1、games v1.1、tools v2.2.1、poem v0.1.1、blog v1.0.1｜Zoe＋Alison｜重新分工＋絕對音感三語，兩份更新包合併成同一批發布｜兩份交接都要升 core v1.1，同日都未 push，合併避免撞號
+  - 分工：games、poem、追劇、漫畫歸 Zoe，tools、小說歸 Alison，blog 兩人共管；只有 Zoe 合併進 main，Alison 用網頁版 Claude Code 開分支和 PR；core §0 新增分工表、不越界、放錯位置要轉移、存檔流程四條規則；5 部原創故事改列追劇（registry 狀態改「待修」，自動廣告改成不開）；story 新增漫畫類型與 page_title 格式，hub 分三區；season_booking、concert_trip 修正為規劃中（實際尚未上線）；tools 新增 wp-src/｜分工明確、main 只有一個出口，桌機與 GitHub 都保有完整檔案
+  - 依實際 repo 更正交接文件：story 首頁與 5 部原創追劇都在 `story` repo（沒有 `happyfamilyintaiwan-bot.github.io` repo，原創追劇也不是獨立 repo）；core §1 GitHub 帳號一列改成實際做法：兩人共用同一個帳號，靠 `alison/` 分支與「Alison:」區分，tools 的 main 設保護
+  - story 分類別資料夾：`books/`（Alison）、`drama/`（Zoe）、`comics/`（Zoe），既有 7 部追劇搬進 drama/、舊網址留轉址頁；core §7 多語例外加入 story；registry 補登記 amidst-a-snowstorm-of-love、lighter-and-princess；a-gentleman-in-moscow 改規劃中（尚未上線）；games.md、tools.md 移除 season_booking 在 games 的舊說法｜資料夾即負責範圍，作品變多後好溝通、好歸檔
+  - 絕對音感（Alison 交件）：core §7 games 多語網址例外改為 /<slug>/en/、/<slug>/ja/；games 加入多語列、HY_GAME_LANG 與 lang_switch 寫法；registry absolute_pitch 補三語名稱、網址與專屬事件｜絕對音感養成所推出英日版；遊戲一個資料夾整包上傳較好管理
+
 - 2026-10-03｜**全部定版**：core v1.0、registry v1.0、tools v2.2、games v1.0（新增）、story v1.0、blog v1.0、poem v0.1（新增）｜Zoe＋Alison｜併入 `05-Alison回覆2.md`｜建立 GitHub 單一來源
   - core §3-2：`cta_id` 記位置（各站自訂）、`cta_type` 記平台；看全部聯盟點擊改用 cta_type 篩
   - core §3-1 #2：註明 story 的 `work` 用連字號是例外；放在 games 的工具仍送 `tool_id`
