@@ -1,6 +1,6 @@
 # poem.knittinghiyori.com 規範
 
-**版本：poem-v0.3｜2026-10-09｜Zoe（v0.3：詩頁也放 AdSense、首頁與詩頁分開廣告單元、根目錄 favicon、小圖示換品牌圖。v0.2：Drive、AdSense、頁尾 Cookie 說明、spec-version 實際上線；新增 404 頁。v0.1.1：由 subdomain-monetization-notes 整理）**
+**版本：poem-v0.3｜2026-10-09｜Zoe（v0.3：詩頁也放 AdSense、根目錄 favicon、小圖示換品牌圖。v0.2：Drive、AdSense、頁尾 Cookie 說明、spec-version 實際上線；新增 404 頁。v0.1.1：由 subdomain-monetization-notes 整理）**
 負責人：Zoe。先讀 `core.md`；本檔只寫 poem 專屬的部分。
 
 > GA4 追蹤寫法尚未整理。標 ⚠ 處待補，補完升 v1.0。
@@ -23,7 +23,7 @@
 
 | 項目 | 規則 |
 |---|---|
-| slot | 首頁 `6629751780`（AdSense 單元名「poem-目錄下方」）；詩頁 ⚠ 待 Zoe 在 AdSense 建「poem-詩頁下方」，建好前暫時共用 `6629751780`。一個位置一個單元，「廣告單元」報表才能分開看成效 |
+| slot | `6629751780`（AdSense 單元名「poem-目錄下方」），首頁與詩頁**共用**（Zoe 2026-10-09：收益合在一起看；哪一首詩人多用 GA4 看） |
 | 自動廣告 | 不開（載入碼不帶 `?client=`），所有連結加 `data-google-vignette="false"`；AdSense 後台 poem 子網域的自動廣告也要是關閉 |
 | 位置與數量 | 每頁最多 1 個，上下各留 150px（`ad_unit(slot)`）：首頁在日曆／借書卡之後、about 之前；詩頁在電子報之後、頁尾說明之前（不打斷讀詩） |
 | 載入碼 | 首頁與詩頁 head 輸出（`head(..., ads=True)`），不帶 `?client=`（Zoe 2026-10-09 確認：Google 給的原碼帶 `?client=`，照規範拿掉，不影響報表） |
