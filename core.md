@@ -121,7 +121,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
 | `content_type` | result、tool、game、story（⚠ 詩待補） |
-| `cta_type` | tool、article、game、story、study、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
+| `cta_type` | tool、article、game、story、study、poem、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja |
 
@@ -192,7 +192,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - **頁首品牌列**（2026-10-04 起）：所有子網域（story、tools、games、poem、study）的每一頁，**最上方**都放「正式 logo＋『編織日和・站名』文字」，點了回**該子網域的首頁**。作品／工具／遊戲名稱放在品牌列下方，不取代品牌。寫法以 games 的 `_template/` 為準（`.kh-brand-row`、`.kh-brand`）。
   - logo 用正式 logo（方形「編織日和 Knitting Hiyori」棒針底圖），檔案以 games 的 `/icons/logo-knitting-120.webp` 為準（高解析度用 `logo-knitting-240.webp`），顯示 40px；旁邊已寫出「編織日和」時 `alt=""`。
   - 文字用靜態 HTML（§8-1），不能只放在圖片裡。站名例：小遊戲、工具、故事、學習筆記（英：編織日和 · Games；日：編織日和・ミニゲーム）。窄螢幕放不下時，先藏站名，「編織日和」不藏。
-  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`、study `study`；poem ⚠ 待補值域）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
+  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`、study `study`、poem `poem`）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
   - 既有頁面列在 registry 待修清單，改版時補上。
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
