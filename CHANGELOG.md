@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-09｜poem v0.3｜Zoe｜詩頁 /MMDD/ 也放 1 個 AdSense（電子報之後、頁尾說明之前）；404 不放（AdSense 政策）；首頁與詩頁各用一個廣告單元（詩頁 slot 待建，暫時共用 6629751780）；根目錄補 favicon.ico、/icons/ 換成 games 的品牌圖版本｜Zoe 要求每頁都有廣告並追蹤成效；Travelpayouts 網域顯示灰色地球
+  - **改版日 2026-10-09**：poem 詩頁開始有廣告；詩頁換成新 slot 那天也要記一筆改版日
+
 - 2026-10-09｜registry v1.3、games v1.6｜Alison（Zoe 上架）｜新增 morse_code（前綴 morse_，已上線）；games §1 加共用引擎 /lib/hy-trainer/；§7 加篩選代碼 topic=morse（skill 沿用 ear_training、listening）；摩斯頁頁尾改 core v1.2 新文字、spec-version 改 core-v1.3/games-v1.6；主頁加卡片、篩選、JSON-LD、sitemap｜實證訓練法系列第 1 款「守燈人摩斯日誌」上線（Alison 交接寫的是 core-v1.0／games-v1.0 時的版號，依現況改成 registry v1.2→v1.3、games v1.5→v1.6）
 
 - 2026-10-06｜poem v0.2｜Zoe（Alison 交接提出）｜Drive、AdSense（只放首頁 1 個，slot 6629751780，不開自動廣告）、`.kh-legal`、`spec-version` 實際上線（v0.1.1 只寫了規則，repo 沒有）；所有連結在 build 時加 vignette 標記；新增 404 頁（2026-10-04 已上線）；§1 寫明 build.py 的常數與 `write()`｜Travelpayouts 後台顯示 poem Drive 無法使用
