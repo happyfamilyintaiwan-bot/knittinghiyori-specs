@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.3.1｜2026-10-09｜Zoe＋Alison**（v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.4｜2026-10-09｜Zoe＋Alison**（v1.4：每個子網域都要有 404 頁，統一內容與追蹤。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -197,7 +197,12 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - OG 圖與部落格文章首圖共用同一張橫式設計（1200×630），**不放浮水印**；浮水印只用在社群貼文圖與成績卡／進度圖卡這類會被轉傳的圖。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
-- FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
+- FAQ 的 JSON-LD 必須和頁面文字逐字一致。
+- **404 頁**（2026-10-09 起，每個子網域都要有根目錄的 `404.html`；GitHub Pages 遇到不存在的網址都會顯示它，並回 404 狀態碼）：讀者打錯網址或點到舊連結時，引導回系列主頁、看更多選擇，不要讓人直接離開。寫法以 games 的 `404.html` 為準。
+  - 由上到下：①頁首品牌列（同上）②一句好懂的說明（例：「這一頁找不到了，可能網址打錯或已經搬家。」）③**大按鈕回該站首頁**④「你可能會喜歡」推薦卡片（該站的作品／遊戲／工具／主題；可以在瀏覽器讀首頁卡片自動產生，但頁面裡要寫死一份備用清單，JS 壞掉也看得到）⑤跨站連結一行（故事、詩、小遊戲、小工具、學習筆記、部落格）⑥頁尾 `.kh-legal`。
+  - 語言：預設中文；壞掉的網址含 `/en/`、`/ja/` 時換成英文／日文說明與按鈕（同一個 404.html，用 JS 切換）。
+  - SEO：`noindex`；不放 canonical、hreflang、OG。不放 AdSense 廣告單元（Drive 照放）。
+  - 追蹤：GA4 照常載入，`page_title` 用 `類別|找不到頁面|404`（例：`遊戲|找不到頁面|404`），報表看 page_location 就知道哪些壞網址最常被點，回頭修連結。點擊一律 `cta_click`：回首頁 `cta_id=notfound_hub`；推薦卡片 `notfound_<東西>`（games `notfound_game`、study `notfound_topic`、poem `notfound_poem`、story `notfound_work`、tools `notfound_tool`）；跨站連結 `notfound_site`；`cta_type` 填目的地類型（§3-3）。
 - 中文內容使用全形標點；版面以手機閱讀為優先（390px 先做對）。
 
 ---
@@ -225,3 +230,4 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - 追蹤碼「和號」字元數為 0
 - `spec-version` meta 存在且是目前版本
 - 頁首最上方有品牌列：正式 logo＋「編織日和」文字，連到該子網域首頁（§7）
+- 亂打一個網址（例：`/no-such-page/`、`/en/no-such-page/`）會顯示該站 404 頁，回 404 狀態碼、語言正確、按鈕回首頁、有推薦卡片（§7）

@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3.3｜2026-10-09｜Zoe＋Alison**（v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.3.4｜2026-10-09｜Zoe＋Alison**（v1.3.4：待修清單加 404 頁。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -109,5 +109,6 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
 | 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 4 部 8 頁仍用舊的內嵌追蹤（已改送 content_group=story、work）；page_title 不是 `追劇\|…` 格式 | 改用 hy-story.js、page_title 改成 story.md 格式，重驗 DebugView（搬資料夾、關自動廣告、spec-version 已於 2026-10-04 完成） |
+| 404 頁（core §7，2026-10-09） | story 沒有 404 頁（顯示 GitHub 英文錯誤頁）；tools 的 404 只有一句說明，沒有品牌列與推薦卡片；poem 回首頁的 cta_id 是 `notfound_home`；games 缺跨站連結一行 | story：照 games 做（回故事首頁＋書與小說／影視劇集／漫畫三區卡片，`notfound_work`），hub 外框共管；tools：改 `build.py` 的 404，卡片從 tools.json 產生（`notfound_tool`）；poem：`notfound_home` 改 `notfound_hub`；games：加跨站連結（`notfound_site`） |
 
 （`trip_planner`、`jr_pass` 依 Project 裡 2026-09-22 的原始碼判斷，線上版本若已更新請改狀態。）
