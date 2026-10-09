@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3.5｜2026-10-10｜Zoe＋Alison**（v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.3.6｜2026-10-10｜Zoe＋Alison**（v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -51,7 +51,7 @@
 | game_id | 名稱（⚠＝請 Alison 補中文名） | 前綴 | 狀態 | 備註 |
 |---|---|---|---|---|
 | ⚠ `hub`？ | 遊戲主頁 | `hub_` | 已上線 | ⚠ game_id 待確認 |
-| `sql_detective` | 霞光畫廊失竊案（SQL 偵探） | `sql_` | 已上線 | |
+| `sql_detective` | 霞光畫廊失竊案（SQL 偵探） | `sql_` | 已上線 | 只有中文；level＝l00–l07（關卡）；option＝case01；一局＝一個還沒破解的關卡；專屬事件 `sql_hint_open`、`sql_solution_view`；聯盟 `below_game`（klook，2026-10-10 起；之前是 affiliate）；介紹文 knittinghiyori.com/sql-beginner-game/（文中 `escape_room` 仍是 affiliate，待 WordPress 改） |
 | `jlpt_mishitsu` | JLPT 單字密室（言の葉館） | `jlpt_` | 已上線 | 目前無專屬事件；前綴保留，日後加專屬事件就用它；level＝l01–l05（密室）；option＝clue 等；聯盟 `trip_hall`、`trip_result`（trip，2026-10-10 起；之前是 affiliate）；介紹文 knittinghiyori.com/jlpt-vocab-game/（文中 `trip_article` 待 WordPress 改） |
 | `katsuyo_escape` | 活用館脫出（活用館からの脱出） | `katsuyo_` | 已上線 | 專屬事件 `katsuyo_tutorial_skip`、`katsuyo_hint_open`；聯盟 `below_game`、`room_clear`（klook，2026-10-09 起；之前是 affiliate）；介紹文 knittinghiyori.com/japanese-verb-conjugation-game/（文中 `escape_room` 仍是 affiliate，待 WordPress 改） |
 | `swiftui_detective` | ⚠ 待補 | `swiftui_` | 已上線 | 專屬事件 `swiftui_hint_open`、`swiftui_solution_view` |
@@ -105,7 +105,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 |---|---|---|
 | `trip_planner` | 沒送 `tool_id`；用 `affiliate_click`＋`platform`；用保留名稱 `tool`；share 的 `method=link` 不在值域 | `gtag('set')` 帶 tool_id；`cta_click`（cta_id＝位置、cta_type＝平台）；share method 改 native／copy_link |
 | `jr_pass` | `affiliate_click`＋`platform`、`tool` 參數 | 同上 |
-| 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（dadaocheng_*、escape_room_*）→ `klook`。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
+| 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql（~~below_game~~ 2026-10-10 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（dadaocheng_*、escape_room_*）→ `klook`。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
 | 404 頁 cta_id（~~games~~ 2026-10-10 已改、study、poem） | ~~games `notfound_game`~~；study `notfound_topic`；poem `notfound_home`、`notfound_poem`，和 core §7 統一值不同 | games、study `→ notfound_card`；poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |

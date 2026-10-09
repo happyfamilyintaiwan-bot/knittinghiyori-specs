@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-10｜registry v1.3.6｜Zoe｜SQL 偵探（sql_detective）檢查：補專屬事件、level／option 值域；遊戲頁聯盟 cta_type affiliate→klook、補 nofollow；修正新玩家一進來就看到「結案」區（hidden 被 display:grid 蓋掉）；補 og 圖、結構化資料、介紹文連結；頁尾新文字；字型去和號；廣告移到回主頁按鈕下方；按鈕加大｜7 款遊戲逐款檢查的第 3 款
+  - **改版日 2026-10-10**：sql 的聯盟點擊之前是 `cta_type=affiliate`，看長期趨勢要合併
+
 - 2026-10-10｜games v1.7｜Zoe｜games 404 頁照 core v1.4：推薦卡片 cta_id `notfound_game`→`notfound_card`、最多 3 張、加到主站的次要按鈕 `notfound_main`、`noindex, follow`；registry 待修清單 games 劃掉｜core v1.4 統一所有子網域的 404
   - **改版日 2026-10-10**：games 404 的卡片點擊之前是 `notfound_game`，看長期趨勢要合併
 
