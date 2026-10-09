@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-09｜core v1.4、story v1.3｜Zoe｜core §7 新增「404 頁」、§9 驗收加一項；story §5 補 404 寫法；story 上線 `404.html`（story#5）｜Zoe 要求：找不到的頁面要引導讀者回系列主頁看其他作品，不要出現 GitHub 白底錯誤頁
+  - GA4：404 頁新增 cta_id `notfound_hub`、`notfound_main`、`notfound_card`
+  - 部落格 404 延到搬 Astro 時一起做
 - 2026-10-04｜games v1.5、registry absolute_pitch 列｜Zoe｜§5 改為每款遊戲都可放少量主題相符的聯盟（每頁 1～2 個位置、蝦皮只放中文頁、網址和號寫 `&amp;`）；絕對音感中文頁加蝦皮練習用耳機、補回介紹文連結｜Zoe 指定：所有子網域都可以有 AdSense、Travelpayouts，限制數量、不影響讀者體驗
   - **改版日 2026-10-04**：絕對音感開始有聯盟點擊（cta_type=shopee）
 
