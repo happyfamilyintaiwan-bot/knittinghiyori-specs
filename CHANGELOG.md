@@ -13,7 +13,7 @@
   - **改版日 2026-10-09**：katsuyo 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
 
 - 2026-10-09｜poem v0.4｜Zoe｜每頁最上方加品牌列（正式 logo＋編織日和・詩，brand_hub）；灰字加深到 5.02；季節色當文字／按鈕時加深（日 35%、夜文字提亮 18%），12 個月都達 4.5；根目錄補 apple-touch-icon｜core §7 品牌列、§9 對比 0 筆不合格
-  - **改版日 2026-10-09**：poem 開始送 `cta_id=brand_hub`（`cta_type=poem`，core 值域待 Alison 確認）
+  - **改版日 2026-10-09**：poem 開始送 `cta_id=brand_hub`（`cta_type=poem`）
 
 - 2026-10-09｜registry v1.3.1｜Zoe｜`hiyori_pet` 補專屬事件 `pet_walk_remind`、`pet_walk_done`、`pet_walk_snooze`｜日和毛孩加入走動提醒（尚未上線）
 

@@ -16,7 +16,7 @@
 - 頁面一律經 `write()` 寫出：自動在所有 `<a>` 加 `data-google-vignette="false"`（靜態 HTML，不靠 JS）。新增頁面也要用 `write()`。
 - 每頁最下方有 `.kh-legal`（三語，`legal()` 產生，文字照 core §6）。
 - `404.html` 由 `build_404()` 產生：noindex、不放 canonical／hreflang／OG；GA4 `story_id` = `poem-404`；回目錄 `notfound_home`、最近 3 首 `notfound_poem`。
-- **頁首品牌列**（core §7）：`BRAND`（正式 logo `/icons/logo-knitting-120.webp`＋240 給高解析度，40px）＋「編織日和・詩」（英：編織日和 · Poems），連到 `https://poem.knittinghiyori.com/`，`data-cta="brand_hub"`、`data-cta-type="poem"`（⚠ core 值域待 Alison 確認加入 `poem`）。語言切換與夜間模式在同一列右側；400px 以下藏「・詩」（`.kh-brand-sub`）並縮小語言按鈕內距。詩頁與 404 在品牌列下方另有「‹ 目錄」（`BACK`）
+- **頁首品牌列**（core §7）：`BRAND`（正式 logo `/icons/logo-knitting-120.webp`＋240 給高解析度，40px）＋「編織日和・詩」（英：編織日和 · Poems），連到 `https://poem.knittinghiyori.com/`，`data-cta="brand_hub"`、`data-cta-type="poem"`（core §3-3 值域，2026-10-09 定案）。語言切換與夜間模式在同一列右側；400px 以下藏「・詩」（`.kh-brand-sub`）並縮小語言按鈕內距。詩頁與 404 在品牌列下方另有「‹ 目錄」（`BACK`）
 - **對比**：灰字 `--pencil` 白天 `#6b6359`（5.02）；季節色當文字或按鈕底色時白天用 `color-mix(var(--c 或 --m) 65%, #000)`、夜間文字用 `82%, #fff`，12 個月×日夜都達 4.5（2026-10-09 逐月掃過）。新元素要用季節色時照這個寫法
 - 根目錄要有 `/favicon.ico`（Travelpayouts 等服務只抓根目錄，沒有會顯示灰色地球）；`/icons/` 整套與 games 相同（品牌圖版本），根目錄也放 `apple-touch-icon.png`。
 - 跑 build 會重畫所有 og.png（檔案有細微差異），沒改到的舊詩 og.png 用 `git restore` 還原。
