@@ -1,6 +1,6 @@
 # story.knittinghiyori.com 規範
 
-**版本：story-v1.2｜2026-10-04｜v1.2：作品頁統一用 hy-story.js，送 content_group=story、work；莫斯科紳士上線。v1.1：分工改為追劇／漫畫 Zoe、小說 Alison；新增漫畫類型；原創追劇不開自動廣告**
+**版本：story-v1.3｜2026-10-09｜v1.3：新增 404 頁。v1.2：作品頁統一用 hy-story.js，送 content_group=story、work；莫斯科紳士上線。v1.1：分工改為追劇／漫畫 Zoe、小說 Alison；新增漫畫類型；原創追劇不開自動廣告**
 負責人：追劇（drama）與漫畫（comics）由 Zoe 負責，小說（novel）由 Alison 負責；story 首頁 hub 外框與本檔共用段落由兩人共管，改的時候兩人都要確認，各區卡片由該區負責人維護。先讀 `core.md`；本檔只寫 story 專屬的部分。
 
 > 整合時有 7 處和 core 衝突，已依 core 改寫並經 Alison 確認，原寫法與理由見 §9。
@@ -104,6 +104,7 @@ gtag("set",{content_group:"story",work:"a-gentleman-in-moscow",page_lang:"zh-Han
 - `<title>`（SEO 標題）與 H1 不同。
 - JSON-LD：小說頁 `Article`（about → Book）＋`Book`＋`FAQPage`（與頁面逐字一致）＋`BreadcrumbList`（Story. → 作品）；追劇頁 `TVSeries`。漫畫頁 ⚠ 待 Zoe 決定（例：`ComicSeries`）。
 - 子網域沒有 WordPress 的改寫問題，頁面 JS 可以正常寫；**GA4 追蹤碼仍不含「和號」字元**（core §3-1 #7）。
+- **404 頁**（`/404.html`，core §7）：`/books/` 進來說「這本小說」、`/drama/` 說「這部劇」、`/comics/` 說「這部漫畫」；推薦卡片從首頁抓 `#grid > li.work[data-state="ready"]`，同類型優先，不夠 3 張用別區補，混到別區時標題改「從這幾部開始讀」。首頁卡片照原本方式維護即可，404 不用改。
 - 互動元件慣例：閱讀進度地圖有 JS 時只顯示選中那一段（`.gm-map-js`），沒有 JS 時全部段落顯示；版本自測有 JS 時答完才顯示唯一一個對應結果（`.gm-quiz-js`），沒有 JS 時所有結果顯示。兩者都讓爬蟲讀得到全部文字。
 
 ---

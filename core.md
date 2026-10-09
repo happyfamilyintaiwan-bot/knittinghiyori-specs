@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.3.1｜2026-10-09｜Zoe＋Alison**（v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.4｜2026-10-09｜Zoe＋Alison**（v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -198,6 +198,12 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - OG 圖與部落格文章首圖共用同一張橫式設計（1200×630），**不放浮水印**；浮水印只用在社群貼文圖與成績卡／進度圖卡這類會被轉傳的圖。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
 - FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
+- **404 頁**（2026-10-09 起）：每個子網域根目錄都要有 `404.html`（GitHub Pages 找不到網址時自動顯示），不讓讀者看到 GitHub 白底錯誤頁。
+  - 由上到下：品牌列（同上）→ 一句說明（網址可能打錯或頁面搬家）→ 回**該站首頁**的主要按鈕＋到主站的次要按鈕 → 同系列的作品／工具／遊戲推薦（最多 3 個）。
+  - 依網址第一層判斷讀者原本要去哪一區（例：story `/books/` 小說、`/drama/` 追劇），同區優先推薦。推薦項目在執行時從該站首頁抓，首頁更新就自動跟著更新，不另外維護一份清單。
+  - `noindex, follow`；不放 AdSense；Drive 照放（§5）。不載會把網址當內容 id 的站內追蹤（例：hy-story.js），只送 page_view 與 `cta_click`：`notfound_hub`（回該站首頁）、`notfound_main`（到主站，有放才送）、`notfound_card`（推薦卡片），cta_type 照該站類型。**所有子網域統一用這 3 個值**，不另取站別名稱；已上線的 games（`notfound_game`）、study（`notfound_topic`）、poem（`notfound_home`、`notfound_poem`）列在 registry 待修清單，改版時改成統一值並在 CHANGELOG 記改版日，GA4 看長期趨勢要合併舊值。
+  - `<title>`／page_title 要看得出是 404（例：story「404 找不到這一頁｜…」、study `筆記|404|找不到頁面`），GA4 用標題就能篩出哪些錯網址有人進來。所有連結用絕對路徑（404 會出現在任何一層網址底下）。
+  - 各站寫法見站別檔（story §5、games §1、study §1、poem）。部落格（WordPress）等搬到 Astro 時一起做。
 - 中文內容使用全形標點；版面以手機閱讀為優先（390px 先做對）。
 
 ---
@@ -224,4 +230,5 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - `?hy_debug=1` 操作一輪，參數值沒有中文、讀者輸入的文字或 (not set)
 - 追蹤碼「和號」字元數為 0
 - `spec-version` meta 存在且是目前版本
+- 網站根目錄有 `404.html`，打一個不存在的網址會顯示它（§7）
 - 頁首最上方有品牌列：正式 logo＋「編織日和」文字，連到該子網域首頁（§7）

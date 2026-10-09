@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-10-09｜core v1.4、story v1.3、registry v1.3.4｜Zoe 提案、Alison 確認｜core §7 新增「404 頁」、§9 驗收加一項；story §5 補 404 寫法；story 上線 `404.html`（story#5）｜Zoe 要求：找不到的頁面要引導讀者回系列主頁看其他作品，不要出現 GitHub 白底錯誤頁
+  - GA4：404 頁新增 cta_id `notfound_hub`、`notfound_main`、`notfound_card`
+  - 部落格 404 延到搬 Astro 時一起做
+  - 已上線的 404 用的 cta_id 和新規則不同，統一成 `notfound_hub`／`notfound_main`／`notfound_card`：games `notfound_game`→`notfound_card`；study `notfound_topic`→`notfound_card`；poem `notfound_home`→`notfound_hub`、`notfound_poem`→`notfound_card`。列進 registry 待修清單，**各站改完當天在這裡記改版日**；GA4 看長期趨勢時要把舊值和新值合併
 - 2026-10-09｜core v1.3.1、games v1.6.1｜Alison（Zoe 確認上架）｜core §7：OG 圖與部落格首圖共用橫式設計、不放浮水印；games §6-1：morse_code 加入進度圖卡｜分享進度要能傳到訊息與社群；網頁預覽與文章首圖不需要浮水印
 
 - 2026-10-09｜core v1.3（補值域，不升版）、registry v1.3.3｜Zoe 提案、Alison 確認｜core §3-3 cta_type 值域加 `poem`；§7 品牌列追蹤值補「poem `poem`」（原標 ⚠ 待補）；registry 品牌列待修清單移除 poem（poem v0.4 已上線）｜poem 品牌列 brand_hub 送 cta_type=poem，GA4 一次篩得出各子網域
