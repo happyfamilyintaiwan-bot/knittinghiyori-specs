@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-09｜core v1.4、registry v1.3.4｜Zoe｜core §7 新增「404 頁」：每個子網域都要有，內容依序為品牌列、說明、回首頁大按鈕、推薦卡片（自動產生＋寫死備用）、跨站連結、頁尾；網址含 /en/、/ja/ 換語言；noindex、不放廣告單元；追蹤統一 `notfound_hub`／`notfound_<東西>`／`notfound_site`；§9 驗收加一項；registry 待修清單加 story、tools、poem 三項｜Zoe 希望打錯網址時引導讀者回系列主頁看更多；games、poem、study 已各自做了，統一寫法
+  - 2026-10-09 實查：study 符合（Drive 全站待建立）；games 缺跨站連結一行；poem 的回首頁 cta_id 要改名；story 沒有 404；tools 只有一句說明。都列進 registry 待修，各站下次改版時處理，並把 spec-version 改成 core-v1.4
+
 - 2026-10-09｜core v1.3.1、games v1.6.1｜Alison（Zoe 確認上架）｜core §7：OG 圖與部落格首圖共用橫式設計、不放浮水印；games §6-1：morse_code 加入進度圖卡｜分享進度要能傳到訊息與社群；網頁預覽與文章首圖不需要浮水印
 
 - 2026-10-09｜core v1.3（補值域，不升版）、registry v1.3.3｜Zoe 提案、Alison 確認｜core §3-3 cta_type 值域加 `poem`；§7 品牌列追蹤值補「poem `poem`」（原標 ⚠ 待補）；registry 品牌列待修清單移除 poem（poem v0.4 已上線）｜poem 品牌列 brand_hub 送 cta_type=poem，GA4 一次篩得出各子網域
