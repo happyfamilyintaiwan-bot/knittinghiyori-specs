@@ -4,9 +4,36 @@
 
 ---
 
-- 2026-10-09｜core v1.4、story v1.3｜Zoe｜core §7 新增「404 頁」、§9 驗收加一項；story §5 補 404 寫法；story 上線 `404.html`（story#5）｜Zoe 要求：找不到的頁面要引導讀者回系列主頁看其他作品，不要出現 GitHub 白底錯誤頁
+- 2026-10-09｜core v1.4、story v1.3、registry v1.3.4｜Zoe 提案、Alison 確認｜core §7 新增「404 頁」、§9 驗收加一項；story §5 補 404 寫法；story 上線 `404.html`（story#5）｜Zoe 要求：找不到的頁面要引導讀者回系列主頁看其他作品，不要出現 GitHub 白底錯誤頁
   - GA4：404 頁新增 cta_id `notfound_hub`、`notfound_main`、`notfound_card`
   - 部落格 404 延到搬 Astro 時一起做
+  - 已上線的 404 用的 cta_id 和新規則不同，統一成 `notfound_hub`／`notfound_main`／`notfound_card`：games `notfound_game`→`notfound_card`；study `notfound_topic`→`notfound_card`；poem `notfound_home`→`notfound_hub`、`notfound_poem`→`notfound_card`。列進 registry 待修清單，**各站改完當天在這裡記改版日**；GA4 看長期趨勢時要把舊值和新值合併
+- 2026-10-09｜core v1.3.1、games v1.6.1｜Alison（Zoe 確認上架）｜core §7：OG 圖與部落格首圖共用橫式設計、不放浮水印；games §6-1：morse_code 加入進度圖卡｜分享進度要能傳到訊息與社群；網頁預覽與文章首圖不需要浮水印
+
+- 2026-10-09｜core v1.3（補值域，不升版）、registry v1.3.3｜Zoe 提案、Alison 確認｜core §3-3 cta_type 值域加 `poem`；§7 品牌列追蹤值補「poem `poem`」（原標 ⚠ 待補）；registry 品牌列待修清單移除 poem（poem v0.4 已上線）｜poem 品牌列 brand_hub 送 cta_type=poem，GA4 一次篩得出各子網域
+  - 只補原本空著的值，不改既有寫法，所以 core 不升版、各站 spec-version 不用改
+
+- 2026-10-09｜registry morse_code 列｜Zoe｜摩斯加蝦皮 AirPods 5（gear_card／shopee）；絕對音感與摩斯加 iPhone 靜音鍵處理（navigator.audioSession.type=playback）與「iPhone 請關閉靜音鍵」提示｜Zoe 指定兩款都推薦戴耳機；靜音鍵打開時網頁音效會被靜音
+
+- 2026-10-09｜registry v1.3.2｜Zoe｜活用館脫出（katsuyo_escape）檢查：補中文名與專屬事件；遊戲頁聯盟 cta_type affiliate→klook、補 nofollow；game_milestone 參數 item_count→milestone（照 games §3-2）；補 og 預覽圖；頁尾新文字；對比修到 AA｜7 款遊戲逐款檢查的第 1 款
+  - **改版日 2026-10-09**：katsuyo 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
+
+- 2026-10-09｜poem v0.4｜Zoe｜每頁最上方加品牌列（正式 logo＋編織日和・詩，brand_hub）；灰字加深到 5.02；季節色當文字／按鈕時加深（日 35%、夜文字提亮 18%），12 個月都達 4.5；根目錄補 apple-touch-icon｜core §7 品牌列、§9 對比 0 筆不合格
+  - **改版日 2026-10-09**：poem 開始送 `cta_id=brand_hub`（`cta_type=poem`）
+
+- 2026-10-09｜registry v1.3.1｜Zoe｜`hiyori_pet` 補專屬事件 `pet_walk_remind`、`pet_walk_done`、`pet_walk_snooze`｜日和毛孩加入走動提醒（尚未上線）
+
+- 2026-10-09｜registry v1.3.1｜Zoe｜新增遊戲 `hiyori_pet`（日和毛孩，前綴 `pet_`，規劃中）｜games.md 規定開工前登記；10/4 的登記在舊分支 zoe/spec-v1.1 上沒有併進 main，這次重新登記
+
+- 2026-10-09｜poem v0.3｜Zoe｜詩頁 /MMDD/ 也放 1 個 AdSense（電子報之後、頁尾說明之前）；404 不放（AdSense 政策）；首頁與詩頁共用 slot 6629751780（收益合在一起看）；根目錄補 favicon.ico、/icons/ 換成 games 的品牌圖版本｜Zoe 要求每頁都有廣告並追蹤成效；Travelpayouts 網域顯示灰色地球
+  - **改版日 2026-10-09**：poem 詩頁開始有廣告
+
+- 2026-10-09｜registry v1.3、games v1.6｜Alison（Zoe 上架）｜新增 morse_code（前綴 morse_，已上線）；games §1 加共用引擎 /lib/hy-trainer/；§7 加篩選代碼 topic=morse（skill 沿用 ear_training、listening）；摩斯頁頁尾改 core v1.2 新文字、spec-version 改 core-v1.3/games-v1.6；主頁加卡片、篩選、JSON-LD、sitemap｜實證訓練法系列第 1 款「守燈人摩斯日誌」上線（Alison 交接寫的是 core-v1.0／games-v1.0 時的版號，依現況改成 registry v1.2→v1.3、games v1.5→v1.6）
+
+- 2026-10-06｜poem v0.2｜Zoe（Alison 交接提出）｜Drive、AdSense（只放首頁 1 個，slot 6629751780，不開自動廣告）、`.kh-legal`、`spec-version` 實際上線（v0.1.1 只寫了規則，repo 沒有）；所有連結在 build 時加 vignette 標記；新增 404 頁（2026-10-04 已上線）；§1 寫明 build.py 的常數與 `write()`｜Travelpayouts 後台顯示 poem Drive 無法使用
+  - **改版日 2026-10-06**：poem 開始有 AdSense 與 Drive 收益；spec-version 用 `core-v1.3/poem-v0.2`（交接寫 core v1.0，以目前版本為準）
+  - 小標與頁尾小字用新的 `--note` 色（白天對比 5.02）；網站原本的灰字 `--pencil` 與電子報按鈕對比不足，列在 §4 待補
+
 - 2026-10-04｜games v1.5、registry absolute_pitch 列｜Zoe｜§5 改為每款遊戲都可放少量主題相符的聯盟（每頁 1～2 個位置、蝦皮只放中文頁、網址和號寫 `&amp;`）；絕對音感中文頁加蝦皮練習用耳機、補回介紹文連結｜Zoe 指定：所有子網域都可以有 AdSense、Travelpayouts，限制數量、不影響讀者體驗
   - **改版日 2026-10-04**：絕對音感開始有聯盟點擊（cta_type=shopee）
 
