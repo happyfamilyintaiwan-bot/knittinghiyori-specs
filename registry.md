@@ -107,7 +107,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | `jr_pass` | `affiliate_click`＋`platform`、`tool` 參數 | 同上 |
 | 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（dadaocheng_*、escape_room_*）→ `klook`。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
-| 404 頁 cta_id（games、study、poem） | games `notfound_game`；study `notfound_topic`；poem `notfound_home`、`notfound_poem`，和 core §7 統一值不同 | games、study `→ notfound_card`；poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
+| 404 頁 cta_id（~~games~~ 2026-10-10 已改、study、poem） | ~~games `notfound_game`~~；study `notfound_topic`；poem `notfound_home`、`notfound_poem`，和 core §7 統一值不同 | games、study `→ notfound_card`；poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
 | 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 4 部 8 頁仍用舊的內嵌追蹤（已改送 content_group=story、work）；page_title 不是 `追劇\|…` 格式 | 改用 hy-story.js、page_title 改成 story.md 格式，重驗 DebugView（搬資料夾、關自動廣告、spec-version 已於 2026-10-04 完成） |
 
