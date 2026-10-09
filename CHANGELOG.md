@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-09｜registry morse_code 列｜Zoe｜摩斯加蝦皮 AirPods 5（gear_card／shopee）；絕對音感與摩斯加 iPhone 靜音鍵處理（navigator.audioSession.type=playback）與「iPhone 請關閉靜音鍵」提示｜Zoe 指定兩款都推薦戴耳機；靜音鍵打開時網頁音效會被靜音
+
 - 2026-10-09｜registry v1.3.2｜Zoe｜活用館脫出（katsuyo_escape）檢查：補中文名與專屬事件；遊戲頁聯盟 cta_type affiliate→klook、補 nofollow；game_milestone 參數 item_count→milestone（照 games §3-2）；補 og 預覽圖；頁尾新文字；對比修到 AA｜7 款遊戲逐款檢查的第 1 款
   - **改版日 2026-10-09**：katsuyo 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
 
