@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-10｜registry v1.3.5｜Zoe｜日檢密室（jlpt_mishitsu）檢查：補中文名；遊戲頁聯盟 cta_type affiliate→trip、補 nofollow；game_milestone 參數 item_count→milestone；補 og 圖、結構化資料、介紹文連結；頁尾新文字；字型與分享網址去和號；對比修到 AA。全站 vignette 標記改成持續留意（程式之後產生的連結也會加上）｜7 款遊戲逐款檢查的第 2 款；日檢的旅遊卡片、分享、來源連結都是程式產生的，原本沒有 vignette 標記
+  - **改版日 2026-10-10**：jlpt 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
+
 - 2026-10-09｜core v1.4、story v1.3、registry v1.3.4｜Zoe 提案、Alison 確認｜core §7 新增「404 頁」、§9 驗收加一項；story §5 補 404 寫法；story 上線 `404.html`（story#5）｜Zoe 要求：找不到的頁面要引導讀者回系列主頁看其他作品，不要出現 GitHub 白底錯誤頁
   - GA4：404 頁新增 cta_id `notfound_hub`、`notfound_main`、`notfound_card`
   - 部落格 404 延到搬 Astro 時一起做
