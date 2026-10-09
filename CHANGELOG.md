@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-09｜registry v1.3.2｜Zoe｜活用館脫出（katsuyo_escape）檢查：補中文名與專屬事件；遊戲頁聯盟 cta_type affiliate→klook、補 nofollow；game_milestone 參數 item_count→milestone（照 games §3-2）；補 og 預覽圖；頁尾新文字；對比修到 AA｜7 款遊戲逐款檢查的第 1 款
+  - **改版日 2026-10-09**：katsuyo 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
+
 - 2026-10-09｜poem v0.4｜Zoe｜每頁最上方加品牌列（正式 logo＋編織日和・詩，brand_hub）；灰字加深到 5.02；季節色當文字／按鈕時加深（日 35%、夜文字提亮 18%），12 個月都達 4.5；根目錄補 apple-touch-icon｜core §7 品牌列、§9 對比 0 筆不合格
   - **改版日 2026-10-09**：poem 開始送 `cta_id=brand_hub`（`cta_type=poem`，core 值域待 Alison 確認）
 
