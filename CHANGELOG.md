@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-09｜core v1.3.1、games v1.6.1｜Alison（Zoe 確認上架）｜core §7：OG 圖與部落格首圖共用橫式設計、不放浮水印；games §6-1：morse_code 加入進度圖卡｜分享進度要能傳到訊息與社群；網頁預覽與文章首圖不需要浮水印
+
 - 2026-10-09｜core v1.3（補值域，不升版）、registry v1.3.3｜Zoe 提案、Alison 確認｜core §3-3 cta_type 值域加 `poem`；§7 品牌列追蹤值補「poem `poem`」（原標 ⚠ 待補）；registry 品牌列待修清單移除 poem（poem v0.4 已上線）｜poem 品牌列 brand_hub 送 cta_type=poem，GA4 一次篩得出各子網域
   - 只補原本空著的值，不改既有寫法，所以 core 不升版、各站 spec-version 不用改
 
