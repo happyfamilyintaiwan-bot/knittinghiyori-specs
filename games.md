@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.5｜2026-10-04｜Zoe**（v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.6｜2026-10-09｜Zoe**（v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -13,6 +13,7 @@
 | 網址 | `games.knittinghiyori.com/<slug>/`，資料夾＋`index.html`（＋og 圖 1200×630） |
 | 分頁圖示 | 全部用正式 logo（方形「編織日和 Knitting Hiyori」，原檔 512px）做成 `/icons/` 整組：favicon.ico（16／32／48）、favicon-32、favicon-96、icon-192、icon-512、apple-touch-icon；**根目錄另放 `favicon.ico`、`apple-touch-icon.png`**（瀏覽器、Google、iPhone 書籤會直接找根目錄，沒有就顯示灰色地球）。換圖時連結加 `?v=N` 逼瀏覽器重抓 |
 | 404 頁 | `404.html`（GitHub Pages 遇到不存在的網址都會顯示它）：品牌列＋「4🌸4」＋中英日一句說明＋「回遊戲主頁」按鈕＋全部遊戲卡片。卡片在瀏覽器讀遊戲主頁的 `a.card` 自動產生，主頁新增遊戲時 404 不用改；讀不到時用頁面裡寫死的備用清單。**語言**：網址含 `/ja/`、`/en/` 優先，其次瀏覽器語言（中文以外沒對應就用英文），整頁文字、品牌列站名跟著換；有該語言版本的遊戲排前面並連到該語言頁，其他遊戲標「中国語／Chinese」。`noindex`、有 GA4（page_title `遊戲\|404\|找不到頁面`，用 page_location 找壞連結）、頁尾 `.kh-legal` |
+| 共用引擎 | `/lib/hy-trainer/`（實證訓練法系列共用：階段、門檻解鎖、交錯與間隔複習、進度紀錄）；內容包放各遊戲資料夾。改引擎前要確認所有使用中的遊戲都相容，存檔格式要能讀舊版 |
 | og 圖 | 左上角品牌列：正式 logo（約 56px）＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），和頁面頂端品牌列一致；圖上網址寫到該遊戲（含語言）路徑，例 `games.knittinghiyori.com/absolute-pitch/en`。**換圖一律用新檔名**（`og-2.png`、`og-3.png`…，FB／LINE 才會重抓），og:image、twitter:image、JSON-LD 三處一起改；`og:image:alt` 開頭寫品牌名 |
 | 多語 | 英日放在遊戲資料夾裡：`/<slug>/en/`、`/<slug>/ja/`（core §7 例外）；三語共用同一個 localStorage key；交付 zip 的最外層就是中文版 |
 | slug／game_id | 資料夾用連字號、`game_id` 用底線，兩者對應（`jlpt-mishitsu` ↔ `jlpt_mishitsu`） |
@@ -186,6 +187,7 @@ body 底部放標準 hyGame 追蹤碼：
 | coding | sql | sql_detective |
 | coding | swiftui | swiftui_detective |
 | music | ear_training | absolute_pitch |
+| morse | ear_training、listening | morse_code |
 | travel | planning | shun_tabi（擱置） |
 
 ---

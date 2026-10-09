@@ -4,6 +4,12 @@
 
 ---
 
+- 2026-10-09｜registry v1.3、games v1.6｜Alison（Zoe 上架）｜新增 morse_code（前綴 morse_，已上線）；games §1 加共用引擎 /lib/hy-trainer/；§7 加篩選代碼 topic=morse（skill 沿用 ear_training、listening）；摩斯頁頁尾改 core v1.2 新文字、spec-version 改 core-v1.3/games-v1.6；主頁加卡片、篩選、JSON-LD、sitemap｜實證訓練法系列第 1 款「守燈人摩斯日誌」上線（Alison 交接寫的是 core-v1.0／games-v1.0 時的版號，依現況改成 registry v1.2→v1.3、games v1.5→v1.6）
+
+- 2026-10-06｜poem v0.2｜Zoe（Alison 交接提出）｜Drive、AdSense（只放首頁 1 個，slot 6629751780，不開自動廣告）、`.kh-legal`、`spec-version` 實際上線（v0.1.1 只寫了規則，repo 沒有）；所有連結在 build 時加 vignette 標記；新增 404 頁（2026-10-04 已上線）；§1 寫明 build.py 的常數與 `write()`｜Travelpayouts 後台顯示 poem Drive 無法使用
+  - **改版日 2026-10-06**：poem 開始有 AdSense 與 Drive 收益；spec-version 用 `core-v1.3/poem-v0.2`（交接寫 core v1.0，以目前版本為準）
+  - 小標與頁尾小字用新的 `--note` 色（白天對比 5.02）；網站原本的灰字 `--pencil` 與電子報按鈕對比不足，列在 §4 待補
+
 - 2026-10-04｜games v1.5、registry absolute_pitch 列｜Zoe｜§5 改為每款遊戲都可放少量主題相符的聯盟（每頁 1～2 個位置、蝦皮只放中文頁、網址和號寫 `&amp;`）；絕對音感中文頁加蝦皮練習用耳機、補回介紹文連結｜Zoe 指定：所有子網域都可以有 AdSense、Travelpayouts，限制數量、不影響讀者體驗
   - **改版日 2026-10-04**：絕對音感開始有聯盟點擊（cta_type=shopee）
 
