@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3｜2026-10-09｜Zoe＋Alison**（v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.3.1｜2026-10-09｜Zoe＋Alison**（v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -58,6 +58,7 @@
 | `absolute_pitch` | 絕對音感養成所（en：Absolute Pitch Trainer／ja：絶対音感養成所） | `ap_` | 已上線 | 三語：/absolute-pitch/、/absolute-pitch/en/、/absolute-pitch/ja/；專屬事件 `ap_daily_goal`、`ap_pair_fixed`、`ap_progress_reset`；聯盟：中文頁蝦皮練習用耳機（`below_game`／shopee，2026-10-04 起）；介紹文 knittinghiyori.com/absolute-pitch-training-game/（2026-10-04 發布） |
 | `flower_shop` | ひより花店 | `flower_` | 已上線 | ⚠ 事件名稱待確認 |
 | `morse_code` | 守燈人摩斯日誌 | `morse_` | 已上線 | 實證訓練法系列第 1 款；只有中文；共用引擎 /lib/hy-trainer/；level＝Koch 課數 l01–l40；option＝koch／group；專屬事件 morse_skip_intro、morse_daily_goal（streak）、morse_pair_play、morse_progress_reset；聯盟 cta_id=lighthouse_trip（klook）；2026-10-09 上線 |
+| `hiyori_pet` | 日和毛孩（網頁電子寵物） | `pet_` | 規劃中 | 網址 /hiyori-pet/，預定 2026-11-09 上線，施工分支 `hiyori-pet`；只有中文；專屬事件 `pet_adopt`、`pet_action`、`pet_stage`、`pet_mail_read`、`pet_pip_open`、`pet_pwa_install`、`pet_move`（option＝export／import）；開發中再加 `pet_walk_*`（走動提醒）、`pet_visit_share`／`pet_visit_open`（串門子連結），定名後補；聯盟 klook（cta_id `trip_result`）；localStorage `hiyori-pet:save`、`hiyori-pet:book`、`hiyori-pet:ios-tip` |
 | ⚠ `tozai_dojo` | 東西腔道場 | `tozai_` | 已上線 | ⚠ game_id 與事件待確認 |
 | `shun_tabi` | 旬之旅（遊戲版） | — | 擱置 | 改做 season_booking（見工具表） |
 

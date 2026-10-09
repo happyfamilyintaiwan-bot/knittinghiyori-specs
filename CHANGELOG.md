@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-09｜registry v1.3.1｜Zoe｜新增遊戲 `hiyori_pet`（日和毛孩，前綴 `pet_`，規劃中）｜games.md 規定開工前登記；10/4 的登記在舊分支 zoe/spec-v1.1 上沒有併進 main，這次重新登記
+
 - 2026-10-09｜poem v0.3｜Zoe｜詩頁 /MMDD/ 也放 1 個 AdSense（電子報之後、頁尾說明之前）；404 不放（AdSense 政策）；首頁與詩頁共用 slot 6629751780（收益合在一起看）；根目錄補 favicon.ico、/icons/ 換成 games 的品牌圖版本｜Zoe 要求每頁都有廣告並追蹤成效；Travelpayouts 網域顯示灰色地球
   - **改版日 2026-10-09**：poem 詩頁開始有廣告
 
