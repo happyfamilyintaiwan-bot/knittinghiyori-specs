@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.8.1｜2026-10-10｜Zoe**（v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.8.2｜2026-10-10｜Zoe**（v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -112,7 +112,23 @@ body 底部放標準 hyGame 追蹤碼：
 
 ### 3-6 GA4 後台
 
-- 參數：`game_id`、`level`、`correct_count`、`milestone` ⚠ 以 GA4 Custom definitions 匯出表核對註冊狀態
+- 自訂定義（2026-10-10 核對並補登記，GA4 資源 Knitting Hiyori）。**登記日之前的資料報表看不到，也補不回來**：
+
+  | 參數 | GA4 顯示名稱 | 類型 | 登記日 |
+  |---|---|---|---|
+  | `game_id` | 遊戲 | 維度 | 2026-10-10 |
+  | `level` | 關卡 | 維度 | 2026-10-10 |
+  | `result` | 結果 | 維度 | 2026-10-10 |
+  | `source` | 來源 | 維度 | 2026-10-10 |
+  | `milestone` | 里程碑 | 維度 | 2026-10-10 |
+  | `unlock_id` | 解鎖項目 | 維度 | 2026-10-10 |
+  | `correct_count` | 答對數 | 指標 | 2026-10-10 |
+  | `round_count` | 局數 | 指標 | 2026-10-10 |
+  | `cta_id`、`cta_type`、`method`、`content_type`、`option`、`entry_point`、`page_lang` | （沿用全站既有的） | 維度 | 2026-08～09 |
+  | `duration_sec`、`item_count` | 完成秒數、項目數 | 指標 | 2026-08～09 |
+
+- 不登記：`score`（各遊戲算法不同，core §3-4）、`card_index`。要分辨是哪一款，登記日之前的資料用網頁路徑或頁面標題（`遊戲|名稱|…`）
+- 名額（全站共用）：維度 31／50、指標 11／50
 - 重要事件 ⚠ 待定（core §3-4）
 - 不另建資源
 

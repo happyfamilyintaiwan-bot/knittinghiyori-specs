@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-10-10｜games v1.8.2｜Zoe｜GA4 自訂定義核對：遊戲用的 `game_id`、`level`、`result`、`source`、`milestone`、`unlock_id`（維度）與 `correct_count`、`round_count`（指標）原本都沒登記，今天補登記（Zoe 同意，Claude 在 GA4 建立）；`score` 照 core §3-4 不登記｜Zoe 要看遊戲數據，發現關卡與過關結果報表看不到
+  - **登記日 2026-10-10**：這 8 個欄位在報表裡從今天才開始有資料
+  - core §3-4 參數字典寫 `source`、`result`、`game_id` 已註冊，實際上到今天才登記；`unlock_id`、`round_count` 還不在字典裡。core 是共管檔，待 Zoe、Alison 確認後再改
+
 - 2026-10-10｜registry v1.3.10｜Zoe｜待修清單「404 頁 cta_id」劃掉 poem（已照 core §7 改成統一值，poem#8）；剩 study 待改｜Alison 已確認可以合併（Zoe 2026-10-10 轉達）
 
 - 2026-10-10｜poem v0.5｜Zoe｜404 頁照 core v1.4：`notfound_home → notfound_hub`、`notfound_poem → notfound_card`，`cta_type` 由 `other` 改 `poem`；新增到主站連結 `notfound_main`；robots 改 `noindex, follow`；404 的 GA4 加 `page_title`＝`詩|404|找不到頁面`；全站 spec-version 改 `core-v1.4/poem-v0.5`（poem#8）｜registry 待修清單「404 頁 cta_id」的 poem 項
