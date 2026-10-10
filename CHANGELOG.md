@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-10｜poem v0.5｜Zoe｜404 頁照 core v1.4：`notfound_home → notfound_hub`、`notfound_poem → notfound_card`，`cta_type` 由 `other` 改 `poem`；新增到主站連結 `notfound_main`；robots 改 `noindex, follow`；404 的 GA4 加 `page_title`＝`詩|404|找不到頁面`；全站 spec-version 改 `core-v1.4/poem-v0.5`（poem#8）｜registry 待修清單「404 頁 cta_id」的 poem 項
+  - **改版日 2026-10-10**：poem 的 404 點擊改送 `notfound_hub`／`notfound_card`／`notfound_main`，看長期趨勢要合併舊值 `notfound_home`／`notfound_poem`
+
 - 2026-10-10｜games v1.8.1、registry v1.3.9｜Zoe｜遊戲主頁檢查：補預覽圖 /assets/og-hub.png（原本沒有）、對比修到 AA、到主站連結 cta_type `mainsite`→`article`（`mainsite` 不在 core 值域）、頁尾 cta_id `footer`→`footer_main`；主頁 game_id 確認為 `hub`；主頁 NEW 只標最新三款（Zoe 決定）｜主頁是最後一頁還沒檢查的；Zoe 要求未來都只標最新三款
   - **改版日 2026-10-10**：主頁到主站的點擊之前是 `cta_type=mainsite`（頁尾 cta_id 之前是 `footer`），看長期趨勢要合併
 
