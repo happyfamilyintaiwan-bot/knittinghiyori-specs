@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-10｜study v0.3（core §1 補值，core 版本不變）｜Zoe｜core §1 study 列填入 AdSense slot `7499102019` 與 Drive `emrld.ltd/NTgzNjI3.js?t=583627`；study 每頁底部 1 個手動版位（404 不放）、Drive 全頁載入；新增專屬分享縮圖 `icons/og-study.jpg`；404 對齊 core v1.4（page_title 改 `筆記|找不到頁面|404`、不放 canonical／OG、加跨站連結 `notfound_site`、/en/ /ja/ 換語言）；各頁 spec-version 改 `core-v1.4/study-v0.3`｜Zoe 建好廣告單元與 Drive；study 原本借用 story 的分享圖
+  - **改版日 2026-10-10**：404 的 page_title 由 `筆記|404|找不到頁面` 改成 `筆記|找不到頁面|404`，看 404 報表時兩個都要算
+
 - 2026-10-10｜registry v1.3.5｜Zoe｜日檢密室（jlpt_mishitsu）檢查：補中文名；遊戲頁聯盟 cta_type affiliate→trip、補 nofollow；game_milestone 參數 item_count→milestone；補 og 圖、結構化資料、介紹文連結；頁尾新文字；字型與分享網址去和號；對比修到 AA。全站 vignette 標記改成持續留意（程式之後產生的連結也會加上）｜7 款遊戲逐款檢查的第 2 款；日檢的旅遊卡片、分享、來源連結都是程式產生的，原本沒有 vignette 標記
   - **改版日 2026-10-10**：jlpt 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
 

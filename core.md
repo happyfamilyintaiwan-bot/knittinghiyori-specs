@@ -66,7 +66,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | games | `5316670118` | `emrld.ltd/NTc4NjIz.js?t=578623` | 不開 |
 | poem | `6629751780` | `emrld.ltd/NTc4NjIw.js?t=578620` | 不開 |
 | story | `2285424505` | `emrld.ltd/NTc4NjI0.js?t=578624` | 首頁開；小說、追劇、漫畫頁（含 5 部原創追劇）**不開**（不帶 `?client=`＋AdSense 後台網頁排除，見 story.md） |
-| study | ⚠ 待建立 | ⚠ 待建立 | 不開 |
+| study | `7499102019` | `emrld.ltd/NTgzNjI3.js?t=583627` | 不開 |
 
 ---
 

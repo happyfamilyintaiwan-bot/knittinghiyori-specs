@@ -1,6 +1,6 @@
 # study.knittinghiyori.com 規範
 
-**版本：study-v0.2｜2026-10-04｜Zoe**（v0.2：設計改中性專業調性、首頁加「目次」`toc_link`。v0.1：Alison 提案、Zoe 定案）
+**版本：study-v0.3｜2026-10-10｜Zoe**（v0.3：開 AdSense 底部版位與 Travelpayouts Drive、專屬分享縮圖、404 對齊 core v1.4。v0.2：設計改中性專業調性、首頁加「目次」`toc_link`。v0.1：Alison 提案、Zoe 定案）
 內容負責人：Alison；上架：Zoe（見 core §0）。先讀 `core.md`；本檔只寫 study 專屬的部分。
 
 ## 1. 網址與檔案
@@ -14,14 +14,16 @@
 | 原稿 | `notes/<topic>/<slug>.md`（Markdown＋開頭 title／date／summary／source） |
 | 產生頁面 | `python3 build.py` 產生全部 HTML、sitemap、404，並做上線前檢查；產生的檔案不手改 |
 | 頁首品牌列 | core §7：正式 logo＋「編織日和・學習筆記」，連 study 首頁 |
-| 404 頁 | `404.html`：品牌列＋說明＋「回學習筆記首頁」＋最近更新＋全部主題卡；`noindex`、有 GA4（page_title `筆記\|404\|找不到頁面`） |
+| 404 頁 | `404.html`，照 core §7：品牌列＋說明＋「回學習筆記首頁」＋最近更新＋全部主題卡＋跨站連結一行；網址含 `/en/`、`/ja/` 時說明與按鈕換英文／日文；`noindex`、不放 canonical／OG／廣告單元；page_title `筆記\|找不到頁面\|404` |
 | 設計 | 日系筆記本骨架＋中性專業調性（照顧男女讀者）：點陣方格底、明朝體標題（Noto Serif TC）、等寬編號（IBM Plex Mono）、方正卡片＋左上索引標籤、筆記頁左側紅色邊線；不用紙膠帶、便利貼、手寫字、歪斜卡片這類偏可愛的元素。色彩與字型寫在 `assets/study.css` 開頭的變數 |
+| 分享縮圖 | `icons/og-study.jpg`（1200×630）：左上正式 logo＋「編織日和・學習筆記」、標題、目次、網址；全站共用一張。換圖用新檔名（`og-study-2.jpg`…），改 `build.py` 的 `OG_IMG`；`og:image:alt` 開頭寫品牌名 |
 | 語言 | 目前只有中文 |
 
 ## 2. 廣告
 
 - 不開自動廣告：AdSense 載入碼不帶 `?client=`，所有連結加 `data-google-vignette="false"`（build.py 自動加）。
-- 每頁最多 1 個手動版位，放在內容最下面、頁尾上面；slot 建立前不放。
+- 每頁最多 1 個手動版位（單元「Study-頁面底部」，slot 見 core §1），放在內容最下面、頁尾上面；404 不放。
+- Travelpayouts Drive 放 `<head>` 第一個 script，所有頁面含 404，寫法同 tools（含 `data-cmp-ab`）。
 
 ## 3. GA4
 
@@ -29,7 +31,7 @@
 |---|---|
 | `content_group` | `study` |
 | 內容 id 參數 | `topic`（首頁、404 送 `hub`）；需在 GA4 註冊成事件範圍自訂維度 |
-| `page_title` | `筆記\|主題名\|筆記標題`，主題頁 `筆記\|CS50\|主題總覽`，首頁 `筆記\|學習筆記\|總覽`，404 `筆記\|404\|找不到頁面` |
+| `page_title` | `筆記\|主題名\|筆記標題`，主題頁 `筆記\|CS50\|主題總覽`，首頁 `筆記\|學習筆記\|總覽`，404 `筆記\|找不到頁面\|404` |
 
 事件只用 core 共用事件 `cta_click`：
 
@@ -43,6 +45,7 @@
 | `source_link` | 筆記頁來源連結 | other |
 | `notfound_hub` | 404「回學習筆記首頁」 | study |
 | `notfound_topic` | 404 主題卡 | 同 `topic_card` |
+| `notfound_site` | 404 跨站連結 | story／game／tool／article／other（詩） |
 
 ## 4. 驗收
 
