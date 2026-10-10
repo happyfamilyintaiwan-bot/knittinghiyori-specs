@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3.9｜2026-10-10｜Zoe＋Alison**（v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.3.10｜2026-10-10｜Zoe＋Alison**（v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -108,7 +108,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | `jr_pass` | `affiliate_click`＋`platform`、`tool` 參數 | 同上 |
 | 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql（~~below_game~~ 2026-10-10 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（~~dadaocheng_result、escape_room_result~~ 2026-10-10 遊戲頁已改）→ `klook`；tozai（~~start_card、result_card~~）→ `trip`、flower（~~flower_trip~~）→ `klook`，都在 2026-10-10 改完。**遊戲頁全部改完，只剩 WordPress 介紹文裡的**。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
-| 404 頁 cta_id（~~games~~ 2026-10-10 已改、study、poem） | ~~games `notfound_game`~~；study `notfound_topic`；poem `notfound_home`、`notfound_poem`，和 core §7 統一值不同 | games、study `→ notfound_card`；poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
+| 404 頁 cta_id（~~games~~、~~poem~~ 2026-10-10 已改、study） | ~~games `notfound_game`~~；study `notfound_topic`；~~poem `notfound_home`、`notfound_poem`~~，和 core §7 統一值不同 | games、study `→ notfound_card`；~~poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`~~（poem#8）；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
 | 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 4 部 8 頁仍用舊的內嵌追蹤（已改送 content_group=story、work）；page_title 不是 `追劇\|…` 格式 | 改用 hy-story.js、page_title 改成 story.md 格式，重驗 DebugView（搬資料夾、關自動廣告、spec-version 已於 2026-10-04 完成） |
 

@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-10｜registry v1.3.10｜Zoe｜待修清單「404 頁 cta_id」劃掉 poem（已照 core §7 改成統一值，poem#8）；剩 study 待改｜Alison 已確認可以合併（Zoe 2026-10-10 轉達）
+
 - 2026-10-10｜poem v0.5｜Zoe｜404 頁照 core v1.4：`notfound_home → notfound_hub`、`notfound_poem → notfound_card`，`cta_type` 由 `other` 改 `poem`；新增到主站連結 `notfound_main`；robots 改 `noindex, follow`；404 的 GA4 加 `page_title`＝`詩|404|找不到頁面`；全站 spec-version 改 `core-v1.4/poem-v0.5`（poem#8）｜registry 待修清單「404 頁 cta_id」的 poem 項
   - **改版日 2026-10-10**：poem 的 404 點擊改送 `notfound_hub`／`notfound_card`／`notfound_main`，看長期趨勢要合併舊值 `notfound_home`／`notfound_poem`
 
