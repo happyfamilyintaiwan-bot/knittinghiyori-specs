@@ -96,7 +96,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | `cs50` | 哈佛 CS50 計算機科學概論 | study /cs50/ | 已上線 | 公開課；卡片連 `/harvard-cs50-courses/` |
 | `claude-ai` | Claude AI 與 AI 分身 | study /claude-ai/ | 已上線 | 自學；卡片連 `/claude-beginner-guide-anthropic-academy-courses/` |
 | `minerva-mda` | Minerva MDA | study /minerva-mda/ | 已上線 | 上過的課；卡片連 `/minerva-university-mda-master-degree-guide/`；⚠ 正式課程名稱待 Alison 補 |
-| `japanese` | 日文學習 | study /japanese/ | 已上線 | 自學；卡片連 `/japanese-verb-conjugation-six-forms-five-types/` |
+| `japanese` | 日文學習 | study /japanese/ | 已上線 | 自學；卡片連 hub 文章 `/learn-japanese-self-study-guide/`（2026-10-10 起；之前連動詞變化總整理） |
 | `chess` | 西洋棋 | study /chess/ | 已上線 | 自學；卡片連 `/chess-for-beginners/` |
 | `artists-way` | 藝術家之路（The Artist's Way） | study /artists-way/、/artists-way/abundant-studio/、/en/artists-way/abundant-studio/ | 已上線 | 自學；內容 Alison；互動頁「豐盛工作室／The Abundant Studio」中英雙語，2026-10-10 上線；事件前綴 `studio_`（與工具／遊戲前綴不重複）；page_title `筆記\|藝術家之路\|豐盛工作室`；聯盟：中文頁蝦皮 2 本書（read_card、book_shelf） |
 
