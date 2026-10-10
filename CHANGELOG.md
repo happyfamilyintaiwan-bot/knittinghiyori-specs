@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-10｜core v1.6、blog v1.1｜Zoe｜core §3-3 cta_type 加 `newsletter`、§3-2 新增 `read_depth`（`pct` 50／90）、§3-1 content_group 加 `article`；blog 新增 §4 GA4 追蹤（cta_id 位置表、page_title `文章|主題|文章標題`）｜部落格搬到 Astro，要跟子網域用同一套事件；訂閱是最重要的轉換，獨立一個 cta_type
+  - **改版日**：新站第一批頁面上線那天（預計 2026-11 中試水溫 10 頁）。WordPress 舊頁面沒有這些事件，報表比較時要分開看
+
 - 2026-10-10｜core v1.5、study v0.4、registry v1.4｜Alison 提案、Zoe 上架｜core §3-3 content_type 加 `study`、`invite`（invite 是「固定作息燈塔」要用的，Alison 要求併成同一列先加）；study 新增互動頁規則（整頁 HTML、中英雙語網址、`topics.json` 的 `page`、產生器放 `interactive/`、站台共用值用環境變數帶入）、聯盟連結規則、cta_id `page_link`／`read_card`／`book_shelf` 與 §3-1 互動頁事件（前綴 studio_）；registry 新增 `artists-way`（已上線）｜Alison 新增 12 週創造力練習互動頁「豐盛工作室」，邀請朋友的 share 需要 study 值，study 原本只支援 Markdown 筆記與中文
   - **改版日 2026-10-10**：study 開始有聯盟點擊（cta_type=shopee）
   - 上架時的技術調整：Drive、AdSense 底部版位、cookie_domain、分頁圖示、og 圖補 logo 與網址；各頁 spec-version `core-v1.5/study-v0.4`

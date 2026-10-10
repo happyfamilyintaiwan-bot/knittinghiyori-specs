@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.5｜2026-10-10｜Zoe＋Alison**（v1.5：content_type 加 study、invite。v1.4：每個子網域都要有 404 頁，統一內容與追蹤。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.6｜2026-10-10｜Zoe＋Alison**（v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite。v1.4：每個子網域都要有 404 頁，統一內容與追蹤。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -88,7 +88,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 ### 3-1 設計原則
 1. 一個參數名稱＝一種意思，全站通用。
 2. 內容 id 各用各的：工具 `tool_id`、遊戲 `game_id`、故事／小說／追劇 `work`，不互相借用。工具與遊戲的 id 用**底線**（`travel_split`）；**story 的 `work` 例外用連字號**，直接等於作品資料夾名（`a-gentleman-in-moscow`），不要改成底線。**study 的 `topic` 同樣用連字號**，直接等於主題資料夾名（`claude-ai`）。工具若放在 games 子網域，仍送 `tool_id`。
-3. `content_group`：工具＝`tool`、遊戲＝`game`、故事＝`story`（⚠ 待核對既有作品）、學習筆記＝`study`、詩＝⚠ 待確認。
+3. `content_group`：部落格文章＝`article`（部落格上的工具頁＝`tool`）、工具＝`tool`、遊戲＝`game`、故事＝`story`（⚠ 待核對既有作品）、學習筆記＝`study`、詩＝⚠ 待確認。
 4. **參數值只能是固定的英文代碼**：不送讀者輸入的文字、中文句子或個資。
 5. 不逐次送高頻動作（按鍵、輸入），結果彙總在一個事件。
 6. 名稱 40 字元內；參數值 100 字元內；每事件 25 個參數內。
@@ -105,6 +105,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | `share`／`share_cancel` | 傳給別人 | `method`、`content_type` |
 | `export` | 自己留存 | `method`（copy_text／image／print） |
 | `faq_open` | 展開 FAQ | `option` |
+| `read_depth` | 文章內文讀到 50％、90％ 各送一次（部落格） | `pct`（50／90） |
 | `lang_switch`／`lang_auto` | 切換語言 | `source`、`from_lang` |
 | `open_saved_shortcut`、`install_*`、`pwa_*`、`bookmark_shortcut` | 加到桌面相關 | `option`／`result` |
 
@@ -121,7 +122,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
 | `content_type` | result、tool、game、story、study、invite（邀請朋友加入，連結帶進度）（⚠ 詩待補） |
-| `cta_type` | tool、article、game、story、study、poem、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
+| `cta_type` | tool、article、game、story、study、poem、newsletter（去訂閱電子報：Kit 表單或訂閱中心）、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja |
 
