@@ -135,14 +135,16 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | `page_lang` | 介面語言 | 故事規範 |
 | `cta_id`、`cta_type` | 點的位置、去哪裡 | 故事規範 |
 | `entry_point` | 從哪裡開始用 | 故事規範 |
-| `method`、`content_type`、`option`、`source`、`result` | 見 3-2、3-3 | 工具規範 |
+| `method`、`content_type`、`option` | 見 3-2、3-3 | 工具規範 |
+| `source`、`result` | 動作從哪裡觸發、結果（見 3-2、3-3） | 2026-10-10 才登記（之前字典寫已註冊，實際沒有） |
 | `item_count`（指標） | 個數 | 工具規範 |
 | `duration_sec`（指標） | 秒數 | 故事規範 |
-| `game_id` | 哪個遊戲 | 遊戲規範 |
-| `level`、`correct_count`、`milestone` | 關卡（l00–l99）、答對數、里程碑 | ⚠ 遊戲規範（以 GA4 匯出表核對） |
+| `game_id` | 哪個遊戲 | 遊戲規範（2026-10-10 登記） |
+| `level`、`milestone`、`unlock_id` | 關卡（l00–l99）、里程碑、解鎖項目 | 遊戲規範（2026-10-10 登記） |
+| `correct_count`、`round_count`（指標） | 答對數、這次造訪玩到第幾局 | 遊戲規範（2026-10-10 登記） |
 | `card_index`、`score`、`pct` | 數字 | 不註冊（需要時再加） |
 
-- 自訂維度名額（事件範圍 50 個）**全站共用**，新增參數前先查這張表，能沿用就沿用。
+- 自訂維度名額（事件範圍 50 個）**全站共用**，新增參數前先查這張表，能沿用就沿用。2026-10-10 實際用量：維度 31／50、指標 11／50。**登記日之前的資料報表看不到、也補不回來**，新參數上線前先登記。
 - 保留名稱（不要使用）：`lang`、`tool`、`type`、`device`、`platform`、`content`、`choice`、`outcome`、`level_name`、`success`、`character`。
 - 重要事件：`share`、`cta_click`、`tool_result`、`open_saved_shortcut`（⚠ 遊戲的待補）。
 - 子網域都在 knittinghiyori.com 底下，cookie 共用，**不用設定跨網域**。

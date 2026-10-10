@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-10｜core v1.4（補登記狀態，不升版）｜Zoe 確認｜§3-4 參數字典照 GA4 實際狀況更新：`source`、`result`、`game_id`、`level`、`milestone`、`correct_count` 標上 2026-10-10 登記；新增 `unlock_id`（維度）、`round_count`（指標）；補一句「新參數上線前先登記」與目前用量｜字典原本寫已註冊的，核對 GA4 後發現沒有；只更新事實，不改規則，各站 spec-version 不用改
+
 - 2026-10-10｜games v1.8.2｜Zoe｜GA4 自訂定義核對：遊戲用的 `game_id`、`level`、`result`、`source`、`milestone`、`unlock_id`（維度）與 `correct_count`、`round_count`（指標）原本都沒登記，今天補登記（Zoe 同意，Claude 在 GA4 建立）；`score` 照 core §3-4 不登記｜Zoe 要看遊戲數據，發現關卡與過關結果報表看不到
   - **登記日 2026-10-10**：這 8 個欄位在報表裡從今天才開始有資料
   - core §3-4 參數字典寫 `source`、`result`、`game_id` 已註冊，實際上到今天才登記；`unlock_id`、`round_count` 還不在字典裡。core 是共管檔，待 Zoe、Alison 確認後再改
