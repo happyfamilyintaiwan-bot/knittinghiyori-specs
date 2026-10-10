@@ -4,6 +4,11 @@
 
 ---
 
+- 2026-10-10｜games v1.8｜Zoe｜全部遊戲頁與遊戲主頁的分享列加「加到我的最愛」按鈕：共用 `/lib/hy-fav.js`，自動補在「複製連結」後面，按下去依裝置顯示加書籤的做法；事件 `bookmark_shortcut`（option=inapp／ios／android／mac／desktop）｜Zoe 要求：希望大家時常回訪，在我的最愛裡好找
+  - **改版日 2026-10-10**：games 開始送 `bookmark_shortcut`
+
+- 2026-10-10｜registry v1.3.7、core v1.4（補值域，不升版）、games v1.8｜Alison（Zoe 上架）｜新增 sleep_rhythm（前綴 sleep_）；core §3-3 content_type 加 invite；games §7 加篩選代碼 topic=habit、skill=sleep；遊戲頁 Drive 換成標準寫法、分頁圖示加 v=2、上鎖手記字色加深到 AA、spec-version 改 core-v1.4/games-v1.8｜「固定作息燈塔」上線：可用連結邀朋友互看進度，邀請分享要和一般分享分開看（Alison 交接寫的是 registry v1.4、core v1.4、games v1.6.1，依現況改成 registry v1.3.6→v1.3.7、games v1.7→v1.8；core 只補原本沒有的值，照 2026-10-09 加 poem 的前例不升版）
+
 - 2026-10-10｜registry v1.3.6｜Zoe｜SQL 偵探（sql_detective）檢查：補專屬事件、level／option 值域；遊戲頁聯盟 cta_type affiliate→klook、補 nofollow；修正新玩家一進來就看到「結案」區（hidden 被 display:grid 蓋掉）；補 og 圖、結構化資料、介紹文連結；頁尾新文字；字型去和號；廣告移到回主頁按鈕下方；按鈕加大｜7 款遊戲逐款檢查的第 3 款
   - **改版日 2026-10-10**：sql 的聯盟點擊之前是 `cta_type=affiliate`，看長期趨勢要合併
 

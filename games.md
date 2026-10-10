@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.7｜2026-10-10｜Zoe**（v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.8｜2026-10-10｜Zoe**（v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -30,7 +30,7 @@
 0. **編織日和品牌列**（頁面最上方）：正式 logo（方形「編織日和 Knitting Hiyori」，`/icons/logo-knitting-120.webp`，顯示 40px）＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），點了回遊戲主頁（`data-cta="brand_hub"`、`data-cta-type="game"`）；多語遊戲的語言切換放在同一列右側，400px 以下藏起「・小遊戲」（`.kh-brand-sub`）避免橫向溢出。寫法照 `_template/`（`.kh-brand-row`、`.kh-brand`），`max-width` 對齊該遊戲本體寬度；遊戲名放在品牌列下方
 1. **遊戲**（首屏就是遊戲，不先放長說明）
 2. 聯盟區（常駐，在遊戲區**外**）
-3. 分享列
+3. 分享列：最後一顆是「加到我的最愛」（2026-10-10 起，遊戲主頁也有）。頁面結尾放一行 `<script src="/lib/hy-fav.js" defer></script>`，它會在每個「複製連結」按鈕後面自動補一顆，樣式跟著該遊戲的複製按鈕；英、日頁依 `<html lang>` 自動換字。瀏覽器不允許網頁自己加書籤，所以按下去是跳出「這台裝置怎麼加」的提示（App 內建瀏覽器、iPhone、Android、Mac、其他電腦各一種說明）。新遊戲的複製按鈕請用 `data-share="copy_link"`，才會自動補上
 4. 回遊戲主頁大按鈕（`data-cta="about_hub"`、`data-cta-type="game"`，文案「探索更多互動遊戲 →」）
 5. 廣告（1 個）
 6. 頁尾 `.kh-legal`
@@ -71,6 +71,7 @@ body 底部放標準 hyGame 追蹤碼：
 | `game_milestone` | 累積作答第 1／10／50／100 題（可延伸） | `milestone` |
 | `tutorial_begin`／`tutorial_complete` | 教學開始／完成（每次載入各一次） | |
 | `game_settings` | 改設定 | 值如 `sound_on`、`noise_off`、`timbre_<音色>` |
+| `bookmark_shortcut` | 按「加到我的最愛」（core §3-2 共用事件；由 /lib/hy-fav.js 送出，不算 `game_start`） | `option`＝提示的裝置：inapp／ios／android／mac／desktop；遊戲主頁 `game_id=hub` |
 | `share`、`cta_click` | 照 core §3-2 | 分享 `content_type`：破關前 `game`、破關後 `result` |
 
 ### 3-3 一局怎麼定義
@@ -189,6 +190,7 @@ body 底部放標準 hyGame 追蹤碼：
 | coding | swiftui | swiftui_detective |
 | music | ear_training | absolute_pitch |
 | morse | ear_training、listening | morse_code |
+| habit | sleep | sleep_rhythm |
 | travel | planning | shun_tabi（擱置） |
 
 ---

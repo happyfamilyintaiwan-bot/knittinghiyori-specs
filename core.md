@@ -120,7 +120,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | 參數 | 允許的值 |
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
-| `content_type` | result、tool、game、story（⚠ 詩待補） |
+| `content_type` | result、tool、game、story、invite（邀請朋友加入，連結帶進度）（⚠ 詩待補） |
 | `cta_type` | tool、article、game、story、study、poem、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja |
