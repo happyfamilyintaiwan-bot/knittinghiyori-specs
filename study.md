@@ -1,6 +1,6 @@
 # study.knittinghiyori.com 規範
 
-**版本：study-v0.3｜2026-10-10｜Zoe**（v0.3：開 AdSense 底部版位與 Travelpayouts Drive、專屬分享縮圖、404 對齊 core v1.4。v0.2：設計改中性專業調性、首頁加「目次」`toc_link`。v0.1：Alison 提案、Zoe 定案）
+**版本：study-v0.4｜2026-10-10｜Alison 提案、Zoe 上架**（v0.4：新增互動頁規則（整頁 HTML、中英雙語）、聯盟連結規則、互動頁事件 studio_；首例 artists-way/abundant-studio。v0.3：開 AdSense 底部版位與 Travelpayouts Drive、專屬分享縮圖、404 對齊 core v1.4。v0.2：設計改中性專業調性、首頁加「目次」`toc_link`。v0.1：Alison 提案、Zoe 定案）
 內容負責人：Alison；上架：Zoe（見 core §0）。先讀 `core.md`；本檔只寫 study 專屬的部分。
 
 ## 1. 網址與檔案
@@ -17,13 +17,15 @@
 | 404 頁 | `404.html`，照 core §7：品牌列＋說明＋「回學習筆記首頁」＋最近更新＋全部主題卡＋跨站連結一行；網址含 `/en/`、`/ja/` 時說明與按鈕換英文／日文；`noindex`、不放 canonical／OG／廣告單元；page_title `筆記\|找不到頁面\|404` |
 | 設計 | 日系筆記本骨架＋中性專業調性（照顧男女讀者）：點陣方格底、明朝體標題（Noto Serif TC）、等寬編號（IBM Plex Mono）、方正卡片＋左上索引標籤、筆記頁左側紅色邊線；不用紙膠帶、便利貼、手寫字、歪斜卡片這類偏可愛的元素。色彩與字型寫在 `assets/study.css` 開頭的變數 |
 | 分享縮圖 | `icons/og-study.jpg`（1200×630）：左上正式 logo＋「編織日和・學習筆記」、標題、目次、網址；全站共用一張。換圖用新檔名（`og-study-2.jpg`…），改 `build.py` 的 `OG_IMG`；`og:image:alt` 開頭寫品牌名 |
-| 語言 | 目前只有中文 |
+| 語言 | 預設只有中文；互動頁可做中英雙語：中文 `/<topic>/<slug>/`、英文 `/en/<topic>/<slug>/`（core §7 預設），互設 hreflang，x-default 指中文 |
+| 互動頁 | 不經 Markdown 的整頁 HTML。產生器原始碼放 `interactive/<slug>/`（自己的 `build.py` 輸出到 `dist/`），在 `topics.json` 該主題加 `page`（href、title、label、source、langs）；study 的 `build.py` 會執行產生器、把 `dist/` 原樣放進網站、補 vignette 標記、加進 sitemap 並照常做上線前檢查。spec-version、Drive、AdSense slot 由 study 的 `build.py` 用環境變數帶入（`HY_SPEC`、`HY_DRIVE`、`HY_ADS_CLIENT`、`HY_ADS_SLOT`），產生器不各自維護。有 `page` 的主題，首頁卡片、目次、404 卡片直接連互動頁。首例 `artists-way/abundant-studio` |
 
 ## 2. 廣告
 
 - 不開自動廣告：AdSense 載入碼不帶 `?client=`，所有連結加 `data-google-vignette="false"`（build.py 自動加）。
 - 每頁最多 1 個手動版位（單元「Study-頁面底部」，slot 見 core §1），放在內容最下面、頁尾上面；404 不放。
 - Travelpayouts Drive 放 `<head>` 第一個 script，所有頁面含 404，寫法同 tools（含 `data-cmp-ab`）。
+- 聯盟連結：每頁最多 2 個位置；蝦皮只放中文頁；`rel="sponsored nofollow noopener"`，區塊下方寫揭露。
 
 ## 3. GA4
 
@@ -43,9 +45,28 @@
 | `blog_link` | 主題頁「先讀部落格文章」按鈕 | article |
 | `course_link` | 主題頁「課程官網」按鈕 | other |
 | `source_link` | 筆記頁來源連結 | other |
+| `page_link` | 主題頁「互動頁」按鈕 | study |
+| `read_card` | 互動頁「閱讀本週章節」卡片的買書連結 | shopee（`option`＝書的代碼） |
+| `book_shelf` | 互動頁書架區 | shopee（`option`＝書的代碼） |
 | `notfound_hub` | 404「回學習筆記首頁」 | study |
 | `notfound_topic` | 404 主題卡 | 同 `topic_card` |
 | `notfound_site` | 404 跨站連結 | story／game／tool／article／other（詩） |
+
+### 3-1 互動頁事件（artists-way/abundant-studio，前綴 studio_）
+
+| 事件 | 何時 | 參數 |
+| --- | --- | --- |
+| `studio_start` | 按「搬進工作室」 | `level`=l01、`entry_point`（direct／shared，網址帶 `?from=invite` 為 shared） |
+| `studio_pages_done` | 完成當天晨間隨筆（一天一次） | `level`=l01–l12（週次）、`option`=paper／typed／short |
+| `studio_streak` | 連續天數達 7、30 | `milestone`=s7／s30 |
+| `studio_date_done` | 本週藝術家約會完成 | `level` |
+| `studio_walk_done` | 本週獨自散步完成 | `level` |
+| `studio_week_complete` | 搬進本週物件 | `level`、`item_count`（本週隨筆天數）、`score`（本週練習完成數） |
+| `studio_progress_reset` | 清除進度 | `level` |
+
+- 共用事件：`share`／`share_cancel`（`content_type=study`）、`faq_open`（`option`=q1–q7）、`lang_switch`（`source`=header）、`cta_click`（`brand_hub`、`read_card`、`book_shelf`）。
+- 隨筆文字不送、不存，只記完成日期。
+- 書的代碼：`artists_way`（創作之路）、`creative_act`（創造力的修行）。
 
 ## 4. 驗收
 

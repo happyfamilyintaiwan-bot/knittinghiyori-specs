@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-10-10｜core v1.5、study v0.4、registry v1.4｜Alison 提案、Zoe 上架｜core §3-3 content_type 加 `study`、`invite`（invite 是「固定作息燈塔」要用的，Alison 要求併成同一列先加）；study 新增互動頁規則（整頁 HTML、中英雙語網址、`topics.json` 的 `page`、產生器放 `interactive/`、站台共用值用環境變數帶入）、聯盟連結規則、cta_id `page_link`／`read_card`／`book_shelf` 與 §3-1 互動頁事件（前綴 studio_）；registry 新增 `artists-way`（已上線）｜Alison 新增 12 週創造力練習互動頁「豐盛工作室」，邀請朋友的 share 需要 study 值，study 原本只支援 Markdown 筆記與中文
+  - **改版日 2026-10-10**：study 開始有聯盟點擊（cta_type=shopee）
+  - 上架時的技術調整：Drive、AdSense 底部版位、cookie_domain、分頁圖示、og 圖補 logo 與網址；各頁 spec-version `core-v1.5/study-v0.4`
+
 - 2026-10-10｜study v0.3（core §1 補值，core 版本不變）｜Zoe｜core §1 study 列填入 AdSense slot `7499102019` 與 Drive `emrld.ltd/NTgzNjI3.js?t=583627`；study 每頁底部 1 個手動版位（404 不放）、Drive 全頁載入；新增專屬分享縮圖 `icons/og-study.jpg`；404 對齊 core v1.4（page_title 改 `筆記|找不到頁面|404`、不放 canonical／OG、加跨站連結 `notfound_site`、/en/ /ja/ 換語言）；各頁 spec-version 改 `core-v1.4/study-v0.3`｜Zoe 建好廣告單元與 Drive；study 原本借用 story 的分享圖
   - **改版日 2026-10-10**：404 的 page_title 由 `筆記|404|找不到頁面` 改成 `筆記|找不到頁面|404`，看 404 報表時兩個都要算
 

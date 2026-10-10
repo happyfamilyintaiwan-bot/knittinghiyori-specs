@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3.5｜2026-10-10｜Zoe＋Alison**（v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 頁。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4｜2026-10-10｜Zoe＋Alison**（v1.4：新增 study `artists-way`。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 頁。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -98,6 +98,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | `minerva-mda` | Minerva MDA | study /minerva-mda/ | 已上線 | 上過的課；卡片連 `/minerva-university-mda-master-degree-guide/`；⚠ 正式課程名稱待 Alison 補 |
 | `japanese` | 日文學習 | study /japanese/ | 已上線 | 自學；卡片連 `/japanese-verb-conjugation-six-forms-five-types/` |
 | `chess` | 西洋棋 | study /chess/ | 已上線 | 自學；卡片連 `/chess-for-beginners/` |
+| `artists-way` | 藝術家之路（The Artist's Way） | study /artists-way/、/artists-way/abundant-studio/、/en/artists-way/abundant-studio/ | 已上線 | 自學；內容 Alison；互動頁「豐盛工作室／The Abundant Studio」中英雙語，2026-10-10 上線；事件前綴 `studio_`（與工具／遊戲前綴不重複）；page_title `筆記\|藝術家之路\|豐盛工作室`；聯盟：中文頁蝦皮 2 本書（read_card、book_shelf） |
 
 ## 待修清單（改版時處理，修完把狀態改回「已上線」並寫 CHANGELOG）
 
