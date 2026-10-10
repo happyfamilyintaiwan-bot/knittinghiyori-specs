@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-10-10｜registry v1.3.8｜Zoe｜SwiftUI 偵探、東西腔道場、ひより花店檢查（7 款逐款檢查的第 4～6 款，全部完成）：三款都補 og 圖與分享大圖、聯盟改記平台名並補 nofollow、頁尾新文字、對比修到 AA、spec-version core-v1.4/games-v1.8。另外修了三個追蹤問題：東西腔道場從分享連結進來一直沒記到 shared、分享網址 via=share 改 ref=share；花店聯盟點擊沒帶到花名、cta_id 改名｜逐款檢查
+  - **改版日 2026-10-10**：swiftui、flower 的聯盟點擊之前是 `cta_type=affiliate`，現在是 `klook`；tozai 之前是 `affiliate`，現在是 `trip`
+  - **改版日 2026-10-10**：flower 的 cta_id `article_link`→`about_article`、`footer`→`footer_hub`／`footer_main`；tozai 的 `entry_point=shared` 從今天起才有資料
+
 - 2026-10-10｜games v1.8｜Zoe｜全部遊戲頁與遊戲主頁的分享列加「加到我的最愛」按鈕：共用 `/lib/hy-fav.js`，自動補在「複製連結」後面，按下去依裝置顯示加書籤的做法；事件 `bookmark_shortcut`（option=inapp／ios／android／mac／desktop）｜Zoe 要求：希望大家時常回訪，在我的最愛裡好找
   - **改版日 2026-10-10**：games 開始送 `bookmark_shortcut`
 

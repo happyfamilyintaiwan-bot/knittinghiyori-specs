@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3.7｜2026-10-10｜Zoe＋Alison**（v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.3.8｜2026-10-10｜Zoe＋Alison**（v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -54,13 +54,13 @@
 | `sql_detective` | 霞光畫廊失竊案（SQL 偵探） | `sql_` | 已上線 | 只有中文；level＝l00–l07（關卡）；option＝case01；一局＝一個還沒破解的關卡；專屬事件 `sql_hint_open`、`sql_solution_view`；聯盟 `below_game`（klook，2026-10-10 起；之前是 affiliate）；介紹文 knittinghiyori.com/sql-beginner-game/（文中 `escape_room` 仍是 affiliate，待 WordPress 改） |
 | `jlpt_mishitsu` | JLPT 單字密室（言の葉館） | `jlpt_` | 已上線 | 目前無專屬事件；前綴保留，日後加專屬事件就用它；level＝l01–l05（密室）；option＝clue 等；聯盟 `trip_hall`、`trip_result`（trip，2026-10-10 起；之前是 affiliate）；介紹文 knittinghiyori.com/jlpt-vocab-game/（文中 `trip_article` 待 WordPress 改） |
 | `katsuyo_escape` | 活用館脫出（活用館からの脱出） | `katsuyo_` | 已上線 | 專屬事件 `katsuyo_tutorial_skip`、`katsuyo_hint_open`；聯盟 `below_game`、`room_clear`（klook，2026-10-09 起；之前是 affiliate）；介紹文 knittinghiyori.com/japanese-verb-conjugation-game/（文中 `escape_room` 仍是 affiliate，待 WordPress 改） |
-| `swiftui_detective` | ⚠ 待補 | `swiftui_` | 已上線 | 專屬事件 `swiftui_hint_open`、`swiftui_solution_view` |
+| `swiftui_detective` | 雨夜懷錶案（SwiftUI 偵探） | `swiftui_` | 已上線 | 只有中文；level＝l00–l07（章節）、l08（結案指認）；option＝case01；專屬事件 `swiftui_hint_open`、`swiftui_solution_view`；聯盟只在結案畫面：`dadaocheng_result`、`escape_room_result`（klook，2026-10-10 起；之前是 affiliate）；存檔 localStorage swiftui-noir-v2；介紹文 knittinghiyori.com/swiftui-tutorial-detective-game/ |
 | `absolute_pitch` | 絕對音感養成所（en：Absolute Pitch Trainer／ja：絶対音感養成所） | `ap_` | 已上線 | 三語：/absolute-pitch/、/absolute-pitch/en/、/absolute-pitch/ja/；專屬事件 `ap_daily_goal`、`ap_pair_fixed`、`ap_progress_reset`；聯盟：中文頁蝦皮練習用耳機（`below_game`／shopee，2026-10-04 起）；介紹文 knittinghiyori.com/absolute-pitch-training-game/（2026-10-04 發布） |
-| `flower_shop` | ひより花店 | `flower_` | 已上線 | ⚠ 事件名稱待確認 |
+| `flower_shop` | ひより花店 | `flower_` | 已上線 | 只有中文；目前無專屬事件（前綴保留）；option＝kana／flower_quiz／hana_quiz／typing_hana／typing_<語言>；level＝relaxed／standard／challenge／review（測驗）、small／medium／large＋_<計時模式>（打字）；聯盟 `flower_trip`（klook，2026-10-10 起；之前是 affiliate），cta_click 另帶 option＝花的英文名（2026-10-10 前沒送到）；頁尾 `footer_hub`、`footer_main`（之前都是 `footer`）；介紹文連結 `about_article`（之前是 `article_link`）；介紹文 knittinghiyori.com/japanese-kana-game/ |
 | `morse_code` | 守燈人摩斯日誌 | `morse_` | 已上線 | 實證訓練法系列第 1 款；只有中文；共用引擎 /lib/hy-trainer/；level＝Koch 課數 l01–l40；option＝koch／group；專屬事件 morse_skip_intro、morse_daily_goal（streak）、morse_pair_play、morse_progress_reset；聯盟 cta_id=lighthouse_trip（klook）、gear_card（shopee，AirPods，2026-10-09 起）；2026-10-09 上線；介紹文 knittinghiyori.com/morse-code-training-game/（2026-10-09 發布） |
 | `sleep_rhythm` | 固定作息燈塔 | `sleep_` | 已上線 | 規律作息養成；只有中文；一局＝一次打卡（option=wake／sleep，level＝燈靈階段 l01–l06）；不送打卡時間、差距、準不準時或城市；專屬事件 sleep_skip_intro、sleep_backfill、sleep_morning_light、sleep_report_open、sleep_fleet_open、sleep_diary_open、sleep_diary_answer（option＝手記頁 id）、sleep_signal_send（option=gm／gn／tg／ch）、sleep_friend_add（result=new／update、source=link／paste）、sleep_progress_reset；game_unlock 含 spirit_l02–l06、diary_d01–d21、diary_d30–d100（每 10 天）、diary_f01／f03／f05／f10（聯盟的信）；邀請朋友 share content_type=invite；邀請資料放網址 #f= 片段，GA4 載入前移除；聯盟 cta_id=lighthouse_trip（klook）；存檔 localStorage hy_sleep_v1；2026-10-10 上線；介紹文 knittinghiyori.com/sleep-schedule-habit-game/ |
 | `hiyori_pet` | 日和毛孩（網頁電子寵物） | `pet_` | 規劃中 | 網址 /hiyori-pet/，預定 2026-11-09 上線，施工分支 `hiyori-pet`；只有中文；專屬事件 `pet_adopt`、`pet_action`、`pet_stage`、`pet_mail_read`、`pet_pip_open`、`pet_pwa_install`、`pet_move`（option＝export／import）；`pet_walk_remind`（option＝notice／block）、`pet_walk_done`（option＝manual／idle）、`pet_walk_snooze`（option＝later／today）；開發中再加 `pet_visit_share`／`pet_visit_open`（串門子連結）；聯盟 klook（cta_id `trip_result`）；localStorage `hiyori-pet:save`、`hiyori-pet:book`、`hiyori-pet:ios-tip` |
-| ⚠ `tozai_dojo` | 東西腔道場 | `tozai_` | 已上線 | ⚠ game_id 與事件待確認 |
+| `tozai_dojo` | 東西腔道場 | `tozai_` | 已上線 | 只有中文；game_id 已確認；目前無專屬事件（前綴保留）；一局＝一回 10 題，option＝mixed，沒有 level；round_end 帶 score；聯盟 `start_card`、`result_card`（trip，2026-10-10 起；之前是 affiliate）；分享網址 `?ref=share`（之前是 `?via=share`，舊連結仍認；2026-10-10 前 entry_point=shared 沒記到）；存檔 localStorage tozai-best2；介紹文尚未寫 |
 | `shun_tabi` | 旬之旅（遊戲版） | — | 擱置 | 改做 season_booking（見工具表） |
 
 ---
@@ -106,7 +106,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 |---|---|---|
 | `trip_planner` | 沒送 `tool_id`；用 `affiliate_click`＋`platform`；用保留名稱 `tool`；share 的 `method=link` 不在值域 | `gtag('set')` 帶 tool_id；`cta_click`（cta_id＝位置、cta_type＝平台）；share method 改 native／copy_link |
 | `jr_pass` | `affiliate_click`＋`platform`、`tool` 參數 | 同上 |
-| 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql（~~below_game~~ 2026-10-10 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（dadaocheng_*、escape_room_*）→ `klook`。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
+| 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql（~~below_game~~ 2026-10-10 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（~~dadaocheng_result、escape_room_result~~ 2026-10-10 遊戲頁已改）→ `klook`；tozai（~~start_card、result_card~~）→ `trip`、flower（~~flower_trip~~）→ `klook`，都在 2026-10-10 改完。**遊戲頁全部改完，只剩 WordPress 介紹文裡的**。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
 | 404 頁 cta_id（~~games~~ 2026-10-10 已改、study、poem） | ~~games `notfound_game`~~；study `notfound_topic`；poem `notfound_home`、`notfound_poem`，和 core §7 統一值不同 | games、study `→ notfound_card`；poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
