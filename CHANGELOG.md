@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-10｜games v1.8.1、registry v1.3.9｜Zoe｜遊戲主頁檢查：補預覽圖 /assets/og-hub.png（原本沒有）、對比修到 AA、到主站連結 cta_type `mainsite`→`article`（`mainsite` 不在 core 值域）、頁尾 cta_id `footer`→`footer_main`；主頁 game_id 確認為 `hub`；主頁 NEW 只標最新三款（Zoe 決定）｜主頁是最後一頁還沒檢查的；Zoe 要求未來都只標最新三款
+  - **改版日 2026-10-10**：主頁到主站的點擊之前是 `cta_type=mainsite`（頁尾 cta_id 之前是 `footer`），看長期趨勢要合併
+
 - 2026-10-10｜registry v1.3.8｜Zoe｜SwiftUI 偵探、東西腔道場、ひより花店檢查（7 款逐款檢查的第 4～6 款，全部完成）：三款都補 og 圖與分享大圖、聯盟改記平台名並補 nofollow、頁尾新文字、對比修到 AA、spec-version core-v1.4/games-v1.8。另外修了三個追蹤問題：東西腔道場從分享連結進來一直沒記到 shared、分享網址 via=share 改 ref=share；花店聯盟點擊沒帶到花名、cta_id 改名｜逐款檢查
   - **改版日 2026-10-10**：swiftui、flower 的聯盟點擊之前是 `cta_type=affiliate`，現在是 `klook`；tozai 之前是 `affiliate`，現在是 `trip`
   - **改版日 2026-10-10**：flower 的 cta_id `article_link`→`about_article`、`footer`→`footer_hub`／`footer_main`；tozai 的 `entry_point=shared` 從今天起才有資料

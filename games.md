@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.8｜2026-10-10｜Zoe**（v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.8.1｜2026-10-10｜Zoe**（v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -98,6 +98,8 @@ body 底部放標準 hyGame 追蹤碼：
 | 404 頁：到主站 | `notfound_main` | game |
 | 404 頁：推薦遊戲卡片（帶 `game_id`；2026-10-10 前是 `notfound_game`） | `notfound_card` | game |
 | 回遊戲主頁（每頁必有） | `about_hub` | game |
+| 主頁、遊戲頁尾：到主站（部落格） | `blog_banner`（主頁橫幅）、`footer_main`（頁尾） | article |
+| 遊戲頁尾：回遊戲主頁（小連結） | `footer_hub` | game |
 | 連到介紹文 | `about_article` | article |
 | 連到規則依據文章 | `source_article` | article |
 | 參考文獻、資料來源 | `source_link`（或 `source_*`） | other |
@@ -175,7 +177,8 @@ body 底部放標準 hyGame 追蹤碼：
 | `data-game` | game_id |
 | `data-cta-type` | `game` |
 | `data-topic`／`data-skill` | 沿用 `HY_FILTERS` 既有代碼；新代碼同步加進 HY_FILTERS |
-| NEW 標記 | 選用 |
+| NEW 標記 | **只標最新上線的三款**（2026-10-10 Zoe 決定）。新遊戲上線時：新卡片加 NEW，同時把第四新那款的 NEW 拿掉 |
+| 主頁預覽圖 | `/assets/og-hub.png`（1200×630，右邊是最新 6 款的縮圖）。新遊戲上線後重做一次，FB 偵錯工具重抓 |
 | JSON-LD 遊戲清單 | name、url、description、inLanguage |
 | 404 多語卡片 | 有英日版的遊戲：在 `404.html` 的 `LANG_GAMES` 加一筆（各語言 url、name、desc）；只有中文的遊戲不用改 404 |
 | 介紹文網址 | 文章發布後回填 |
@@ -222,7 +225,7 @@ core §9 全部，再加：
 ## 10. 待補
 
 - 以《遊戲 GA4 v1.0》原文或 hyGame 程式碼核對 §3-2 的觸發點與參數名
-- 遊戲主頁的 game_id
+- ~~遊戲主頁的 game_id~~（2026-10-10 確認：`hub`，專屬事件 `hub_filter`）
 - flower_shop、東西腔道場的事件寫法（DebugView）
 - 遊戲重要事件
 - 成績卡套到其他遊戲（absolute_pitch 試點上線後看 `export`／`share content_type=result` 數據再排）
