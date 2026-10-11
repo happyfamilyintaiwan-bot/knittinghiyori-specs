@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.8.3｜2026-10-11｜Zoe**（v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.8.4｜2026-10-12｜Zoe**（v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -12,7 +12,7 @@
 | repo | `happyfamilyintaiwan-bot/games`（GitHub Pages） |
 | 網址 | `games.knittinghiyori.com/<slug>/`，資料夾＋`index.html`（＋og 圖 1200×630） |
 | 分頁圖示 | 全部用正式 logo（方形「編織日和 Knitting Hiyori」，原檔 512px）做成 `/icons/` 整組：favicon.ico（16／32／48）、favicon-32、favicon-96、icon-192、icon-512、apple-touch-icon；**根目錄另放 `favicon.ico`、`apple-touch-icon.png`**（瀏覽器、Google、iPhone 書籤會直接找根目錄，沒有就顯示灰色地球）。換圖時連結加 `?v=N` 逼瀏覽器重抓 |
-| 404 頁 | `404.html`，照 core §7：品牌列＋「4🌸4」＋一句說明（中英日，依網址 `/ja/`、`/en/` 或瀏覽器語言切換）＋主要按鈕「回遊戲主頁」（`notfound_hub`）＋次要按鈕「到編織日和主站」（`notfound_main`）＋推薦遊戲**最多 3 張**（`notfound_card`，帶 `game_id`）。卡片在瀏覽器讀遊戲主頁的 `a.card` 產生，有該語言版本的排前面；讀不到時用頁面裡寫死的 3 張備用。`noindex, follow`、不放 AdSense、有 GA4（page_title `遊戲\|404\|找不到頁面`）、頁尾 `.kh-legal` |
+| 404 頁 | `404.html`，照 core §7：品牌列＋「4🌸4」＋一句說明（中英日，依網址 `/ja/`、`/en/` 或瀏覽器語言切換）＋主要按鈕「回遊戲主頁」（`notfound_hub`）＋次要按鈕「到編織日和主站」（`notfound_main`）＋推薦遊戲**最多 3 張**（`notfound_card`，帶 `game_id`）。卡片在瀏覽器讀遊戲主頁的 `a.card` 產生，有該語言版本的排前面；讀不到時用頁面裡寫死的 3 張備用。`noindex, follow`、不放 AdSense、有 GA4（page_title `遊戲\|404\|找不到頁面`）、頁尾 `.kh-legal`；卡片下方有**跨站連結一行**「也可以逛逛：故事、詩、小工具、學習筆記」（`notfound_site`，2026-10-12 起，Zoe 要求；做法同 study 的 404） |
 | 共用引擎 | `/lib/hy-trainer/`（實證訓練法系列共用：階段、門檻解鎖、交錯與間隔複習、進度紀錄）；內容包放各遊戲資料夾。改引擎前要確認所有使用中的遊戲都相容，存檔格式要能讀舊版 |
 | og 圖 | 左上角品牌列：正式 logo（約 56px）＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），和頁面頂端品牌列一致；圖上網址寫到該遊戲（含語言）路徑，例 `games.knittinghiyori.com/absolute-pitch/en`。**換圖一律用新檔名**（`og-2.png`、`og-3.png`…，FB／LINE 才會重抓），og:image、twitter:image、JSON-LD 三處一起改；`og:image:alt` 開頭寫品牌名 |
 | 多語 | 英日放在遊戲資料夾裡：`/<slug>/en/`、`/<slug>/ja/`（core §7 例外）；三語共用同一個 localStorage key；交付 zip 的最外層就是中文版 |
@@ -97,6 +97,7 @@ body 底部放標準 hyGame 追蹤碼：
 | 404 頁：回遊戲主頁 | `notfound_hub` | game |
 | 404 頁：到主站 | `notfound_main` | game |
 | 404 頁：推薦遊戲卡片（帶 `game_id`；2026-10-10 前是 `notfound_game`） | `notfound_card` | game |
+| 404 頁：跨站連結一行（故事、詩、小工具、學習筆記；2026-10-12 起） | `notfound_site` | 目的地類型：story、poem、tool、study |
 | 回遊戲主頁（每頁必有） | `about_hub` | game |
 | 主頁、遊戲頁尾：到主站（部落格） | `blog_banner`（主頁橫幅）、`footer_main`（頁尾） | article |
 | 遊戲頁尾：回遊戲主頁（小連結） | `footer_hub` | game |

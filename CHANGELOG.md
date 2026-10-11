@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-10-12｜games v1.8.4｜Zoe｜games 404 頁加跨站連結一行（故事、詩、小工具、學習筆記），點擊送 `cta_click`，`cta_id=notfound_site`、`cta_type` 填目的地類型；中英日三語；粉紅色加深到 AA｜Zoe 指出 games 的 404 少了這一行（study 的 404 已經有）
+  - **改版日 2026-10-12**：games 開始送 `notfound_site`
+  - ⚠ 規範不一致待釐清：main 上的 core v1.4（#3，2026-10-09 合併）寫 404 卡片統一 `notfound_card`、page_title 例 `類別|404|找不到頁面`，沒有提跨站連結；還開著的 #4（zoe/core-404）與 #7（zoe/blog-ga4）裡的 core 寫的是卡片 `notfound_<東西>`、page_title `類別|找不到頁面|404`、有跨站連結 `notfound_site`。games 目前照 main，只多加跨站連結一行。要以哪一份為準，待 Zoe 決定後統一
+
 - 2026-10-11｜games v1.8.3｜Zoe｜10 個遊戲頁（含主頁）的 `<title>` 與 `meta description` 改用和介紹文不同的字組：遊戲頁＝測試、測驗、線上練習；介紹文＝遊戲、怎麼學（文章不動）。絕對音感頁面兩處「驗收」加上「12 音測試」。規則寫進 games §7-1｜Search Console 顯示絕對音感、活用館、SwiftUI 的遊戲頁和介紹文在搶同一批字；「sql 遊戲」是介紹文排上去的。Zoe 決定兩邊分開測不同字組（總控同意即可，不另外通知 Alison）
   - **改版日 2026-10-11**：看搜尋排名趨勢時以這天為分界；`page_title`（GA4）沒有改，報表不受影響
 
