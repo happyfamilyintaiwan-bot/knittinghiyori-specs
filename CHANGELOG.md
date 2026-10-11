@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-11｜games v1.8.3｜Zoe｜10 個遊戲頁（含主頁）的 `<title>` 與 `meta description` 改用和介紹文不同的字組：遊戲頁＝測試、測驗、線上練習；介紹文＝遊戲、怎麼學（文章不動）。絕對音感頁面兩處「驗收」加上「12 音測試」。規則寫進 games §7-1｜Search Console 顯示絕對音感、活用館、SwiftUI 的遊戲頁和介紹文在搶同一批字；「sql 遊戲」是介紹文排上去的。Zoe 決定兩邊分開測不同字組（總控同意即可，不另外通知 Alison）
+  - **改版日 2026-10-11**：看搜尋排名趨勢時以這天為分界；`page_title`（GA4）沒有改，報表不受影響
+
 - 2026-10-10｜core v1.4（補登記狀態，不升版）｜Zoe 確認｜§3-4 參數字典照 GA4 實際狀況更新：`source`、`result`、`game_id`、`level`、`milestone`、`correct_count` 標上 2026-10-10 登記；新增 `unlock_id`（維度）、`round_count`（指標）；補一句「新參數上線前先登記」與目前用量｜字典原本寫已註冊的，核對 GA4 後發現沒有；只更新事實，不改規則，各站 spec-version 不用改
 
 - 2026-10-10｜games v1.8.2｜Zoe｜GA4 自訂定義核對：遊戲用的 `game_id`、`level`、`result`、`source`、`milestone`、`unlock_id`（維度）與 `correct_count`、`round_count`（指標）原本都沒登記，今天補登記（Zoe 同意，Claude 在 GA4 建立）；`score` 照 core §3-4 不登記｜Zoe 要看遊戲數據，發現關卡與過關結果報表看不到

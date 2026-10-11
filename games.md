@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.8.2｜2026-10-10｜Zoe**（v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.8.3｜2026-10-11｜Zoe**（v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -211,6 +211,23 @@ body 底部放標準 hyGame 追蹤碼：
 | morse | ear_training、listening | morse_code |
 | habit | sleep | sleep_rhythm |
 | travel | planning | shun_tabi（擱置） |
+
+---
+
+### 7-1 搜尋標題的字組分工（2026-10-11 起，Zoe 決定）
+
+遊戲頁和它的部落格介紹文**用不同字組**，避免在 Google 互搶同一個字，也當作字組測試：
+
+| | 字組 | 例 |
+|---|---|---|
+| 介紹文（部落格） | 遊戲、怎麼學、可以練嗎、方法 | 「SQL 入門遊戲｜…」「摩斯密碼怎麼學最快？…」 |
+| 遊戲頁（games） | 測試、測驗、線上練習、免安裝 | 「SQL 線上練習｜…｜SQL 偵探」「絕對音感測試｜…」 |
+
+- 寫法：`主攻字｜一句說明｜遊戲名`，主攻字放最前面；`meta description` 第一句也用同一個字。
+- 只改 `<title>` 和 `meta description`；`og:title`、頁面大標、GA4 的 `page_title` 不動（報表不會斷）。
+- 沒有介紹文的頁面（東西腔道場、遊戲主頁）不受限。新遊戲上線、或介紹文要改標題時，先對照這張表。
+- 目前分配：絕對音感＝絕對音感測試；SQL＝SQL 線上練習；SwiftUI＝SwiftUI 線上練習；活用館＝日文動詞變化測驗；日檢＝日文單字測驗 N5～N1；花店＝五十音測驗；摩斯＝摩斯密碼線上練習；燈塔＝作息打卡；東西腔＝關西腔；主頁＝日文小遊戲。
+- 依據與回頭檢查：Search Console 2026-09-12～10-09 的數據；預計 2026-11-01 左右比對兩邊排名（遊戲頁有沒有出現在新字組、介紹文的「遊戲」字有沒有守住）。
 
 ---
 
