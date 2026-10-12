@@ -1,6 +1,6 @@
 # poem.knittinghiyori.com 規範
 
-**版本：poem-v0.4｜2026-10-09｜Zoe（v0.4：頁首品牌列、灰字與季節色對比加深。v0.3：詩頁也放 AdSense、根目錄 favicon、小圖示換品牌圖。v0.2：Drive、AdSense、頁尾 Cookie 說明、spec-version 實際上線；新增 404 頁。v0.1.1：由 subdomain-monetization-notes 整理）**
+**版本：poem-v0.5｜2026-10-10｜Zoe（v0.5：404 頁照 core v1.4，cta_id 統一成 notfound_hub／notfound_main／notfound_card。v0.4：頁首品牌列、灰字與季節色對比加深。v0.3：詩頁也放 AdSense、根目錄 favicon、小圖示換品牌圖。v0.2：Drive、AdSense、頁尾 Cookie 說明、spec-version 實際上線；新增 404 頁。v0.1.1：由 subdomain-monetization-notes 整理）**
 負責人：Zoe。先讀 `core.md`；本檔只寫 poem 專屬的部分。
 
 > GA4 追蹤寫法尚未整理。標 ⚠ 處待補，補完升 v1.0。
@@ -12,10 +12,10 @@
 - repo：`happyfamilyintaiwan-bot/poem`（CNAME `poem.knittinghiyori.com`）。
 - **頁面由 `build.py` 從 `poems.json` 產生（需 Python 3.12+）**。改版面要改 `build.py` 再重跑；直接改 `index.html` 會被覆蓋。
 - Drive（`emrld.ltd/NTc4NjIw.js?t=578620`）寫在 `build.py` 的 `DRIVE`，所有頁面（含 404）head 第一個 script。
-- 常數都在 `build.py` 開頭：`DRIVE`、`AD_CLIENT`／`AD_SLOT`、`AD_SLOT_HOME`／`AD_SLOT_POEM`、`SPEC`（spec-version，目前 `core-v1.3/poem-v0.4`）、`PRIVACY`。升版時改 `SPEC` 再重跑 build。
+- 常數都在 `build.py` 開頭：`DRIVE`、`AD_CLIENT`／`AD_SLOT`、`AD_SLOT_HOME`／`AD_SLOT_POEM`、`SPEC`（spec-version，目前 `core-v1.4/poem-v0.5`）、`PRIVACY`。升版時改 `SPEC` 再重跑 build。
 - 頁面一律經 `write()` 寫出：自動在所有 `<a>` 加 `data-google-vignette="false"`（靜態 HTML，不靠 JS）。新增頁面也要用 `write()`。
 - 每頁最下方有 `.kh-legal`（三語，`legal()` 產生，文字照 core §6）。
-- `404.html` 由 `build_404()` 產生：noindex、不放 canonical／hreflang／OG；GA4 `story_id` = `poem-404`；回目錄 `notfound_home`、最近 3 首 `notfound_poem`。
+- `404.html` 由 `build_404()` 產生（core §7）：`noindex, follow`、不放 canonical／hreflang／OG、不放 AdSense；GA4 `story_id` = `poem-404`、`page_title` = `詩|404|找不到頁面`（`head(..., page_title=)`，只有 404 送）。由上到下：品牌列 →〈此路不通〉小詩 → 回目錄按鈕 `notfound_hub` → 到主站文字連結 `notfound_main`（`.nf-main`，高 44px、`--pencil`）→ 最近 3 首 `notfound_card`。三個的 `cta_type` 都是 `poem`。最近 3 首在 build 時從 `poems.json` 產生（和首頁同一份資料），不另外維護清單。
 - **頁首品牌列**（core §7）：`BRAND`（正式 logo `/icons/logo-knitting-120.webp`＋240 給高解析度，40px）＋「編織日和・詩」（英：編織日和 · Poems），連到 `https://poem.knittinghiyori.com/`，`data-cta="brand_hub"`、`data-cta-type="poem"`（core §3-3 值域，2026-10-09 定案）。語言切換與夜間模式在同一列右側；400px 以下藏「・詩」（`.kh-brand-sub`）並縮小語言按鈕內距。詩頁與 404 在品牌列下方另有「‹ 目錄」（`BACK`）
 - **對比**：灰字 `--pencil` 白天 `#6b6359`（5.02）；季節色當文字或按鈕底色時白天用 `color-mix(var(--c 或 --m) 65%, #000)`、夜間文字用 `82%, #fff`，12 個月×日夜都達 4.5（2026-10-09 逐月掃過）。新元素要用季節色時照這個寫法
 - 根目錄要有 `/favicon.ico`（Travelpayouts 等服務只抓根目錄，沒有會顯示灰色地球）；`/icons/` 整套與 games 相同（品牌圖版本），根目錄也放 `apple-touch-icon.png`。
