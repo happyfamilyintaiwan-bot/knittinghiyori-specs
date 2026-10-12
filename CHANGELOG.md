@@ -7,6 +7,12 @@
 - 2026-10-10｜core v1.6、blog v1.1｜Zoe｜core §3-3 cta_type 加 `newsletter`、§3-2 新增 `read_depth`（`pct` 50／90）、§3-1 content_group 加 `article`；blog 新增 §4 GA4 追蹤（cta_id 位置表、page_title `文章|主題|文章標題`）｜部落格搬到 Astro，要跟子網域用同一套事件；訂閱是最重要的轉換，獨立一個 cta_type
   - **改版日**：新站第一批頁面上線那天（預計 2026-11 中試水溫 10 頁）。WordPress 舊頁面沒有這些事件，報表比較時要分開看
 
+- 2026-10-12｜core v1.5（補項）、story v1.3.1、registry v1.4｜Zoe｜**404 規則定案**（回應下面 games v1.8.4 的 ⚠）：以 main 的 core v1.4 為準，卡片統一 `notfound_card`、page_title `類別|404|找不到頁面`；原 #4 草案裡的 `notfound_<東西>` 寫法作廢。core §7 補三項：跨站連結一行 `notfound_site`、依 `/en/`、`/ja/` 切換語言、`gtag('set')` 送 content_group。另把「分頁圖示」改成一律用正式 logo 整組＋根目錄 favicon.ico／apple-touch-icon.png｜Zoe 確認；Zoe 從 Travelpayouts 後台發現 story、tools 的網域圖示是只有拱窗的舊圖
+  - 已上線：story 404（cbc5abf）補 GA4 分類與英日語切換；story、tools（tools#8）分頁圖示換成正式 logo，圖示連結加 `?v=2`
+  - **改版日 2026-10-12**：story 404 開始送 content_group=story、page_title；之前的 404 點擊沒有 content_group
+
+- 2026-10-12｜（補登）｜Zoe｜下面兩筆 2026-10-10 的紀錄原本只在 #4 分支上、沒進 main，這次一起合併補回；其中 study 404 的 page_title 之後要改回 `筆記|404|找不到頁面`（見 registry 待修）
+
 - 2026-10-10｜core v1.5、study v0.4、registry v1.4｜Alison 提案、Zoe 上架｜core §3-3 content_type 加 `study`、`invite`（invite 是「固定作息燈塔」要用的，Alison 要求併成同一列先加）；study 新增互動頁規則（整頁 HTML、中英雙語網址、`topics.json` 的 `page`、產生器放 `interactive/`、站台共用值用環境變數帶入）、聯盟連結規則、cta_id `page_link`／`read_card`／`book_shelf` 與 §3-1 互動頁事件（前綴 studio_）；registry 新增 `artists-way`（已上線）｜Alison 新增 12 週創造力練習互動頁「豐盛工作室」，邀請朋友的 share 需要 study 值，study 原本只支援 Markdown 筆記與中文
   - **改版日 2026-10-10**：study 開始有聯盟點擊（cta_type=shopee）
   - 上架時的技術調整：Drive、AdSense 底部版位、cookie_domain、分頁圖示、og 圖補 logo 與網址；各頁 spec-version `core-v1.5/study-v0.4`
@@ -14,12 +20,49 @@
 - 2026-10-10｜study v0.3（core §1 補值，core 版本不變）｜Zoe｜core §1 study 列填入 AdSense slot `7499102019` 與 Drive `emrld.ltd/NTgzNjI3.js?t=583627`；study 每頁底部 1 個手動版位（404 不放）、Drive 全頁載入；新增專屬分享縮圖 `icons/og-study.jpg`；404 對齊 core v1.4（page_title 改 `筆記|找不到頁面|404`、不放 canonical／OG、加跨站連結 `notfound_site`、/en/ /ja/ 換語言）；各頁 spec-version 改 `core-v1.4/study-v0.3`｜Zoe 建好廣告單元與 Drive；study 原本借用 story 的分享圖
   - **改版日 2026-10-10**：404 的 page_title 由 `筆記|404|找不到頁面` 改成 `筆記|找不到頁面|404`，看 404 報表時兩個都要算
 
+- 2026-10-12｜games v1.8.4｜Zoe｜games 404 頁加跨站連結一行（故事、詩、小工具、學習筆記），點擊送 `cta_click`，`cta_id=notfound_site`、`cta_type` 填目的地類型；中英日三語；粉紅色加深到 AA｜Zoe 指出 games 的 404 少了這一行（study 的 404 已經有）
+  - **改版日 2026-10-12**：games 開始送 `notfound_site`
+  - ⚠ 規範不一致待釐清：main 上的 core v1.4（#3，2026-10-09 合併）寫 404 卡片統一 `notfound_card`、page_title 例 `類別|404|找不到頁面`，沒有提跨站連結；還開著的 #4（zoe/core-404）與 #7（zoe/blog-ga4）裡的 core 寫的是卡片 `notfound_<東西>`、page_title `類別|找不到頁面|404`、有跨站連結 `notfound_site`。games 目前照 main，只多加跨站連結一行。要以哪一份為準，待 Zoe 決定後統一
+
+- 2026-10-11｜games v1.8.3｜Zoe｜10 個遊戲頁（含主頁）的 `<title>` 與 `meta description` 改用和介紹文不同的字組：遊戲頁＝測試、測驗、線上練習；介紹文＝遊戲、怎麼學（文章不動）。絕對音感頁面兩處「驗收」加上「12 音測試」。規則寫進 games §7-1｜Search Console 顯示絕對音感、活用館、SwiftUI 的遊戲頁和介紹文在搶同一批字；「sql 遊戲」是介紹文排上去的。Zoe 決定兩邊分開測不同字組（總控同意即可，不另外通知 Alison）
+  - **改版日 2026-10-11**：看搜尋排名趨勢時以這天為分界；`page_title`（GA4）沒有改，報表不受影響
+
+- 2026-10-10｜core v1.4（補登記狀態，不升版）｜Zoe 確認｜§3-4 參數字典照 GA4 實際狀況更新：`source`、`result`、`game_id`、`level`、`milestone`、`correct_count` 標上 2026-10-10 登記；新增 `unlock_id`（維度）、`round_count`（指標）；補一句「新參數上線前先登記」與目前用量｜字典原本寫已註冊的，核對 GA4 後發現沒有；只更新事實，不改規則，各站 spec-version 不用改
+
+- 2026-10-10｜games v1.8.2｜Zoe｜GA4 自訂定義核對：遊戲用的 `game_id`、`level`、`result`、`source`、`milestone`、`unlock_id`（維度）與 `correct_count`、`round_count`（指標）原本都沒登記，今天補登記（Zoe 同意，Claude 在 GA4 建立）；`score` 照 core §3-4 不登記｜Zoe 要看遊戲數據，發現關卡與過關結果報表看不到
+  - **登記日 2026-10-10**：這 8 個欄位在報表裡從今天才開始有資料
+  - core §3-4 參數字典寫 `source`、`result`、`game_id` 已註冊，實際上到今天才登記；`unlock_id`、`round_count` 還不在字典裡。core 是共管檔，待 Zoe、Alison 確認後再改
+
+- 2026-10-10｜registry v1.3.10｜Zoe｜待修清單「404 頁 cta_id」劃掉 poem（已照 core §7 改成統一值，poem#8）；剩 study 待改｜Alison 已確認可以合併（Zoe 2026-10-10 轉達）
+
+- 2026-10-10｜poem v0.5｜Zoe｜404 頁照 core v1.4：`notfound_home → notfound_hub`、`notfound_poem → notfound_card`，`cta_type` 由 `other` 改 `poem`；新增到主站連結 `notfound_main`；robots 改 `noindex, follow`；404 的 GA4 加 `page_title`＝`詩|404|找不到頁面`；全站 spec-version 改 `core-v1.4/poem-v0.5`（poem#8）｜registry 待修清單「404 頁 cta_id」的 poem 項
+  - **改版日 2026-10-10**：poem 的 404 點擊改送 `notfound_hub`／`notfound_card`／`notfound_main`，看長期趨勢要合併舊值 `notfound_home`／`notfound_poem`
+
+- 2026-10-10｜games v1.8.1、registry v1.3.9｜Zoe｜遊戲主頁檢查：補預覽圖 /assets/og-hub.png（原本沒有）、對比修到 AA、到主站連結 cta_type `mainsite`→`article`（`mainsite` 不在 core 值域）、頁尾 cta_id `footer`→`footer_main`；主頁 game_id 確認為 `hub`；主頁 NEW 只標最新三款（Zoe 決定）｜主頁是最後一頁還沒檢查的；Zoe 要求未來都只標最新三款
+  - **改版日 2026-10-10**：主頁到主站的點擊之前是 `cta_type=mainsite`（頁尾 cta_id 之前是 `footer`），看長期趨勢要合併
+
+- 2026-10-10｜registry v1.3.8｜Zoe｜SwiftUI 偵探、東西腔道場、ひより花店檢查（7 款逐款檢查的第 4～6 款，全部完成）：三款都補 og 圖與分享大圖、聯盟改記平台名並補 nofollow、頁尾新文字、對比修到 AA、spec-version core-v1.4/games-v1.8。另外修了三個追蹤問題：東西腔道場從分享連結進來一直沒記到 shared、分享網址 via=share 改 ref=share；花店聯盟點擊沒帶到花名、cta_id 改名｜逐款檢查
+  - **改版日 2026-10-10**：swiftui、flower 的聯盟點擊之前是 `cta_type=affiliate`，現在是 `klook`；tozai 之前是 `affiliate`，現在是 `trip`
+  - **改版日 2026-10-10**：flower 的 cta_id `article_link`→`about_article`、`footer`→`footer_hub`／`footer_main`；tozai 的 `entry_point=shared` 從今天起才有資料
+
+- 2026-10-10｜games v1.8｜Zoe｜全部遊戲頁與遊戲主頁的分享列加「加到我的最愛」按鈕：共用 `/lib/hy-fav.js`，自動補在「複製連結」後面，按下去依裝置顯示加書籤的做法；事件 `bookmark_shortcut`（option=inapp／ios／android／mac／desktop）｜Zoe 要求：希望大家時常回訪，在我的最愛裡好找
+  - **改版日 2026-10-10**：games 開始送 `bookmark_shortcut`
+
+- 2026-10-10｜registry v1.3.7、core v1.4（補值域，不升版）、games v1.8｜Alison（Zoe 上架）｜新增 sleep_rhythm（前綴 sleep_）；core §3-3 content_type 加 invite；games §7 加篩選代碼 topic=habit、skill=sleep；遊戲頁 Drive 換成標準寫法、分頁圖示加 v=2、上鎖手記字色加深到 AA、spec-version 改 core-v1.4/games-v1.8｜「固定作息燈塔」上線：可用連結邀朋友互看進度，邀請分享要和一般分享分開看（Alison 交接寫的是 registry v1.4、core v1.4、games v1.6.1，依現況改成 registry v1.3.6→v1.3.7、games v1.7→v1.8；core 只補原本沒有的值，照 2026-10-09 加 poem 的前例不升版）
+
+- 2026-10-10｜registry v1.3.6｜Zoe｜SQL 偵探（sql_detective）檢查：補專屬事件、level／option 值域；遊戲頁聯盟 cta_type affiliate→klook、補 nofollow；修正新玩家一進來就看到「結案」區（hidden 被 display:grid 蓋掉）；補 og 圖、結構化資料、介紹文連結；頁尾新文字；字型去和號；廣告移到回主頁按鈕下方；按鈕加大｜7 款遊戲逐款檢查的第 3 款
+  - **改版日 2026-10-10**：sql 的聯盟點擊之前是 `cta_type=affiliate`，看長期趨勢要合併
+
+- 2026-10-10｜games v1.7｜Zoe｜games 404 頁照 core v1.4：推薦卡片 cta_id `notfound_game`→`notfound_card`、最多 3 張、加到主站的次要按鈕 `notfound_main`、`noindex, follow`；registry 待修清單 games 劃掉｜core v1.4 統一所有子網域的 404
+  - **改版日 2026-10-10**：games 404 的卡片點擊之前是 `notfound_game`，看長期趨勢要合併
+
 - 2026-10-10｜registry v1.3.5｜Zoe｜日檢密室（jlpt_mishitsu）檢查：補中文名；遊戲頁聯盟 cta_type affiliate→trip、補 nofollow；game_milestone 參數 item_count→milestone；補 og 圖、結構化資料、介紹文連結；頁尾新文字；字型與分享網址去和號；對比修到 AA。全站 vignette 標記改成持續留意（程式之後產生的連結也會加上）｜7 款遊戲逐款檢查的第 2 款；日檢的旅遊卡片、分享、來源連結都是程式產生的，原本沒有 vignette 標記
   - **改版日 2026-10-10**：jlpt 的聯盟點擊之前是 `cta_type=affiliate`、里程碑參數之前是 `item_count`，看長期趨勢要合併
 
-- 2026-10-09｜core v1.4、registry v1.3.4｜Zoe｜core §7 新增「404 頁」：每個子網域都要有，內容依序為品牌列、說明、回首頁大按鈕、推薦卡片（自動產生＋寫死備用）、跨站連結、頁尾；網址含 /en/、/ja/ 換語言；noindex、不放廣告單元；追蹤統一 `notfound_hub`／`notfound_<東西>`／`notfound_site`；§9 驗收加一項；registry 待修清單加 story、tools、poem 三項｜Zoe 希望打錯網址時引導讀者回系列主頁看更多；games、poem、study 已各自做了，統一寫法
-  - 2026-10-09 實查：study 符合（Drive 全站待建立）；games 缺跨站連結一行；poem 的回首頁 cta_id 要改名；story 沒有 404；tools 只有一句說明。都列進 registry 待修，各站下次改版時處理，並把 spec-version 改成 core-v1.4
-
+- 2026-10-09｜core v1.4、story v1.3、registry v1.3.4｜Zoe 提案、Alison 確認｜core §7 新增「404 頁」、§9 驗收加一項；story §5 補 404 寫法；story 上線 `404.html`（story#5）｜Zoe 要求：找不到的頁面要引導讀者回系列主頁看其他作品，不要出現 GitHub 白底錯誤頁
+  - GA4：404 頁新增 cta_id `notfound_hub`、`notfound_main`、`notfound_card`
+  - 部落格 404 延到搬 Astro 時一起做
+  - 已上線的 404 用的 cta_id 和新規則不同，統一成 `notfound_hub`／`notfound_main`／`notfound_card`：games `notfound_game`→`notfound_card`；study `notfound_topic`→`notfound_card`；poem `notfound_home`→`notfound_hub`、`notfound_poem`→`notfound_card`。列進 registry 待修清單，**各站改完當天在這裡記改版日**；GA4 看長期趨勢時要把舊值和新值合併
 - 2026-10-09｜core v1.3.1、games v1.6.1｜Alison（Zoe 確認上架）｜core §7：OG 圖與部落格首圖共用橫式設計、不放浮水印；games §6-1：morse_code 加入進度圖卡｜分享進度要能傳到訊息與社群；網頁預覽與文章首圖不需要浮水印
 
 - 2026-10-09｜core v1.3（補值域，不升版）、registry v1.3.3｜Zoe 提案、Alison 確認｜core §3-3 cta_type 值域加 `poem`；§7 品牌列追蹤值補「poem `poem`」（原標 ⚠ 待補）；registry 品牌列待修清單移除 poem（poem v0.4 已上線）｜poem 品牌列 brand_hub 送 cta_type=poem，GA4 一次篩得出各子網域

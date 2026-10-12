@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.6｜2026-10-10｜Zoe＋Alison**（v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite。v1.4：每個子網域都要有 404 頁，統一內容與追蹤。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.6｜2026-10-12｜Zoe＋Alison**（v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -136,14 +136,16 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | `page_lang` | 介面語言 | 故事規範 |
 | `cta_id`、`cta_type` | 點的位置、去哪裡 | 故事規範 |
 | `entry_point` | 從哪裡開始用 | 故事規範 |
-| `method`、`content_type`、`option`、`source`、`result` | 見 3-2、3-3 | 工具規範 |
+| `method`、`content_type`、`option` | 見 3-2、3-3 | 工具規範 |
+| `source`、`result` | 動作從哪裡觸發、結果（見 3-2、3-3） | 2026-10-10 才登記（之前字典寫已註冊，實際沒有） |
 | `item_count`（指標） | 個數 | 工具規範 |
 | `duration_sec`（指標） | 秒數 | 故事規範 |
-| `game_id` | 哪個遊戲 | 遊戲規範 |
-| `level`、`correct_count`、`milestone` | 關卡（l00–l99）、答對數、里程碑 | ⚠ 遊戲規範（以 GA4 匯出表核對） |
+| `game_id` | 哪個遊戲 | 遊戲規範（2026-10-10 登記） |
+| `level`、`milestone`、`unlock_id` | 關卡（l00–l99）、里程碑、解鎖項目 | 遊戲規範（2026-10-10 登記） |
+| `correct_count`、`round_count`（指標） | 答對數、這次造訪玩到第幾局 | 遊戲規範（2026-10-10 登記） |
 | `card_index`、`score`、`pct` | 數字 | 不註冊（需要時再加） |
 
-- 自訂維度名額（事件範圍 50 個）**全站共用**，新增參數前先查這張表，能沿用就沿用。
+- 自訂維度名額（事件範圍 50 個）**全站共用**，新增參數前先查這張表，能沿用就沿用。2026-10-10 實際用量：維度 31／50、指標 11／50。**登記日之前的資料報表看不到、也補不回來**，新參數上線前先登記。
 - 保留名稱（不要使用）：`lang`、`tool`、`type`、`device`、`platform`、`content`、`choice`、`outcome`、`level_name`、`success`、`character`。
 - 重要事件：`share`、`cta_click`、`tool_result`、`open_saved_shortcut`（⚠ 遊戲的待補）。
 - 子網域都在 knittinghiyori.com 底下，cookie 共用，**不用設定跨網域**。
@@ -189,7 +191,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 
 ## 7. 品牌與 SEO 基本項
 
-- **分頁圖示**：所有子網域用編織日和系列的 favicon（米色底、白色拱窗），檔案以 games 的 `/icons/` 為準。分頁圖示只用在分頁，不當品牌 logo。
+- **分頁圖示**（2026-10-12 更新）：所有子網域都用**正式 logo**（方形「編織日和 Knitting Hiyori」棒針底圖）做成的整組圖示，檔案直接複製 games 的 `/icons/`（favicon.ico、favicon-32、favicon-96、icon-192、icon-512、apple-touch-icon），**根目錄另放 `favicon.ico`、`apple-touch-icon.png`**（瀏覽器、Google、Travelpayouts 這類後台會直接抓根目錄）。只有拱窗、沒有字的舊圖不再使用。換圖時圖示連結加 `?v=2` 這類版本號，避免瀏覽器用舊快取。
 - **頁首品牌列**（2026-10-04 起）：所有子網域（story、tools、games、poem、study）的每一頁，**最上方**都放「正式 logo＋『編織日和・站名』文字」，點了回**該子網域的首頁**。作品／工具／遊戲名稱放在品牌列下方，不取代品牌。寫法以 games 的 `_template/` 為準（`.kh-brand-row`、`.kh-brand`）。
   - logo 用正式 logo（方形「編織日和 Knitting Hiyori」棒針底圖），檔案以 games 的 `/icons/logo-knitting-120.webp` 為準（高解析度用 `logo-knitting-240.webp`），顯示 40px；旁邊已寫出「編織日和」時 `alt=""`。
   - 文字用靜態 HTML（§8-1），不能只放在圖片裡。站名例：小遊戲、工具、故事、學習筆記（英：編織日和 · Games；日：編織日和・ミニゲーム）。窄螢幕放不下時，先藏站名，「編織日和」不藏。
@@ -198,12 +200,16 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - OG 圖與部落格文章首圖共用同一張橫式設計（1200×630），**不放浮水印**；浮水印只用在社群貼文圖與成績卡／進度圖卡這類會被轉傳的圖。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
-- FAQ 的 JSON-LD 必須和頁面文字逐字一致。
-- **404 頁**（2026-10-09 起，每個子網域都要有根目錄的 `404.html`；GitHub Pages 遇到不存在的網址都會顯示它，並回 404 狀態碼）：讀者打錯網址或點到舊連結時，引導回系列主頁、看更多選擇，不要讓人直接離開。寫法以 games 的 `404.html` 為準。
-  - 由上到下：①頁首品牌列（同上）②一句好懂的說明（例：「這一頁找不到了，可能網址打錯或已經搬家。」）③**大按鈕回該站首頁**④「你可能會喜歡」推薦卡片（該站的作品／遊戲／工具／主題；可以在瀏覽器讀首頁卡片自動產生，但頁面裡要寫死一份備用清單，JS 壞掉也看得到）⑤跨站連結一行（故事、詩、小遊戲、小工具、學習筆記、部落格）⑥頁尾 `.kh-legal`。
-  - 語言：預設中文；壞掉的網址含 `/en/`、`/ja/` 時換成英文／日文說明與按鈕（同一個 404.html，用 JS 切換）。
-  - SEO：`noindex`；不放 canonical、hreflang、OG。不放 AdSense 廣告單元（Drive 照放）。
-  - 追蹤：GA4 照常載入，`page_title` 用 `類別|找不到頁面|404`（例：`遊戲|找不到頁面|404`），報表看 page_location 就知道哪些壞網址最常被點，回頭修連結。點擊一律 `cta_click`：回首頁 `cta_id=notfound_hub`；推薦卡片 `notfound_<東西>`（games `notfound_game`、study `notfound_topic`、poem `notfound_poem`、story `notfound_work`、tools `notfound_tool`）；跨站連結 `notfound_site`；`cta_type` 填目的地類型（§3-3）。
+- FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
+- **404 頁**（2026-10-09 起）：每個子網域根目錄都要有 `404.html`（GitHub Pages 找不到網址時自動顯示），不讓讀者看到 GitHub 白底錯誤頁。
+  - 由上到下：品牌列（同上）→ 一句說明（網址可能打錯或頁面搬家）→ 回**該站首頁**的主要按鈕＋到主站的次要按鈕 → 同系列的作品／工具／遊戲推薦（最多 3 個）。
+  - 依網址第一層判斷讀者原本要去哪一區（例：story `/books/` 小說、`/drama/` 追劇），同區優先推薦。推薦項目在執行時從該站首頁抓，首頁更新就自動跟著更新，不另外維護一份清單。
+  - `noindex, follow`；不放 AdSense；Drive 照放（§5）。不載會把網址當內容 id 的站內追蹤（例：hy-story.js），只送 page_view 與 `cta_click`：`notfound_hub`（回該站首頁）、`notfound_main`（到主站，有放才送）、`notfound_card`（推薦卡片），cta_type 照該站類型。**所有子網域統一用這幾個值**（加上下面的 `notfound_site` 共 4 個），不另取站別名稱；已上線的 games（`notfound_game`）、study（`notfound_topic`）、poem（`notfound_home`、`notfound_poem`）列在 registry 待修清單，改版時改成統一值並在 CHANGELOG 記改版日，GA4 看長期趨勢要合併舊值。
+  - `<title>`／page_title 要看得出是 404（例：story「404 找不到這一頁｜…」、study `筆記|404|找不到頁面`），GA4 用標題就能篩出哪些錯網址有人進來。所有連結用絕對路徑（404 會出現在任何一層網址底下）。
+  - **跨站連結一行**（v1.5）：推薦卡片下面放一行到其他子網域的連結（故事、詩、小遊戲、小工具、學習筆記，不含自己），送 `cta_click`、`cta_id=notfound_site`、`cta_type` 填目的地類型（story／poem／game／tool／study）。所以 404 的 cta_id 共 4 個：`notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`。
+  - **語言**（v1.5）：預設中文；網址含 `/en/`、`/ja/` 時換成英文／日文，其次看瀏覽器語言，中文以外沒有對應時用英文（同一個 404.html，用 JS 切換說明、按鈕與 `<html lang>`）。
+  - **GA4 分類**（v1.5）：`config` 前先 `gtag('set', {content_group: <該站的值>, page_lang, page_title})`，page_title 用 `類別|404|找不到頁面`（例：`遊戲|404|找不到頁面`、`故事|404|找不到頁面`），報表才分得出是哪一站的 404。
+  - 各站寫法見站別檔（story §5、games §1、study §1、poem）。部落格（WordPress）等搬到 Astro 時一起做。
 - 中文內容使用全形標點；版面以手機閱讀為優先（390px 先做對）。
 
 ---
@@ -230,5 +236,5 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - `?hy_debug=1` 操作一輪，參數值沒有中文、讀者輸入的文字或 (not set)
 - 追蹤碼「和號」字元數為 0
 - `spec-version` meta 存在且是目前版本
+- 網站根目錄有 `404.html`，打一個不存在的網址會顯示它（§7）
 - 頁首最上方有品牌列：正式 logo＋「編織日和」文字，連到該子網域首頁（§7）
-- 亂打一個網址（例：`/no-such-page/`、`/en/no-such-page/`）會顯示該站 404 頁，回 404 狀態碼、語言正確、按鈕回首頁、有推薦卡片（§7）
