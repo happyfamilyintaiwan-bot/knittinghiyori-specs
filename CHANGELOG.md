@@ -4,9 +4,18 @@
 
 ---
 
-- 2026-10-12｜core v1.5、story v1.3.1、registry v1.3.11｜Zoe｜**404 規則定案**（回應下面 games v1.8.4 的 ⚠）：以 main 的 core v1.4 為準，卡片統一 `notfound_card`、page_title `類別|404|找不到頁面`；原 #4 草案裡的 `notfound_<東西>` 寫法作廢。core §7 補三項：跨站連結一行 `notfound_site`、依 `/en/`、`/ja/` 切換語言、`gtag('set')` 送 content_group。另把「分頁圖示」改成一律用正式 logo 整組＋根目錄 favicon.ico／apple-touch-icon.png｜Zoe 確認；Zoe 從 Travelpayouts 後台發現 story、tools 的網域圖示是只有拱窗的舊圖
+- 2026-10-12｜core v1.5（補項）、story v1.3.1、registry v1.4｜Zoe｜**404 規則定案**（回應下面 games v1.8.4 的 ⚠）：以 main 的 core v1.4 為準，卡片統一 `notfound_card`、page_title `類別|404|找不到頁面`；原 #4 草案裡的 `notfound_<東西>` 寫法作廢。core §7 補三項：跨站連結一行 `notfound_site`、依 `/en/`、`/ja/` 切換語言、`gtag('set')` 送 content_group。另把「分頁圖示」改成一律用正式 logo 整組＋根目錄 favicon.ico／apple-touch-icon.png｜Zoe 確認；Zoe 從 Travelpayouts 後台發現 story、tools 的網域圖示是只有拱窗的舊圖
   - 已上線：story 404（cbc5abf）補 GA4 分類與英日語切換；story、tools（tools#8）分頁圖示換成正式 logo，圖示連結加 `?v=2`
   - **改版日 2026-10-12**：story 404 開始送 content_group=story、page_title；之前的 404 點擊沒有 content_group
+
+- 2026-10-12｜（補登）｜Zoe｜下面兩筆 2026-10-10 的紀錄原本只在 #4 分支上、沒進 main，這次一起合併補回；其中 study 404 的 page_title 之後要改回 `筆記|404|找不到頁面`（見 registry 待修）
+
+- 2026-10-10｜core v1.5、study v0.4、registry v1.4｜Alison 提案、Zoe 上架｜core §3-3 content_type 加 `study`、`invite`（invite 是「固定作息燈塔」要用的，Alison 要求併成同一列先加）；study 新增互動頁規則（整頁 HTML、中英雙語網址、`topics.json` 的 `page`、產生器放 `interactive/`、站台共用值用環境變數帶入）、聯盟連結規則、cta_id `page_link`／`read_card`／`book_shelf` 與 §3-1 互動頁事件（前綴 studio_）；registry 新增 `artists-way`（已上線）｜Alison 新增 12 週創造力練習互動頁「豐盛工作室」，邀請朋友的 share 需要 study 值，study 原本只支援 Markdown 筆記與中文
+  - **改版日 2026-10-10**：study 開始有聯盟點擊（cta_type=shopee）
+  - 上架時的技術調整：Drive、AdSense 底部版位、cookie_domain、分頁圖示、og 圖補 logo 與網址；各頁 spec-version `core-v1.5/study-v0.4`
+
+- 2026-10-10｜study v0.3（core §1 補值，core 版本不變）｜Zoe｜core §1 study 列填入 AdSense slot `7499102019` 與 Drive `emrld.ltd/NTgzNjI3.js?t=583627`；study 每頁底部 1 個手動版位（404 不放）、Drive 全頁載入；新增專屬分享縮圖 `icons/og-study.jpg`；404 對齊 core v1.4（page_title 改 `筆記|找不到頁面|404`、不放 canonical／OG、加跨站連結 `notfound_site`、/en/ /ja/ 換語言）；各頁 spec-version 改 `core-v1.4/study-v0.3`｜Zoe 建好廣告單元與 Drive；study 原本借用 story 的分享圖
+  - **改版日 2026-10-10**：404 的 page_title 由 `筆記|404|找不到頁面` 改成 `筆記|找不到頁面|404`，看 404 報表時兩個都要算
 
 - 2026-10-12｜games v1.8.4｜Zoe｜games 404 頁加跨站連結一行（故事、詩、小工具、學習筆記），點擊送 `cta_click`，`cta_id=notfound_site`、`cta_type` 填目的地類型；中英日三語；粉紅色加深到 AA｜Zoe 指出 games 的 404 少了這一行（study 的 404 已經有）
   - **改版日 2026-10-12**：games 開始送 `notfound_site`
