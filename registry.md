@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.3.10｜2026-10-10｜Zoe＋Alison**（v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4｜2026-10-12｜Zoe＋Alison**（v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -97,8 +97,9 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | `cs50` | 哈佛 CS50 計算機科學概論 | study /cs50/ | 已上線 | 公開課；卡片連 `/harvard-cs50-courses/` |
 | `claude-ai` | Claude AI 與 AI 分身 | study /claude-ai/ | 已上線 | 自學；卡片連 `/claude-beginner-guide-anthropic-academy-courses/` |
 | `minerva-mda` | Minerva MDA | study /minerva-mda/ | 已上線 | 上過的課；卡片連 `/minerva-university-mda-master-degree-guide/`；⚠ 正式課程名稱待 Alison 補 |
-| `japanese` | 日文學習 | study /japanese/ | 已上線 | 自學；卡片連 `/japanese-verb-conjugation-six-forms-five-types/` |
+| `japanese` | 日文學習 | study /japanese/ | 已上線 | 自學；卡片連 hub 文章 `/learn-japanese-self-study-guide/`（2026-10-10 起；之前連動詞變化總整理） |
 | `chess` | 西洋棋 | study /chess/ | 已上線 | 自學；卡片連 `/chess-for-beginners/` |
+| `artists-way` | 藝術家之路（The Artist's Way） | study /artists-way/、/artists-way/abundant-studio/、/en/artists-way/abundant-studio/ | 已上線 | 自學；內容 Alison；互動頁「豐盛工作室／The Abundant Studio」中英雙語，2026-10-10 上線；事件前綴 `studio_`（與工具／遊戲前綴不重複）；page_title `筆記\|藝術家之路\|豐盛工作室`；聯盟：中文頁蝦皮 2 本書（read_card、book_shelf） |
 
 ## 待修清單（改版時處理，修完把狀態改回「已上線」並寫 CHANGELOG）
 
@@ -109,6 +110,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql（~~below_game~~ 2026-10-10 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（~~dadaocheng_result、escape_room_result~~ 2026-10-10 遊戲頁已改）→ `klook`；tozai（~~start_card、result_card~~）→ `trip`、flower（~~flower_trip~~）→ `klook`，都在 2026-10-10 改完。**遊戲頁全部改完，只剩 WordPress 介紹文裡的**。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
 | 404 頁 cta_id（~~games~~、~~poem~~ 2026-10-10 已改、study） | ~~games `notfound_game`~~；study `notfound_topic`；~~poem `notfound_home`、`notfound_poem`~~，和 core §7 統一值不同 | games、study `→ notfound_card`；~~poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`~~（poem#8）；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
+| 404 頁 core v1.5 補項（2026-10-12 實查） | poem：沒有跨站連結一行；tools：404 只有一句說明，沒有品牌列、推薦卡片、跨站連結、語言切換；study：404 的 page_title 是 `筆記|找不到頁面|404`（照舊草案寫的） | 各站下次改版時照 core §7 補上；study 的 page_title 改回 `筆記|404|找不到頁面`（story、games 已完成） |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
 | 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 4 部 8 頁仍用舊的內嵌追蹤（已改送 content_group=story、work）；page_title 不是 `追劇\|…` 格式 | 改用 hy-story.js、page_title 改成 story.md 格式，重驗 DebugView（搬資料夾、關自動廣告、spec-version 已於 2026-10-04 完成） |
 

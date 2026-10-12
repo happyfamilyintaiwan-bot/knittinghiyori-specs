@@ -19,6 +19,9 @@
 - **頁首品牌列**（core §7）：`BRAND`（正式 logo `/icons/logo-knitting-120.webp`＋240 給高解析度，40px）＋「編織日和・詩」（英：編織日和 · Poems），連到 `https://poem.knittinghiyori.com/`，`data-cta="brand_hub"`、`data-cta-type="poem"`（core §3-3 值域，2026-10-09 定案）。語言切換與夜間模式在同一列右側；400px 以下藏「・詩」（`.kh-brand-sub`）並縮小語言按鈕內距。詩頁與 404 在品牌列下方另有「‹ 目錄」（`BACK`）
 - **對比**：灰字 `--pencil` 白天 `#6b6359`（5.02）；季節色當文字或按鈕底色時白天用 `color-mix(var(--c 或 --m) 65%, #000)`、夜間文字用 `82%, #fff`，12 個月×日夜都達 4.5（2026-10-09 逐月掃過）。新元素要用季節色時照這個寫法
 - 根目錄要有 `/favicon.ico`（Travelpayouts 等服務只抓根目錄，沒有會顯示灰色地球）；`/icons/` 整套與 games 相同（品牌圖版本），根目錄也放 `apple-touch-icon.png`。
+- css/js 網址後的版本號 `V` 依 style.css＋app.js 內容產生（不用日期），改了就換號。
+- 首頁「在 X 上閱讀」：`poems.json` 的 `site.x_profile`（https://x.com/Zoe584547890142）。
+- 語言切換、夜間模式按鈕高 44px（core §8）。
 - 跑 build 會重畫所有 og.png（檔案有細微差異），沒改到的舊詩 og.png 用 `git restore` 還原。
 
 ## 2. AdSense
@@ -42,4 +45,3 @@
 - GA4 追蹤寫法（§3）
 - 版型規則
 - 驗收與部署步驟
-- 語言切換按鈕高 33px、夜間模式鈕 40px，未達 core §8 的 44px
