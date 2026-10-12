@@ -203,7 +203,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - **404 頁**（2026-10-09 起）：每個子網域根目錄都要有 `404.html`（GitHub Pages 找不到網址時自動顯示），不讓讀者看到 GitHub 白底錯誤頁。
   - 由上到下：品牌列（同上）→ 一句說明（網址可能打錯或頁面搬家）→ 回**該站首頁**的主要按鈕＋到主站的次要按鈕 → 同系列的作品／工具／遊戲推薦（最多 3 個）。
   - 依網址第一層判斷讀者原本要去哪一區（例：story `/books/` 小說、`/drama/` 追劇），同區優先推薦。推薦項目在執行時從該站首頁抓，首頁更新就自動跟著更新，不另外維護一份清單。
-  - `noindex, follow`；不放 AdSense；Drive 照放（§5）。不載會把網址當內容 id 的站內追蹤（例：hy-story.js），只送 page_view 與 `cta_click`：`notfound_hub`（回該站首頁）、`notfound_main`（到主站，有放才送）、`notfound_card`（推薦卡片），cta_type 照該站類型。**所有子網域統一用這 3 個值**，不另取站別名稱；已上線的 games（`notfound_game`）、study（`notfound_topic`）、poem（`notfound_home`、`notfound_poem`）列在 registry 待修清單，改版時改成統一值並在 CHANGELOG 記改版日，GA4 看長期趨勢要合併舊值。
+  - `noindex, follow`；不放 AdSense；Drive 照放（§5）。不載會把網址當內容 id 的站內追蹤（例：hy-story.js），只送 page_view 與 `cta_click`：`notfound_hub`（回該站首頁）、`notfound_main`（到主站，有放才送）、`notfound_card`（推薦卡片），cta_type 照該站類型。**所有子網域統一用這幾個值**（加上下面的 `notfound_site` 共 4 個），不另取站別名稱；已上線的 games（`notfound_game`）、study（`notfound_topic`）、poem（`notfound_home`、`notfound_poem`）列在 registry 待修清單，改版時改成統一值並在 CHANGELOG 記改版日，GA4 看長期趨勢要合併舊值。
   - `<title>`／page_title 要看得出是 404（例：story「404 找不到這一頁｜…」、study `筆記|404|找不到頁面`），GA4 用標題就能篩出哪些錯網址有人進來。所有連結用絕對路徑（404 會出現在任何一層網址底下）。
   - **跨站連結一行**（v1.5）：推薦卡片下面放一行到其他子網域的連結（故事、詩、小遊戲、小工具、學習筆記，不含自己），送 `cta_click`、`cta_id=notfound_site`、`cta_type` 填目的地類型（story／poem／game／tool／study）。所以 404 的 cta_id 共 4 個：`notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`。
   - **語言**（v1.5）：預設中文；網址含 `/en/`、`/ja/` 時換成英文／日文，其次看瀏覽器語言，中文以外沒有對應時用英文（同一個 404.html，用 JS 切換說明、按鈕與 `<html lang>`）。
