@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-14｜registry v1.4.1｜Alison（Zoe 待確認）｜`hiyori_pet` 狀態改已上線、上線日 2026-10-14（games#2，9aea4e5）；補 `pet_walk_ask`、`pet_visit_*`、電子報與問卷的 cta_id（`app_waitlist_game`、`feedback_adult`、`feedback_below`）、book 欄位 `kitAsked`、`fbAsked`｜網頁版當 App 的 MVP 提早上線，Zoe 同意由 Alison 這邊上架。注意：cta_type `newsletter` 在 core v1.6（`zoe/blog-ga4` 分支，還沒進 main）才列入值域
+
 - 2026-10-12｜core v1.5（補項）、story v1.3.1、registry v1.4｜Zoe｜**404 規則定案**（回應下面 games v1.8.4 的 ⚠）：以 main 的 core v1.4 為準，卡片統一 `notfound_card`、page_title `類別|404|找不到頁面`；原 #4 草案裡的 `notfound_<東西>` 寫法作廢。core §7 補三項：跨站連結一行 `notfound_site`、依 `/en/`、`/ja/` 切換語言、`gtag('set')` 送 content_group。另把「分頁圖示」改成一律用正式 logo 整組＋根目錄 favicon.ico／apple-touch-icon.png｜Zoe 確認；Zoe 從 Travelpayouts 後台發現 story、tools 的網域圖示是只有拱窗的舊圖
   - 已上線：story 404（cbc5abf）補 GA4 分類與英日語切換；story、tools（tools#8）分頁圖示換成正式 logo，圖示連結加 `?v=2`
   - **改版日 2026-10-12**：story 404 開始送 content_group=story、page_title；之前的 404 點擊沒有 content_group
