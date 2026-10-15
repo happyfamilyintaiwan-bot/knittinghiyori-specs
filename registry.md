@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4｜2026-10-12｜Zoe＋Alison**（v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4.2｜2026-10-15｜Zoe＋Alison**（v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1 是 specs#8 日和毛孩上線，尚未合併。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -18,9 +18,10 @@
 |---|---|---|---|---|---|---|
 | `hub` | 工具總覽頁 | tools / ・/en/ ・/ja/ | `hub_` | `工具\|工具總覽\|免費線上小工具` | 已上線 | 與遊戲 `hub_` 同名，靠 tool_id 區分 |
 | `travel_split` | 旅費分帳計算機 | tools /travel-split-calculator/（三語） | `split_` | `工具\|旅費分帳計算機\|出國多幣別分帳` | 已搬家 | WP 待設 301 |
-| `bill_split` | 聚餐分帳計算機 | WP /tools/bill-split-calculator/ | `bill_` | ⚠ 待補 | 已上線 | |
+| `bill_split` | 聚餐分帳計算機 | tools /bill-split-calculator/（三語） | `bill_` | `工具\|聚餐分帳計算機\|逐項分帳與服務費比例分攤` | 已搬家 | WP 待設 301；專屬事件 bill_add_item、bill_open_choice 等沿用；2026-10-15 上線（tools#10） |
 | `parking_timer` | 停車計時卡 | tools /parking-timer/（只有中文） | `park_` | `工具\|停車計時卡\|算停車費與限停倒數` | 已上線 | Alison 製作 |
-| `concert_trip` | 追星遠征規劃器 | tools /concert-trip-planner/（只有中文） | `ct_` | `工具\|追星遠征規劃器\|海外演唱會搶票與行程規劃` | 規劃中 | Alison 製作，定稿後上傳 tools repo 並加入 tools.json |
+| `concert_trip` | 追星遠征規劃器 | tools /concert-trip-planner/（只有中文） | `ct_` | `工具\|追星遠征規劃器\|海外演唱會搶票與行程規劃` | 已上線 | Alison 製作；2026-10-04 上線，2026-10-15 加開賣時間換算（tools#11）；專屬事件 `ct_remind`（option＝gcal／ics）；`tool_result` 帶 option＝城市 id、source＝convert／planner；已有品牌列 |
+| `handwriting_compare` | 練字前後對比圖產生器 | tools /handwriting-before-after/（只有中文） | `hw_` | `工具\|練字前後對比圖產生器\|練字成果對比分享圖` | 已上線 | Alison 製作；2026-10-12 上線（tools#12、#13）；專屬事件 `hw_layout`；新 cta_id `catalog_tool`、`catalog_card`、`footer_catalog`（article，字帖目錄） |
 | `season_booking` | 季節訂房倒數工具 | tools /season-booking/ | ⚠ 定稿時確認 | ⚠ `工具\|…` | 規劃中 | 原規劃放 games，改由 Alison 直接在 tools 製作；games 不上線，不需要導向 |
 | `ai_image_prompts` | AI 照片轉插畫風格指令 | tools /ai-image-prompts/ | `aip_` | `工具\|AI照片轉插畫\|風格指令` | 規劃中 | 尚未放進 tools repo |
 | `trip_planner`（預定） | 旅遊行程共編工具 | WP /group-trip-planner/ | `tp_` | ⚠ 待補 | **待修** | 見下方「待修清單」；不在總覽頁 19 個工具裡，⚠ Zoe 決定是否加入 |
