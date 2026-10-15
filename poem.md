@@ -11,6 +11,7 @@
 
 - repo：`happyfamilyintaiwan-bot/poem`（CNAME `poem.knittinghiyori.com`）。
 - **頁面由 `build.py` 從 `poems.json` 產生（需 Python 3.12+）**。改版面要改 `build.py` 再重跑；直接改 `index.html` 會被覆蓋。
+- 根目錄 `llms.txt`（給 AI 搜尋與助理讀的網站摘要）也由 `build.py` 產生，依 `poems.json` 自動列出全部的詩，不手改（2026-10-15 起）。
 - Drive（`emrld.ltd/NTc4NjIw.js?t=578620`）寫在 `build.py` 的 `DRIVE`，所有頁面（含 404）head 第一個 script。
 - 常數都在 `build.py` 開頭：`DRIVE`、`AD_CLIENT`／`AD_SLOT`、`AD_SLOT_HOME`／`AD_SLOT_POEM`、`SPEC`（spec-version，目前 `core-v1.4/poem-v0.5`）、`PRIVACY`。升版時改 `SPEC` 再重跑 build。
 - 頁面一律經 `write()` 寫出：自動在所有 `<a>` 加 `data-google-vignette="false"`（靜態 HTML，不靠 JS）。新增頁面也要用 `write()`。
