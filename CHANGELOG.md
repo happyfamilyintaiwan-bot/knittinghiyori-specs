@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-15｜registry（狀態更新，不升版）｜Zoe｜travel_split、bill_split 的 WordPress 舊頁已設 301（Rank Math → 重新導向，完全符合 `tools/<slug>` → tools 子網域）；tools sitemap.xml 首次提交 GSC；聚餐分帳三語要求建立索引｜搬家後舊網址不分散排名
+  - 新站（Astro）上線時要在 Worker 重做這兩筆轉址，已記在遷移計畫「轉址清單」
+
 - 2026-10-15｜core v1.7、tools v2.4、registry v1.4.2｜Alison 提案，Zoe 確認上架｜**core §3-2**：分享與匯出的內容都要附出處網址。**tools v2.3／v2.4**（tools#2、#4、#10，原 #5）：工具頁統一頁首（logo＋編織日和・小工具／No.XX · 分類／麵包屑，No. 依 tools.json 順序）、spec-version 由 build 自動套、分享與匯出附出處網址、robots 擋 /wp-src/；wp-src 拆成原始碼＋wp_build.py 產生 WordPress 載入器；聚餐分帳搬到 tools 三語，產生器外框、聯盟變數、JSON-LD 類別改依 meta.json。**registry**：bill_split 改 tools 三語、concert_trip 改已上線並登記 ct_remind（tools#11，原 #6）、新增 handwriting_compare｜工具陸續搬到 GitHub，先統一外框；分享出去的內容要看得到來源
   - tools 的 404 已照 core §7 上線（tools#9，2026-10-12），規格段落另開 PR 等 Alison 確認
 
