@@ -8,6 +8,8 @@
 
 - 2026-10-15｜games、poem、study（說明補充，不升版）｜Zoe｜**各站加 llms.txt**：games、story、poem、study 根目錄新增 `llms.txt`（games#7、story#6、poem#9、study#11）；poem 由 `build.py` 自動產生，其餘手寫。上架清單補「llms.txt 加一筆」｜GEO 第一輪，Zoe 決定每個站都要有 llms.txt（tools 早已由 build.py 產生）
   - story.md §7 也要補同一行，因為屬共管段落，另外請 Alison 確認後再改
+- 2026-10-10｜core v1.6、blog v1.1｜Zoe｜core §3-3 cta_type 加 `newsletter`、§3-2 新增 `read_depth`（`pct` 50／90）、§3-1 content_group 加 `article`；blog 新增 §4 GA4 追蹤（cta_id 位置表、page_title `文章|主題|文章標題`）｜部落格搬到 Astro，要跟子網域用同一套事件；訂閱是最重要的轉換，獨立一個 cta_type
+  - **改版日**：新站頁面上線那天（2026-10-13 /chesskid/、2026-10-15 第 1 批 67 篇）。WordPress 舊頁面沒有這些事件，報表比較時要分開看
 
 - 2026-10-12｜core v1.5（補項）、story v1.3.1、registry v1.4｜Zoe｜**404 規則定案**（回應下面 games v1.8.4 的 ⚠）：以 main 的 core v1.4 為準，卡片統一 `notfound_card`、page_title `類別|404|找不到頁面`；原 #4 草案裡的 `notfound_<東西>` 寫法作廢。core §7 補三項：跨站連結一行 `notfound_site`、依 `/en/`、`/ja/` 切換語言、`gtag('set')` 送 content_group。另把「分頁圖示」改成一律用正式 logo 整組＋根目錄 favicon.ico／apple-touch-icon.png｜Zoe 確認；Zoe 從 Travelpayouts 後台發現 story、tools 的網域圖示是只有拱窗的舊圖
   - 已上線：story 404（cbc5abf）補 GA4 分類與英日語切換；story、tools（tools#8）分頁圖示換成正式 logo，圖示連結加 `?v=2`
