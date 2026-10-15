@@ -17,8 +17,8 @@
 | tool_id | 名稱 | 網址 | 前綴 | page_title | 狀態 | 備註 |
 |---|---|---|---|---|---|---|
 | `hub` | 工具總覽頁 | tools / ・/en/ ・/ja/ | `hub_` | `工具\|工具總覽\|免費線上小工具` | 已上線 | 與遊戲 `hub_` 同名，靠 tool_id 區分 |
-| `travel_split` | 旅費分帳計算機 | tools /travel-split-calculator/（三語） | `split_` | `工具\|旅費分帳計算機\|出國多幣別分帳` | 已搬家 | WP 待設 301 |
-| `bill_split` | 聚餐分帳計算機 | tools /bill-split-calculator/（三語） | `bill_` | `工具\|聚餐分帳計算機\|逐項分帳與服務費比例分攤` | 已搬家 | WP 待設 301；專屬事件 bill_add_item、bill_open_choice 等沿用；2026-10-15 上線（tools#10） |
+| `travel_split` | 旅費分帳計算機 | tools /travel-split-calculator/（三語） | `split_` | `工具\|旅費分帳計算機\|出國多幣別分帳` | 已搬家 | WP 301 已設（2026-10-15，Rank Math） |
+| `bill_split` | 聚餐分帳計算機 | tools /bill-split-calculator/（三語） | `bill_` | `工具\|聚餐分帳計算機\|逐項分帳與服務費比例分攤` | 已搬家 | WP 301 已設（2026-10-15，Rank Math）；專屬事件 bill_add_item、bill_open_choice 等沿用；2026-10-15 上線（tools#10） |
 | `parking_timer` | 停車計時卡 | tools /parking-timer/（只有中文） | `park_` | `工具\|停車計時卡\|算停車費與限停倒數` | 已上線 | Alison 製作 |
 | `concert_trip` | 追星遠征規劃器 | tools /concert-trip-planner/（只有中文） | `ct_` | `工具\|追星遠征規劃器\|海外演唱會搶票與行程規劃` | 已上線 | Alison 製作；2026-10-04 上線，2026-10-15 加開賣時間換算（tools#11）；專屬事件 `ct_remind`（option＝gcal／ics）；`tool_result` 帶 option＝城市 id、source＝convert／planner；已有品牌列 |
 | `handwriting_compare` | 練字前後對比圖產生器 | tools /handwriting-before-after/（只有中文） | `hw_` | `工具\|練字前後對比圖產生器\|練字成果對比分享圖` | 已上線 | Alison 製作；2026-10-12 上線（tools#12、#13）；專屬事件 `hw_layout`；新 cta_id `catalog_tool`、`catalog_card`、`footer_catalog`（article，字帖目錄） |
