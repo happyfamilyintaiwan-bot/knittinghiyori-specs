@@ -12,7 +12,7 @@
 | 主題頁 | `/<topic>/`，topic＝`topics.json` 的 id＝`notes/` 底下的資料夾名；沒有筆記時放「先讀部落格文章」按鈕 |
 | 筆記頁 | `/<topic>/<英文-slug>/`，slug＝筆記檔名 |
 | 原稿 | `notes/<topic>/<slug>.md`（Markdown＋開頭 title／date／summary／source） |
-| 產生頁面 | `python3 build.py` 產生全部 HTML、sitemap、404，並做上線前檢查；產生的檔案不手改 |
+| 產生頁面 | `python3 build.py` 產生全部 HTML、sitemap、404，並做上線前檢查；產生的檔案不手改。根目錄 `llms.txt` 是手寫檔（2026-10-15 起），新增主題或互動頁時同步加一筆 |
 | 頁首品牌列 | core §7：正式 logo＋「編織日和・學習筆記」，連 study 首頁 |
 | 404 頁 | `404.html`，照 core §7：品牌列＋說明＋「回學習筆記首頁」＋最近更新＋全部主題卡＋跨站連結一行；網址含 `/en/`、`/ja/` 時說明與按鈕換英文／日文；`noindex`、不放 canonical／OG／廣告單元；page_title `筆記\|找不到頁面\|404` |
 | 設計 | 日系筆記本骨架＋中性專業調性（照顧男女讀者）：點陣方格底、明朝體標題（Noto Serif TC）、等寬編號（IBM Plex Mono）、方正卡片＋左上索引標籤、筆記頁左側紅色邊線；不用紙膠帶、便利貼、手寫字、歪斜卡片這類偏可愛的元素。色彩與字型寫在 `assets/study.css` 開頭的變數 |
