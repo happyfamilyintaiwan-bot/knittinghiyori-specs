@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.6｜2026-10-12｜Zoe＋Alison**（v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.7｜2026-10-15｜Zoe＋Alison**（v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -110,6 +110,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | `open_saved_shortcut`、`install_*`、`pwa_*`、`bookmark_shortcut` | 加到桌面相關 | `option`／`result` |
 
 - `share` 和 `export` 的分法：傳給別人 → `share`；自己留存 → `export`。
+- **分享與匯出的內容都要附上出處網址**（文字、連結、行事曆、圖片）：讀者轉傳出去的東西，收到的人要看得到來自哪個頁面。各站寫法見站別檔（例：tools §6）。
 - 聯盟點擊一律用 `cta_click`，**不再使用 `affiliate_click`**。
 - **`cta_id` 記位置**（各站自訂，例：tools 推薦卡 `rec_card`、遊戲 `below_game`／`room_clear`、小說 `buy_book`），一頁有多個聯盟位置時靠它比較哪個位置有效。
 - **`cta_type` 記去哪裡，聯盟一律填平台名**（trip、agoda、booking、klook、kkday、shopee…）；只有平台不明時才用 `affiliate`。要看「全部聯盟點擊」，用「`cta_type` 屬於平台清單」篩，不用 `cta_id`。不另開平台參數（`platform` 是保留名稱，也會多佔一個自訂維度）。新平台先加進 3-3 值域。
