@@ -126,7 +126,7 @@ core §9 全部，再加：
 2. 作品資料夾放進 story repo 對應的類別資料夾（`books/`／`drama/`／`comics/`），不開新 repo。
 3. 本機測：`python3 -m http.server 8000`，跑 §6 驗收。
 4. 填 `window.HIYORI`。
-5. `sitemap.xml` 加一筆。
+5. `sitemap.xml` 與 `llms.txt` 各加一筆。
 6. story 首頁對應區塊加卡片。
 7. GSC 要求建立索引。
 8. Travelpayouts 後台確認 Drive。

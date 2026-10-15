@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-15｜story（說明補充，不升版）｜Zoe｜§7 部署清單補「`llms.txt` 加一筆」｜共管段落，Alison 2026-10-15 確認；接續上一筆各站加 llms.txt
+
 - 2026-10-15｜games、poem、study（說明補充，不升版）｜Zoe｜**各站加 llms.txt**：games、story、poem、study 根目錄新增 `llms.txt`（games#7、story#6、poem#9、study#11）；poem 由 `build.py` 自動產生，其餘手寫。上架清單補「llms.txt 加一筆」｜GEO 第一輪，Zoe 決定每個站都要有 llms.txt（tools 早已由 build.py 產生）
   - story.md §7 也要補同一行，因為屬共管段落，另外請 Alison 確認後再改
 
