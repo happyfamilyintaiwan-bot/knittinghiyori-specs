@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-17｜poem v0.6｜Zoe｜404 頁「最近的詩」下面加跨站連結一行（故事、小遊戲、小工具、學習筆記，三語），`cta_id=notfound_site`、`cta_type` 填目的地類型；spec-version 升 `core-v1.5/poem-v0.6`；registry 待修清單劃掉 poem 這項｜core §7 v1.5 補項，poem 是最後一個沒做的站之一
+  - **改版日 2026-10-17**：poem 404 開始送 `notfound_site`
+
 - 2026-10-15｜registry（狀態更新，不升版）｜Zoe｜travel_split、bill_split 的 WordPress 舊頁已設 301（Rank Math → 重新導向，完全符合 `tools/<slug>` → tools 子網域）；tools sitemap.xml 首次提交 GSC；聚餐分帳三語要求建立索引｜搬家後舊網址不分散排名
   - 新站（Astro）上線時要在 Worker 重做這兩筆轉址，已記在遷移計畫「轉址清單」
 
