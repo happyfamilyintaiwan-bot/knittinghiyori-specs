@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-19｜registry v1.4.3｜Zoe｜新增 `phone_wallpaper`（手機桌布產生器，tools 三語，前綴 `wall_`）｜Zoe 新工具；圖上不印網址的例外 Zoe 已同意，tools.md 的條文等 Alison 確認後另外改
+
 - 2026-10-17｜poem v0.6｜Zoe｜404 頁「最近的詩」下面加跨站連結一行（故事、小遊戲、小工具、學習筆記，三語），`cta_id=notfound_site`、`cta_type` 填目的地類型；spec-version 升 `core-v1.5/poem-v0.6`；registry 待修清單劃掉 poem 這項｜core §7 v1.5 補項，poem 是最後一個沒做的站之一
   - **改版日 2026-10-17**：poem 404 開始送 `notfound_site`
 
