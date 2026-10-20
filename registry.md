@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4.3｜2026-10-19｜Zoe＋Alison**（v1.4.3：新增 phone_wallpaper。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1 是 specs#8 日和毛孩上線，尚未合併。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4.3｜2026-10-19｜Zoe＋Alison**（v1.4.3：新增 phone_wallpaper（日系花卉版，事件值改為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1 是 specs#8 日和毛孩上線，尚未合併。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -22,7 +22,7 @@
 | `parking_timer` | 停車計時卡 | tools /parking-timer/（只有中文） | `park_` | `工具\|停車計時卡\|算停車費與限停倒數` | 已上線 | Alison 製作 |
 | `concert_trip` | 追星遠征規劃器 | tools /concert-trip-planner/（只有中文） | `ct_` | `工具\|追星遠征規劃器\|海外演唱會搶票與行程規劃` | 已上線 | Alison 製作；2026-10-04 上線，2026-10-15 加開賣時間換算（tools#11）；專屬事件 `ct_remind`（option＝gcal／ics）；`tool_result` 帶 option＝城市 id、source＝convert／planner；已有品牌列 |
 | `handwriting_compare` | 練字前後對比圖產生器 | tools /handwriting-before-after/（只有中文） | `hw_` | `工具\|練字前後對比圖產生器\|練字成果對比分享圖` | 已上線 | Alison 製作；2026-10-12 上線（tools#12、#13）；專屬事件 `hw_layout`；新 cta_id `catalog_tool`、`catalog_card`、`footer_catalog`（article，字帖目錄） |
-| `phone_wallpaper` | 手機桌布產生器 | tools /phone-wallpaper-maker/（三語） | `wall_` | `工具\|手機桌布產生器\|簡約配色與符號桌布` | 已上線 | Zoe 製作；2026-10-19（tools#15）；`tool_result`、`export`（method=image）帶 option＝版型（single／pattern／scatter／corner）、source＝配色 id 或 custom，export 另帶 result＝share／download／long_press；專屬事件 `wall_random`（option＝版型、source＝preview／fab）、`wall_device`（option＝機型 id）；桌布圖上不放品牌與網址（core §3-2 例外，待 Alison 確認寫進 tools.md） |
+| `phone_wallpaper` | 手機桌布產生器 | tools /phone-wallpaper-maker/（三語） | `wall_` | `工具\|手機桌布產生器\|日系小花與英文手寫字桌布` | 待上線 | Zoe 製作；tools#15（2026-10-20 改成日系花卉風格）；`tool_result`、`export`（method=image）帶 option＝擺法（stem／taped／tied／wrapped／pot／branch／none）、source＝底色 id 或 custom，export 另帶 result＝share／download／long_press；專屬事件 `wall_random`（option＝擺法、source＝preview／fab）、`wall_device`（option＝機型 id）、`wall_phrase`（option＝鼓勵語編號 1–15、source＝list／shuffle）；桌布圖上不放品牌與網址（core §3-2 例外，待 Alison 確認寫進 tools.md） |
 | `season_booking` | 季節訂房倒數工具 | tools /season-booking/ | ⚠ 定稿時確認 | ⚠ `工具\|…` | 規劃中 | 原規劃放 games，改由 Alison 直接在 tools 製作；games 不上線，不需要導向 |
 | `ai_image_prompts` | AI 照片轉插畫風格指令 | tools /ai-image-prompts/ | `aip_` | `工具\|AI照片轉插畫\|風格指令` | 規劃中 | 尚未放進 tools repo |
 | `trip_planner`（預定） | 旅遊行程共編工具 | WP /group-trip-planner/ | `tp_` | ⚠ 待補 | **待修** | 見下方「待修清單」；不在總覽頁 19 個工具裡，⚠ Zoe 決定是否加入 |
