@@ -4,7 +4,23 @@
 
 ---
 
-- 2026-10-14｜registry v1.4.1｜Alison（Zoe 待確認）｜`hiyori_pet` 狀態改已上線、上線日 2026-10-14（games#2，9aea4e5）；補 `pet_walk_ask`、`pet_visit_*`、電子報與問卷的 cta_id（`app_waitlist_game`、`feedback_adult`、`feedback_below`）、book 欄位 `kitAsked`、`fbAsked`｜網頁版當 App 的 MVP 提早上線，Zoe 同意由 Alison 這邊上架。注意：cta_type `newsletter` 在 core v1.6（`zoe/blog-ga4` 分支，還沒進 main）才列入值域
+- 2026-10-14｜registry v1.4.1｜Alison（Zoe 待確認）｜`hiyori_pet` 狀態改已上線、上線日 2026-10-14（games#2，9aea4e5）；補 `pet_walk_ask`、`pet_visit_*`、電子報與問卷的 cta_id（`app_waitlist_game`、`feedback_adult`、`feedback_below`）、book 欄位 `kitAsked`、`fbAsked`｜網頁版當 App 的 MVP 提早上線，Zoe 同意由 Alison 這邊上架
+
+- 2026-10-17｜poem v0.6｜Zoe｜404 頁「最近的詩」下面加跨站連結一行（故事、小遊戲、小工具、學習筆記，三語），`cta_id=notfound_site`、`cta_type` 填目的地類型；spec-version 升 `core-v1.5/poem-v0.6`；registry 待修清單劃掉 poem 這項｜core §7 v1.5 補項，poem 是最後一個沒做的站之一
+  - **改版日 2026-10-17**：poem 404 開始送 `notfound_site`
+
+- 2026-10-15｜registry（狀態更新，不升版）｜Zoe｜travel_split、bill_split 的 WordPress 舊頁已設 301（Rank Math → 重新導向，完全符合 `tools/<slug>` → tools 子網域）；tools sitemap.xml 首次提交 GSC；聚餐分帳三語要求建立索引｜搬家後舊網址不分散排名
+  - 新站（Astro）上線時要在 Worker 重做這兩筆轉址，已記在遷移計畫「轉址清單」
+
+- 2026-10-15｜core v1.7、tools v2.4、registry v1.4.2｜Alison 提案，Zoe 確認上架｜**core §3-2**：分享與匯出的內容都要附出處網址。**tools v2.3／v2.4**（tools#2、#4、#10，原 #5）：工具頁統一頁首（logo＋編織日和・小工具／No.XX · 分類／麵包屑，No. 依 tools.json 順序）、spec-version 由 build 自動套、分享與匯出附出處網址、robots 擋 /wp-src/；wp-src 拆成原始碼＋wp_build.py 產生 WordPress 載入器；聚餐分帳搬到 tools 三語，產生器外框、聯盟變數、JSON-LD 類別改依 meta.json。**registry**：bill_split 改 tools 三語、concert_trip 改已上線並登記 ct_remind（tools#11，原 #6）、新增 handwriting_compare｜工具陸續搬到 GitHub，先統一外框；分享出去的內容要看得到來源
+  - tools 的 404 已照 core §7 上線（tools#9，2026-10-12），規格段落另開 PR 等 Alison 確認
+
+- 2026-10-15｜story（說明補充，不升版）｜Zoe｜§7 部署清單補「`llms.txt` 加一筆」｜共管段落，Alison 2026-10-15 確認；接續上一筆各站加 llms.txt
+
+- 2026-10-15｜games、poem、study（說明補充，不升版）｜Zoe｜**各站加 llms.txt**：games、story、poem、study 根目錄新增 `llms.txt`（games#7、story#6、poem#9、study#11）；poem 由 `build.py` 自動產生，其餘手寫。上架清單補「llms.txt 加一筆」｜GEO 第一輪，Zoe 決定每個站都要有 llms.txt（tools 早已由 build.py 產生）
+  - story.md §7 也要補同一行，因為屬共管段落，另外請 Alison 確認後再改
+- 2026-10-10｜core v1.6、blog v1.1｜Zoe｜core §3-3 cta_type 加 `newsletter`、§3-2 新增 `read_depth`（`pct` 50／90）、§3-1 content_group 加 `article`；blog 新增 §4 GA4 追蹤（cta_id 位置表、page_title `文章|主題|文章標題`）｜部落格搬到 Astro，要跟子網域用同一套事件；訂閱是最重要的轉換，獨立一個 cta_type
+  - **改版日**：新站頁面上線那天（2026-10-13 /chesskid/、2026-10-15 第 1 批 67 篇）。WordPress 舊頁面沒有這些事件，報表比較時要分開看
 
 - 2026-10-12｜core v1.5（補項）、story v1.3.1、registry v1.4｜Zoe｜**404 規則定案**（回應下面 games v1.8.4 的 ⚠）：以 main 的 core v1.4 為準，卡片統一 `notfound_card`、page_title `類別|404|找不到頁面`；原 #4 草案裡的 `notfound_<東西>` 寫法作廢。core §7 補三項：跨站連結一行 `notfound_site`、依 `/en/`、`/ja/` 切換語言、`gtag('set')` 送 content_group。另把「分頁圖示」改成一律用正式 logo 整組＋根目錄 favicon.ico／apple-touch-icon.png｜Zoe 確認；Zoe 從 Travelpayouts 後台發現 story、tools 的網域圖示是只有拱窗的舊圖
   - 已上線：story 404（cbc5abf）補 GA4 分類與英日語切換；story、tools（tools#8）分頁圖示換成正式 logo，圖示連結加 `?v=2`

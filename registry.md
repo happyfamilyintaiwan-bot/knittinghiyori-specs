@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4.1｜2026-10-14｜Zoe＋Alison**（v1.4.1：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4.2｜2026-10-15｜Zoe＋Alison**（v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -17,10 +17,11 @@
 | tool_id | 名稱 | 網址 | 前綴 | page_title | 狀態 | 備註 |
 |---|---|---|---|---|---|---|
 | `hub` | 工具總覽頁 | tools / ・/en/ ・/ja/ | `hub_` | `工具\|工具總覽\|免費線上小工具` | 已上線 | 與遊戲 `hub_` 同名，靠 tool_id 區分 |
-| `travel_split` | 旅費分帳計算機 | tools /travel-split-calculator/（三語） | `split_` | `工具\|旅費分帳計算機\|出國多幣別分帳` | 已搬家 | WP 待設 301 |
-| `bill_split` | 聚餐分帳計算機 | WP /tools/bill-split-calculator/ | `bill_` | ⚠ 待補 | 已上線 | |
+| `travel_split` | 旅費分帳計算機 | tools /travel-split-calculator/（三語） | `split_` | `工具\|旅費分帳計算機\|出國多幣別分帳` | 已搬家 | WP 301 已設（2026-10-15，Rank Math） |
+| `bill_split` | 聚餐分帳計算機 | tools /bill-split-calculator/（三語） | `bill_` | `工具\|聚餐分帳計算機\|逐項分帳與服務費比例分攤` | 已搬家 | WP 301 已設（2026-10-15，Rank Math）；專屬事件 bill_add_item、bill_open_choice 等沿用；2026-10-15 上線（tools#10） |
 | `parking_timer` | 停車計時卡 | tools /parking-timer/（只有中文） | `park_` | `工具\|停車計時卡\|算停車費與限停倒數` | 已上線 | Alison 製作 |
-| `concert_trip` | 追星遠征規劃器 | tools /concert-trip-planner/（只有中文） | `ct_` | `工具\|追星遠征規劃器\|海外演唱會搶票與行程規劃` | 規劃中 | Alison 製作，定稿後上傳 tools repo 並加入 tools.json |
+| `concert_trip` | 追星遠征規劃器 | tools /concert-trip-planner/（只有中文） | `ct_` | `工具\|追星遠征規劃器\|海外演唱會搶票與行程規劃` | 已上線 | Alison 製作；2026-10-04 上線，2026-10-15 加開賣時間換算（tools#11）；專屬事件 `ct_remind`（option＝gcal／ics）；`tool_result` 帶 option＝城市 id、source＝convert／planner；已有品牌列 |
+| `handwriting_compare` | 練字前後對比圖產生器 | tools /handwriting-before-after/（只有中文） | `hw_` | `工具\|練字前後對比圖產生器\|練字成果對比分享圖` | 已上線 | Alison 製作；2026-10-12 上線（tools#12、#13）；專屬事件 `hw_layout`；新 cta_id `catalog_tool`、`catalog_card`、`footer_catalog`（article，字帖目錄） |
 | `season_booking` | 季節訂房倒數工具 | tools /season-booking/ | ⚠ 定稿時確認 | ⚠ `工具\|…` | 規劃中 | 原規劃放 games，改由 Alison 直接在 tools 製作；games 不上線，不需要導向 |
 | `ai_image_prompts` | AI 照片轉插畫風格指令 | tools /ai-image-prompts/ | `aip_` | `工具\|AI照片轉插畫\|風格指令` | 規劃中 | 尚未放進 tools repo |
 | `trip_planner`（預定） | 旅遊行程共編工具 | WP /group-trip-planner/ | `tp_` | ⚠ 待補 | **待修** | 見下方「待修清單」；不在總覽頁 19 個工具裡，⚠ Zoe 決定是否加入 |
@@ -110,7 +111,7 @@ story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁�
 | 遊戲聯盟連結 | `cta_type=affiliate` | jlpt（~~trip_hall、trip_result~~ 2026-10-10 遊戲頁已改；trip_article 在 WordPress 介紹文，待改）→ `trip`；sql（~~below_game~~ 2026-10-10 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、katsuyo（~~below_game、room_clear~~ 2026-10-09 遊戲頁已改；escape_room 在 WordPress 介紹文，待改）、swiftui（~~dadaocheng_result、escape_room_result~~ 2026-10-10 遊戲頁已改）→ `klook`；tozai（~~start_card、result_card~~）→ `trip`、flower（~~flower_trip~~）→ `klook`，都在 2026-10-10 改完。**遊戲頁全部改完，只剩 WordPress 介紹文裡的**。**改版日寫進 CHANGELOG**：之前的資料是 `affiliate`，看長期趨勢要合併 |
 | 舊遊戲 | `rel="sponsored noopener"` 少 `nofollow`；沒有 `spec-version` meta | 補上 |
 | 404 頁 cta_id（~~games~~、~~poem~~ 2026-10-10 已改、study） | ~~games `notfound_game`~~；study `notfound_topic`；~~poem `notfound_home`、`notfound_poem`~~，和 core §7 統一值不同 | games、study `→ notfound_card`；~~poem `notfound_home → notfound_hub`、`notfound_poem → notfound_card`~~（poem#8）；同步改站別檔 CTA 表；改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值 |
-| 404 頁 core v1.5 補項（2026-10-12 實查） | poem：沒有跨站連結一行；tools：404 只有一句說明，沒有品牌列、推薦卡片、跨站連結、語言切換；study：404 的 page_title 是 `筆記|找不到頁面|404`（照舊草案寫的） | 各站下次改版時照 core §7 補上；study 的 page_title 改回 `筆記|404|找不到頁面`（story、games 已完成） |
+| 404 頁 core v1.5 補項（2026-10-12 實查） | ~~poem：沒有跨站連結一行~~（2026-10-17 已補，poem#11）；tools：404 只有一句說明，沒有品牌列、推薦卡片、跨站連結、語言切換；study：404 的 page_title 是 `筆記|找不到頁面|404`（照舊草案寫的） | 各站下次改版時照 core §7 補上；study 的 page_title 改回 `筆記|404|找不到頁面`（story、games 已完成） |
 | story 首頁與作品頁、tools 既有頁面（games、poem 已完成） | 頁首最上方沒有品牌列 | 依 core §7「頁首品牌列」補上；各負責人改自己範圍的頁面，story 首頁 hub 兩人共管 |
 | 7 部追劇（5 部原創＋amidst-a-snowstorm-of-love、lighter-and-princess） | 4 部 8 頁仍用舊的內嵌追蹤（已改送 content_group=story、work）；page_title 不是 `追劇\|…` 格式 | 改用 hy-story.js、page_title 改成 story.md 格式，重驗 DebugView（搬資料夾、關自動廣告、spec-version 已於 2026-10-04 完成） |
 

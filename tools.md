@@ -1,6 +1,6 @@
 # tools.knittinghiyori.com 規範
 
-**版本：tools-v2.2.1｜2026-10-04**（由 tools-guideline v2.1 拆出；共用部分已移到 `core.md`，這裡只寫 tools 專屬）
+**版本：tools-v2.4｜2026-10-15**（v2.4：聚餐分帳搬到 tools（三語），工具頁產生器的外框、聯盟變數、JSON-LD 類別改依 meta.json。v2.3：工具頁統一頁首、spec-version 由 build 自動套、分享與匯出附出處網址、wp-src 拆成原始碼＋載入器產生腳本。v2.2.1：由 tools-guideline v2.1 拆出；共用部分已移到 `core.md`，這裡只寫 tools 專屬）
 負責人：Alison（改本檔的規則需 Alison 確認）；新增工具時在 `registry.md` 登記；合併進 main 由 Zoe 統一處理（見 core §0）。先讀 `core.md`。
 
 ---
@@ -15,6 +15,7 @@
 /404.html  /sitemap.xml  /robots.txt  /CNAME  /llms.txt  ← build.py 產生
 /assets/style.css  app.js  favicon.svg      總覽頁共用
 /assets/site.css       工具頁共用外框（k- 開頭的 class）
+/icons/                分頁圖示與正式 logo（檔案同 games /icons/；頁首用 logo-knitting-120.webp）
 /assets/tools/<工具>.css／.js   各工具樣式與程式
 /tools.json            工具清單（總覽頁資料來源）
 /build.py              產生器
@@ -128,10 +129,14 @@ gtag("config","G-ZQZHTYTRMQ");</script>
 - 英日介面文字 build 時換好（`data-t`），爬蟲不執行 JS 也看得到；英日教學與 FAQ 另外寫，不直翻。
 - 原始檔：`_src/<工具>/` 下 `meta.json`、`top.html`、`art.zh|en|ja.html`（`<!--AD-->` 標廣告位置）、`install.html`、`tail.html`、`i18n.json`、`style.css`、`main.js`。
 - 只有中文的新工具：直接放 `/<slug>/index.html`，`tools.json` 設 `"page": "<slug>"`，不設 hreflang。
+- meta.json 可選欄位：`root`（外框代號，產生 `<div id="<root>-app" class="<root> k-tool">`）、`aff_var`（聯盟連結變數名，預設 `<ROOT>_AFF`）、`app_category`（JSON-LD applicationCategory，預設 TravelApplication）、`i18n_fixes`、`base`（各語言預設幣別）。工具頁外框共用 class `k-tool`，site.css 只寫 `.k-tool`。
+- **頁首統一**（build.py 的 `tool_head()` 產生，不要手寫）：左邊 logo＋「編織日和・小工具」（en：Knitting Hiyori · Tools；ja：編織日和・ツール），右邊「No.XX · 分類」；下一行麵包屑「小工具 / 分類 / 工具名」，三語工具的語言切換放在麵包屑右邊。No. 等於 tools.json 的順序，和總覽頁一致。只有中文的工具頁跑 build 時會自動換成這段（`<!--k-head:start-->…<!--k-head:end-->`）。
+- **spec-version** 由 build.py 的 `SPEC` 自動套到所有頁面；規範升版時改這一行再 build。
+- **分享與匯出都要附出處網址**（core §3-2）：分享連結、複製文字、行事曆（Google 日曆說明、.ics 的 DESCRIPTION＋URL）、圖片匯出，都要帶這個工具的網址，例：`停車計時卡 https://tools.knittinghiyori.com/parking-timer/`。
 
 ## 7. 搬家規範（WordPress → tools）
 
-1. 取得線上原始碼 → 拆成 `_src/<工具>/`，語言改由網址決定。
+1. 從 `wp-src/<名稱>/` 的 main.js／style.css／body.html 開始（WordPress 線上版有改過的話，先放新的 *-wordpress.html 到 wp-src/ 再跑 `python3 wp-src/wp_split.py <名稱>`）→ 拆成 `_src/<工具>/`，語言改由網址決定。還沒搬家的工具要改 WordPress 版時：改 wp-src/<名稱>/ → `python3 wp-src/wp_build.py <名稱>` → 貼回 WordPress。
 2. 寫英日教學與 FAQ、填 `meta.json`；`tools.json` 改新網址並加 `"src"`。
 3. `python3 build.py` → 跑驗收。
 4. 上傳 GitHub，確認三個網址可開。
@@ -141,7 +146,7 @@ gtag("config","G-ZQZHTYTRMQ");</script>
 8. 本檔 §3-2 狀態改「已搬家」。
 
 - slug 沿用 WordPress 的英文 slug。
-- 順序：**不搬（2028 前）** 顏文字、小樹點換哩程；**第一批** 旅費分帳（完成）→ 聚餐分帳 → JR Pass → 行李清單 → eSIM → 日文闖關 → YouTube 逐字稿 → QR Code → 名片 QR → UTM → 貼文排版；**第二批（搬前記錄排名）** 日股代號、定期定額、IG 特殊符號、旅遊優惠；文章型工具（織女安檢、拍立得）先不搬。
+- 順序：**不搬（2028 前）** 顏文字、小樹點換哩程；**第一批** 旅費分帳（完成）→ 聚餐分帳（完成，2026-10-15 上線）→ JR Pass → 行李清單 → eSIM → 日文闖關 → YouTube 逐字稿 → QR Code → 名片 QR → UTM → 貼文排版；**第二批（搬前記錄排名）** 日股代號、定期定額、IG 特殊符號、旅遊優惠；文章型工具（織女安檢、拍立得）先不搬。
 - 每搬一個等 2 週看 GSC，再搬下一個。
 - 已知影響：localStorage 依網域分開，舊網址存的資料在新網址看不到；分享連結（# 帶資料）不受影響。
 
@@ -155,7 +160,7 @@ gtag("config","G-ZQZHTYTRMQ");</script>
 
 ## 9. 部署（新工具）
 
-1. 放 `/<slug>/index.html`（或 `_src/`）→ 本機 `python3 -m http.server 8000` 跑驗收。
+1. 放 `/<slug>/index.html`（或 `_src/`）→ 本機 `python3 -m http.server 8000` 跑驗收。手寫的工具頁可以保留原本的頁首，跑 build 時會換成共用版。
 2. `tools.json` 加一筆、`ICONS` 加圖示 → `python3 build.py`。
 3. 推到 `alison/<主題>` 分支並開 PR（工具頁、重新產生的三語 index、sitemap 都要包含），由 Zoe 合併。
 4. GSC 要求索引；§3-2 登記；有新參數才註冊自訂維度；Travelpayouts 後台確認 Drive。

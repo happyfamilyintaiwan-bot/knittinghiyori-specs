@@ -250,7 +250,7 @@ core §9 全部，再加：
 3. GitHub games repo → Upload files → 拖入整個資料夾 → Commit（更新同樣上傳，覆蓋舊檔）。
 4. **已加過廣告碼的遊戲**：新版要和線上版的廣告碼合併後再上傳，不可直接覆蓋。
 5. 等 1–3 分鐘，`?hy_debug=1` 驗收。
-6. 主頁交接（§7）、sitemap 加一筆、GSC 要求建立索引。
+6. 主頁交接（§7）、sitemap 與 `llms.txt` 各加一筆、GSC 要求建立索引。
 7. 介紹文：WordPress「自訂 HTML」區塊貼上（data-cta 才不會被濾掉）。
 8. Travelpayouts 後台確認 Drive。
 
