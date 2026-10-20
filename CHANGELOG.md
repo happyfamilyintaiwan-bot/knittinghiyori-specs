@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-19（2026-10-20 補）｜registry v1.4.3｜Zoe｜新增 `phone_wallpaper`（手機桌布產生器，tools 三語，前綴 `wall_`；10-20 改日系花卉風格，option＝擺法、source＝底色，新增 `wall_phrase`）｜Zoe 新工具；圖上不印網址的例外 Zoe 已同意，tools.md 的條文等 Alison 確認後另外改
+
 - 2026-10-14｜registry v1.4.1｜Alison（Zoe 待確認）｜`hiyori_pet` 狀態改已上線、上線日 2026-10-14（games#2，9aea4e5）；補 `pet_walk_ask`、`pet_visit_*`、電子報與問卷的 cta_id（`app_waitlist_game`、`feedback_adult`、`feedback_below`）、book 欄位 `kitAsked`、`fbAsked`｜網頁版當 App 的 MVP 提早上線，Zoe 同意由 Alison 這邊上架
 
 - 2026-10-17｜poem v0.6｜Zoe｜404 頁「最近的詩」下面加跨站連結一行（故事、小遊戲、小工具、學習筆記，三語），`cta_id=notfound_site`、`cta_type` 填目的地類型；spec-version 升 `core-v1.5/poem-v0.6`；registry 待修清單劃掉 poem 這項｜core §7 v1.5 補項，poem 是最後一個沒做的站之一
