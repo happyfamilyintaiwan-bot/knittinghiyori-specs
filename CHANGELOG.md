@@ -4,7 +4,7 @@
 
 ---
 
-- 2026-10-22｜registry v1.4.5｜Zoe｜`kaomoji` 拿掉「2028 前不搬」，改成提早改版：搬到 tools 子網域（繁中＋日文，網址 /kaomoji-symbols/）、加原創兔兔角色、併入 `ig_symbols`（WP 兩個舊頁都 301 到新頁）；前綴待定｜Zoe 決定先更新網頁、再做 App，網頁與 App 共用同一份素材
+- 2026-10-24｜registry v1.4.5｜Zoe｜`kaomoji` 拿掉「2028 前不搬」，改成提早改版（原創冬眠兔、季節包與流行用語、繁中為主加日文選項）；`kaomoji`、`ig_symbols` 都留在主網域原網址，跟 Astro 搬家換新程式，不設 301；兩頁是否合併等 9/21 改版的數據評估後再決定；前綴待定｜Zoe 決定先更新網頁、再做 App，網頁與 App 共用同一份素材；網址不變是為了避免 301 耗損，也讓排名變化能歸因到內容
 
 - 2026-10-22｜registry v1.4.4｜Zoe｜`phone_wallpaper` 加乒乓菊、向日葵、Google Pixel；新 cta_id `feedback_mail`（other）、`app_waitlist_tool`（newsletter，比照 games 的 app_waitlist_game）｜Zoe 要收使用者建議，並為桌布 App／花店遊戲累積名單
 
