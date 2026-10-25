@@ -84,7 +84,7 @@
 | `the-first-frost` | 追劇（原創，中／en／ja） | story /drama/the-first-frost/ | — | 待修 | Zoe；搬到 /drama/（舊網址留轉址頁）；改成不開自動廣告（不帶 `?client=`＋AdSense 後台網頁排除）；⚠ 追蹤寫法待核對 |
 | `amidst-a-snowstorm-of-love` | 追劇 | story /drama/amidst-a-snowstorm-of-love/ | — | 待修 | Zoe；搬到 /drama/（舊網址留轉址頁）；改成不開自動廣告（不帶 `?client=`＋AdSense 後台網頁排除）；2026-10-04 補登記；⚠ 追蹤寫法待核對 |
 | `lighter-and-princess` | 追劇 | story /drama/lighter-and-princess/ | — | 待修 | Zoe；搬到 /drama/（舊網址留轉址頁）；改成不開自動廣告（不帶 `?client=`＋AdSense 後台網頁排除）；2026-10-04 補登記；⚠ 追蹤寫法待核對 |
-| `drama-calendar` | 追劇工具（中／en／ja） | story /drama/calendar/ | — | 已上線 | Zoe；2026-10-25 上線（story#7，c41b3ad）；追劇日曆計算機，劇清單 `drama/calendar/dramas.json` 每週加一部；用 hy-story.js，interaction_id：`select_drama`、`manual_open`、`manual_input`、`switch_platform`、`add_gcal`、`download_ics`、`copy_share`；cta_id：`dc_article`、`dc_aff`（affiliate）、`dc_list_<劇>`、`dc_article_<劇>`、`dc_more_<作品>` |
+| `drama-calendar` | 追劇工具（中／en／ja） | story /drama/calendar/ | — | 已上線 | Zoe；2026-10-25 上線（story#7，c41b3ad）；追劇日曆計算機，劇清單 `drama/calendar/dramas.json` 每週加一部；用 hy-story.js，interaction_id：`select_drama`、`manual_open`、`manual_input`、`switch_platform`、`add_gcal`、`download_ics`、`copy_share`、`adjust_open`、`adjust_skip`、`adjust_skip_remove`、`adjust_apply`、`adjust_reset`（2026-10-25 加：讀者調整推算）；cta_id：`dc_article`、`dc_aff`（affiliate）、`dc_list_<劇>`、`dc_article_<劇>`、`dc_more_<作品>`；story 首頁：`home_calendar`、`home_calendar_<劇>`（story#9，待合併） |
 
 story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁特有互動才登記前綴（例：`ep_`）。
 
