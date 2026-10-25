@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4.4｜2026-10-22｜Zoe＋Alison**（v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4.5｜2026-10-25｜Zoe＋Alison**（v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -84,6 +84,7 @@
 | `the-first-frost` | 追劇（原創，中／en／ja） | story /drama/the-first-frost/ | — | 待修 | Zoe；搬到 /drama/（舊網址留轉址頁）；改成不開自動廣告（不帶 `?client=`＋AdSense 後台網頁排除）；⚠ 追蹤寫法待核對 |
 | `amidst-a-snowstorm-of-love` | 追劇 | story /drama/amidst-a-snowstorm-of-love/ | — | 待修 | Zoe；搬到 /drama/（舊網址留轉址頁）；改成不開自動廣告（不帶 `?client=`＋AdSense 後台網頁排除）；2026-10-04 補登記；⚠ 追蹤寫法待核對 |
 | `lighter-and-princess` | 追劇 | story /drama/lighter-and-princess/ | — | 待修 | Zoe；搬到 /drama/（舊網址留轉址頁）；改成不開自動廣告（不帶 `?client=`＋AdSense 後台網頁排除）；2026-10-04 補登記；⚠ 追蹤寫法待核對 |
+| `drama-calendar` | 追劇工具（中／en／ja） | story /drama/calendar/ | — | 已上線 | Zoe；2026-10-25 上線（story#7，c41b3ad）；追劇日曆計算機，劇清單 `drama/calendar/dramas.json` 每週加一部；用 hy-story.js，interaction_id：`select_drama`、`manual_open`、`manual_input`、`switch_platform`、`add_gcal`、`download_ics`、`copy_share`、`adjust_open`、`adjust_skip`、`adjust_skip_remove`、`adjust_apply`、`adjust_reset`（2026-10-25 加：讀者調整推算）；cta_id：`dc_article`、`dc_aff`（affiliate）、`dc_list_<劇>`、`dc_article_<劇>`、`dc_more_<作品>`；story 首頁：`home_calendar`、`home_calendar_<劇>`（story#9，2026-10-25 上線） |
 
 story 共用事件 `quiz_complete`、`progress_check` 不加前綴；追劇頁特有互動才登記前綴（例：`ep_`）。
 

@@ -15,6 +15,7 @@
 | 類別資料夾 | `books/`＝書與小說（Alison）、`drama/`＝影視劇集，含原創追劇（Zoe）、`comics/`＝漫畫（Zoe）。資料夾就代表負責人；作品名本身不加 `book-`／`drama-` 前綴 |
 | Hub | story 首頁（`story` repo）就是 hub，分「小說」「追劇」「漫畫」三區卡片：小說區由 Alison 維護，追劇區、漫畫區由 Zoe 維護；hub 外框（版型、頁首頁尾、追蹤碼）兩人共管。不另做 WordPress hub 文章 |
 | 新作品放哪 | 上傳到 `story` repo 對應的類別資料夾，**不開新 repo**。2026-10-04 起既有 7 部追劇（含 5 部原創）搬進 `drama/`，舊網址保留轉址頁（canonical＋meta refresh＋一行文字連結），不要刪 |
+| 追劇工具頁 | `drama/` 底下也可以放追劇用的工具頁（例：`drama/calendar/` 追劇日曆計算機），跟作品一樣登記 `work`、照 §6 驗收、§7 部署；資料檔（例：`dramas.json`）放在工具資料夾裡 |
 | assets | `assets/<作品名>/`（og.png 等） |
 | 既有 WordPress 頁 | 《環遊世界八十天》維持 `knittinghiyori.com/around-the-world-in-80-days-route/` 不搬，story 首頁小說區放外連卡片 |
 
