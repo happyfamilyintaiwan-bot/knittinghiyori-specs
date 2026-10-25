@@ -4,7 +4,7 @@
 
 ---
 
-- 2026-10-25｜registry-v1.4.5、story.md §1（待 Alison 確認）｜Zoe｜新增 `drama-calendar`（追劇日曆計算機，story /drama/calendar/ 三語）與 interaction_id、cta_id；story.md §1 加一列「追劇工具頁」｜每週追劇日曆文章要搭配計算機，工具放在 Zoe 負責的 drama/
+- 2026-10-25｜registry-v1.4.5、story.md §1｜Zoe 提案，Alison 2026-10-25 確認｜新增 `drama-calendar`（追劇日曆計算機，story /drama/calendar/ 三語）與 interaction_id、cta_id；story.md §1 加一列「追劇工具頁」｜每週追劇日曆文章要搭配計算機，工具放在 Zoe 負責的 drama/
 
 - 2026-10-22｜registry v1.4.4｜Zoe｜`phone_wallpaper` 加乒乓菊、向日葵、Google Pixel；新 cta_id `feedback_mail`（other）、`app_waitlist_tool`（newsletter，比照 games 的 app_waitlist_game）｜Zoe 要收使用者建議，並為桌布 App／花店遊戲累積名單
 
