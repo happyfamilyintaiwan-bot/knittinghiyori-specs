@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4.5｜2026-10-25｜Zoe＋Alison**（v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4.6｜2026-10-26｜Zoe＋Alison**（v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -35,8 +35,8 @@
 | `cube_miles`（預定） | 小樹點換哩程試算器 | WP /cube-tree-points-to-airline-miles-guide/ | — | — | 已上線 | 2028 前不搬 |
 | `travel_deals`（預定） | 旅遊優惠總整理 | WP /tools/travel-deals/ | — | — | 已上線 | |
 | `instant_camera`（預定） | 拍立得選擇工具 | WP /instant-camera-guide/ | — | — | 已上線 | 文章型，先不搬 |
-| `kaomoji`（預定） | 大型顏文字產生器 | WP /tools/kaomoji-symbols/ | — | — | 已上線 | 2028 前不搬 |
-| `ig_symbols`（預定） | IG 特殊符號 | WP /tools/ig-symbols/ | — | — | 已上線 | |
+| `kaomoji` | 大型顏文字產生器 | tools /kaomoji-symbols/（三語） | ⚠ 待定 | `工具\|大型顏文字產生器\|兔兔顏文字與表情組合器` | 已搬家 | 2026-10-26 從主站搬到 tools（中、英沿用原內容，新增日文）；舊網址 /tools/kaomoji-symbols/、/en/en-tools/en-kaomoji-symbols/ 由主站分流程式（Worker）301。專屬事件沿用 `copy_symbol`（symbol_section 前綴：英 EN-、日 JA-）。App「顏文字日和」與網頁共用素材 |
+| `ig_symbols` | IG 特殊符號 | tools /ig-symbols/（三語） | ⚠ 待定 | `工具\|IG 特殊符號\|自介排版、分隔線、限動裝飾` | 已搬家 | 2026-10-26 從主站搬到 tools（中文沿用原內容，新增英、日）；舊網址 /tools/ig-symbols/ 由主站分流程式 301。事件沿用 `copy_symbol`（symbol_section 前綴 IG頁-、IG頁-EN-、IG頁-JA-）；是否併入 `kaomoji` 等數據評估後再決定 |
 | `post_formatter`（預定） | 貼文排版小工具 | WP /tools/social-post-formatter/ | — | — | 已上線 | |
 | `japan_stock`（預定） | 日股代號查詢 | WP /tools/japan-stock-ticker/ | — | — | 已上線 | |
 | `dca`（預定） | 投資定期定額計算機 | WP /tools/dca-calculator/ | — | — | 已上線 | |
