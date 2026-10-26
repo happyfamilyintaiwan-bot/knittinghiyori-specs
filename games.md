@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.8.4｜2026-10-12｜Zoe**（v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.9｜2026-10-27｜Zoe**（v1.9：共用 /lib/hy-next.js：遊戲頁「下一款」推薦列（next_game）、主頁「繼續上次的遊戲」（continue_game）、localStorage hy_recent。v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -31,6 +31,7 @@
 1. **遊戲**（首屏就是遊戲，不先放長說明）
 2. 聯盟區（常駐，在遊戲區**外**）
 3. 分享列：最後一顆是「加到我的最愛」（2026-10-10 起，遊戲主頁也有）。頁面結尾放一行 `<script src="/lib/hy-fav.js" defer></script>`，它會在每個「複製連結」按鈕後面自動補一顆，樣式跟著該遊戲的複製按鈕；英、日頁依 `<html lang>` 自動換字。瀏覽器不允許網頁自己加書籤，所以按下去是跳出「這台裝置怎麼加」的提示（App 內建瀏覽器、iPhone、Android、Mac、其他電腦各一種說明）。新遊戲的複製按鈕請用 `data-share="copy_link"`，才會自動補上
+   - 「下一款」推薦列（2026-10-27 起）：遊戲區下方放 `<section data-hy-next hidden></section>`，頁尾放 `<script src="/lib/hy-next.js" defer></script>`（全部遊戲頁都要放，用來記錄「最近來過哪一款」）。卡片從遊戲主頁的 `a.card` 自動挑 3 款：同 `data-topic` 加 3 分、同 `data-skill` 加 2 分，同分取主頁較前面（較新）的。遊戲主頁放 `<section data-hy-continue hidden></section>`，列出這個瀏覽器最近玩過的 3 款（讀 localStorage `hy_recent`，舊玩家用各遊戲自己的存檔判斷）。新遊戲有存檔時，把存檔 key 加進 hy-next.js 的 `SAVE_KEYS`
 4. 回遊戲主頁大按鈕（`data-cta="about_hub"`、`data-cta-type="game"`，文案「探索更多互動遊戲 →」）
 5. 廣告（1 個）
 6. 頁尾 `.kh-legal`
@@ -99,6 +100,8 @@ body 底部放標準 hyGame 追蹤碼：
 | 404 頁：推薦遊戲卡片（帶 `game_id`；2026-10-10 前是 `notfound_game`） | `notfound_card` | game |
 | 404 頁：跨站連結一行（故事、詩、小工具、學習筆記；2026-10-12 起） | `notfound_site` | 目的地類型：story、poem、tool、study |
 | 回遊戲主頁（每頁必有） | `about_hub` | game |
+| 遊戲頁「玩完這款，接著試試」推薦卡（2026-10-27 起，先在絕對音感、摩斯試行；`link_url` 就是哪一款） | `next_game` | game |
+| 遊戲主頁「繼續上次的遊戲」（2026-10-27 起） | `continue_game` | game |
 | 主頁、遊戲頁尾：到主站（部落格） | `blog_banner`（主頁橫幅）、`footer_main`（頁尾） | article |
 | 遊戲頁尾：回遊戲主頁（小連結） | `footer_hub` | game |
 | 連到介紹文 | `about_article` | article |
