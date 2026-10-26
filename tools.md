@@ -71,7 +71,7 @@ gtag("config","G-ZQZHTYTRMQ");</script>
 | 事件 | 觸發 | 參數 |
 |---|---|---|
 | `cta_click` | 點工具卡片 | `cta_id`＝`hub_card`／`hub_feature`／`hub_recent`／`hub_omikuji`、`cta_type=tool`、`option`＝目標 tool_id、`card_index`、`link_url` |
-| `cta_click` | 其他連結 | `promo_games`／`footer_games`（game）、`footer_blog`（article） |
+| `cta_click` | 其他連結 | `promo_games`／`footer_games`（game）、`footer_blog`（article）、`app_waitlist_tool`（newsletter；人氣大卡下方「哪個工具會先變成 App？」訂閱區，三語各接自己的 Kit 表單，和工具頁同一個 cta_id，靠 tool_id=hub 區分） |
 | `hub_filter` | 點分類（「全部」不送） | `option`＝travel／learn／life／social／money／work、`source=category` |
 | `hub_search` | 停止輸入 1.2 秒 | `item_count`、`result`＝hit／miss（不送搜尋字） |
 | `hub_omikuji` | 抽籤 | `option`＝tool_id、`source`＝hero／again |

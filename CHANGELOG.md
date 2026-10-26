@@ -4,6 +4,9 @@
 
 ---
 
+- 2026-10-26｜tools（說明補充，不升版）｜Zoe｜總覽頁人氣大卡改成手機桌布、顏文字、旅費分帳（tools.json `hot` 改數字 1／2／3＝卡片順序）；人氣大卡下方加「哪個工具會先變成 App？」電子報訂閱區，cta_id 沿用 `app_waitlist_tool`（newsletter）（tools#23）｜反應好的工具要做成 App，先累積名單
+  - **改版日 2026-10-26**：總覽頁開始有 `app_waitlist_tool`（tool_id=hub）
+
 - 2026-10-26｜registry v1.4.6、tools v2.5｜Zoe 決定，Alison 2026-10-26 確認（tools.md §7）｜`kaomoji`、`ig_symbols` 搬到 tools 子網域、做成中英日三語（tools#19），主站舊網址由分流程式 301；拿掉「2028 前不搬」；tools.md §7 順序改寫、新增「文字寫在 HTML 裡的工具可用 top.<語言>.html」｜Zoe 要所有工具集中在 tools；兩頁同一天搬，不等聚餐分帳 2 週的數據（排名變化較難歸因，Zoe 已知）
 
 - 2026-10-25｜registry-v1.4.5、story.md §1｜Zoe 提案，Alison 2026-10-25 確認｜新增 `drama-calendar`（追劇日曆計算機，story /drama/calendar/ 三語）與 interaction_id、cta_id；story.md §1 加一列「追劇工具頁」｜每週追劇日曆文章要搭配計算機，工具放在 Zoe 負責的 drama/
