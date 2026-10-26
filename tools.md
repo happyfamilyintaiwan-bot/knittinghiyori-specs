@@ -1,6 +1,6 @@
 # tools.knittinghiyori.com 規範
 
-**版本：tools-v2.4｜2026-10-15**（v2.4：聚餐分帳搬到 tools（三語），工具頁產生器的外框、聯盟變數、JSON-LD 類別改依 meta.json。v2.3：工具頁統一頁首、spec-version 由 build 自動套、分享與匯出附出處網址、wp-src 拆成原始碼＋載入器產生腳本。v2.2.1：由 tools-guideline v2.1 拆出；共用部分已移到 `core.md`，這裡只寫 tools 專屬）
+**版本：tools-v2.5｜2026-10-26**（v2.5：顏文字、IG 特殊符號搬到 tools（三語）；§7 順序改寫；文字寫在 HTML 裡的工具可用 top.<語言>.html。v2.4：聚餐分帳搬到 tools（三語），工具頁產生器的外框、聯盟變數、JSON-LD 類別改依 meta.json。v2.3：工具頁統一頁首、spec-version 由 build 自動套、分享與匯出附出處網址、wp-src 拆成原始碼＋載入器產生腳本。v2.2.1：由 tools-guideline v2.1 拆出；共用部分已移到 `core.md`，這裡只寫 tools 專屬）
 負責人：Alison（改本檔的規則需 Alison 確認）；新增工具時在 `registry.md` 登記；合併進 main 由 Zoe 統一處理（見 core §0）。先讀 `core.md`。
 
 ---
@@ -146,7 +146,8 @@ gtag("config","G-ZQZHTYTRMQ");</script>
 8. 本檔 §3-2 狀態改「已搬家」。
 
 - slug 沿用 WordPress 的英文 slug。
-- 順序：**不搬（2028 前）** 顏文字、小樹點換哩程；**第一批** 旅費分帳（完成）→ 聚餐分帳（完成，2026-10-15 上線）→ JR Pass → 行李清單 → eSIM → 日文闖關 → YouTube 逐字稿 → QR Code → 名片 QR → UTM → 貼文排版；**第二批（搬前記錄排名）** 日股代號、定期定額、IG 特殊符號、旅遊優惠；文章型工具（織女安檢、拍立得）先不搬。
+- 文字大多寫在 HTML 裡、不適合用 i18n.json 逐句翻譯的工具（例：顏文字），可以在 `_src/<工具>/` 放 `top.zh.html`／`top.en.html`／`top.ja.html`，build 會直接用各語言那一份。
+- 順序：**不搬（2028 前）** 小樹點換哩程；**已搬** 顏文字、IG 特殊符號（2026-10-26 同一天搬，Zoe 決定不等 2 週）；**第一批** 旅費分帳（完成）→ 聚餐分帳（完成，2026-10-15 上線）→ JR Pass → 行李清單 → eSIM → 日文闖關 → YouTube 逐字稿 → QR Code → 名片 QR → UTM → 貼文排版；**第二批（搬前記錄排名）** 日股代號、定期定額、IG 特殊符號、旅遊優惠；文章型工具（織女安檢、拍立得）先不搬。
 - 每搬一個等 2 週看 GSC，再搬下一個。
 - 已知影響：localStorage 依網域分開，舊網址存的資料在新網址看不到；分享連結（# 帶資料）不受影響。
 
