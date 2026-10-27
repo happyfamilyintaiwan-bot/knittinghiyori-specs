@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-10-27｜registry v1.4.7｜Zoe｜新增 story `welcome-back-first-love`（日劇《歡迎回來，初戀。》互動頁），登記前綴 `wb_`、事件 `wb_flip`｜播出期間每集追加回憶卡；看哪張卡最多人翻、多少人全部翻完，決定之後的日劇互動頁要不要沿用翻面卡
+
 - 2026-10-27｜games v1.9｜Zoe｜新增共用 `/lib/hy-next.js`：①遊戲頁「玩完這款，接著試試」推薦列，先在絕對音感（中文）、摩斯試行，`cta_id=next_game`；②遊戲主頁「繼續上次的遊戲」，`cta_id=continue_game`；③全部遊戲頁記錄最近來過哪一款（localStorage `hy_recent`，只存 game_id 與時間）｜GA4 顯示絕對音感 4,048 人只有約 1.2% 走到主頁，到了主頁的人接近一半會點遊戲；參考 CrazyGames 每款遊戲旁的「Play next」與首頁「最近玩過」
   - **改版日 2026-10-27**：開始送 `next_game`、`continue_game`；約 2026-11-03 看絕對音感、摩斯的 next_game 點擊，決定要不要推到全部遊戲
 
