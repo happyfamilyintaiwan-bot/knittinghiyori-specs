@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.7｜2026-10-15｜Zoe＋Alison**（v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.8｜2026-10-31｜Zoe＋Alison**（v1.8：多語網址與 `page_lang` 加西文 es，先用在 App 介紹頁。v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -125,7 +125,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | `content_type` | result、tool、game、story、study、invite（邀請朋友加入，連結帶進度）（⚠ 詩待補） |
 | `cta_type` | tool、article、game、story、study、poem、newsletter（去訂閱電子報：Kit 表單或訂閱中心）、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
-| `page_lang` | zh-Hant、en、ja |
+| `page_lang` | zh-Hant、en、ja、es（v1.8，目前只有 App 介紹頁） |
 
 ### 3-4 參數字典
 
@@ -201,6 +201,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - OG 圖與部落格文章首圖共用同一張橫式設計（1200×630），**不放浮水印**；浮水印只用在社群貼文圖與成績卡／進度圖卡這類會被轉傳的圖。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
+  - **西文（v1.8）**：網址加 `/es/` 前綴，`<html lang>`、hreflang 都用 `es`（不分西班牙或拉丁美洲）。目前只用在主站 App 介紹頁（`/es/apps/<slug>/`）；其他站要加西文時，先在站別檔寫明再做。App Store 連結不帶國家碼（`apps.apple.com/app/...`），讓讀者自動進自己國家的商店。
 - FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
 - **404 頁**（2026-10-09 起）：每個子網域根目錄都要有 `404.html`（GitHub Pages 找不到網址時自動顯示），不讓讀者看到 GitHub 白底錯誤頁。
   - 由上到下：品牌列（同上）→ 一句說明（網址可能打錯或頁面搬家）→ 回**該站首頁**的主要按鈕＋到主站的次要按鈕 → 同系列的作品／工具／遊戲推薦（最多 3 個）。
