@@ -4,6 +4,7 @@
 
 ---
 
+- 2026-10-31｜registry v1.4.8｜Zoe 提案（10-26 草稿），Alison 2026-10-31 確認｜新增「App 介紹頁」一節：下載按鈕 `app_download_hero`、`app_download_bottom`、`app_download_sticky`（cta_type other），`app_trial`（game）、`app_contact`、`app_article`（article）、`app_waitlist_android`（newsletter）；App 頁常見問題送 `faq_open`；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊、games 中文頁加 `app_intro`｜絕對音感養成所介紹頁上線（knittinghiyori-site #12、games #14）；草稿原訂 v1.4.7，版本號已被 welcome-back-first-love 用掉
 - 2026-10-27｜registry v1.4.7｜Zoe｜新增 story `welcome-back-first-love`（日劇《歡迎回來，初戀。》互動頁），登記前綴 `wb_`、事件 `wb_flip`｜播出期間每集追加回憶卡；看哪張卡最多人翻、多少人全部翻完，決定之後的日劇互動頁要不要沿用翻面卡
 
 - 2026-10-27｜games v1.9｜Zoe｜新增共用 `/lib/hy-next.js`：①遊戲頁「玩完這款，接著試試」推薦列，先在絕對音感（中文）、摩斯試行，`cta_id=next_game`；②遊戲主頁「繼續上次的遊戲」，`cta_id=continue_game`；③全部遊戲頁記錄最近來過哪一款（localStorage `hy_recent`，只存 game_id 與時間）｜GA4 顯示絕對音感 4,048 人只有約 1.2% 走到主頁，到了主頁的人接近一半會點遊戲；參考 CrazyGames 每款遊戲旁的「Play next」與首頁「最近玩過」
