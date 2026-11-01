@@ -125,7 +125,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | `content_type` | result、tool、game、story、study、invite（邀請朋友加入，連結帶進度）（⚠ 詩待補） |
 | `cta_type` | tool、article、game、story、study、poem、newsletter（去訂閱電子報：Kit 表單或訂閱中心）、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
-| `page_lang` | zh-Hant、en、ja、es（v1.8，目前只有 App 介紹頁） |
+| `page_lang` | zh-Hant、en、ja、es（v1.8；App 介紹頁、games 絕對音感） |
 
 ### 3-4 參數字典
 
@@ -201,7 +201,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - OG 圖與部落格文章首圖共用同一張橫式設計（1200×630），**不放浮水印**；浮水印只用在社群貼文圖與成績卡／進度圖卡這類會被轉傳的圖。
 - 多語網址：中文在根目錄，英日加 `/en/`、`/ja/` 前綴，slug 三語相同（例：tools `/<slug>/`、`/en/<slug>/`、`/ja/<slug>/`）。**games、story 例外**：英日放在作品資料夾裡（games `/<slug>/en/`；story `/<類別>/<作品>/en/`），一個作品一個資料夾、整包上傳。互設 hreflang，`x-default` 指中文；`<html lang>` 為 `zh-Hant-TW`／`en`／`ja`。
-  - **西文（v1.8）**：網址加 `/es/` 前綴，`<html lang>`、hreflang 都用 `es`（不分西班牙或拉丁美洲）。目前只用在主站 App 介紹頁（`/es/apps/<slug>/`）；其他站要加西文時，先在站別檔寫明再做。App Store 連結不帶國家碼（`apps.apple.com/app/...`），讓讀者自動進自己國家的商店。
+  - **西文（v1.8）**：網址加 `/es/` 前綴，`<html lang>`、hreflang 都用 `es`（不分西班牙或拉丁美洲）。用在主站 App 介紹頁（`/es/apps/<slug>/`）與 games 絕對音感（`/absolute-pitch/es/`，games v1.10，2026-11-01）；其他站要加西文時，先在站別檔寫明再做。App Store 連結不帶國家碼（`apps.apple.com/app/...`），讓讀者自動進自己國家的商店。
 - FAQ 的 JSON-LD 必須和頁面文字逐字一致。404 加 `noindex`。
 - **404 頁**（2026-10-09 起）：每個子網域根目錄都要有 `404.html`（GitHub Pages 找不到網址時自動顯示），不讓讀者看到 GitHub 白底錯誤頁。
   - 由上到下：品牌列（同上）→ 一句說明（網址可能打錯或頁面搬家）→ 回**該站首頁**的主要按鈕＋到主站的次要按鈕 → 同系列的作品／工具／遊戲推薦（最多 3 個）。
