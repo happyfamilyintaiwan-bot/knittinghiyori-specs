@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.9｜2026-10-27｜Zoe**（v1.9：共用 /lib/hy-next.js：遊戲頁「下一款」推薦列（next_game）、主頁「繼續上次的遊戲」（continue_game）、localStorage hy_recent。v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.10｜2026-11-01｜Zoe**（v1.10：多語可加西文 `/<slug>/es/`，先用在絕對音感。v1.9：共用 /lib/hy-next.js：遊戲頁「下一款」推薦列（next_game）、主頁「繼續上次的遊戲」（continue_game）、localStorage hy_recent。v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -15,7 +15,7 @@
 | 404 頁 | `404.html`，照 core §7：品牌列＋「4🌸4」＋一句說明（中英日，依網址 `/ja/`、`/en/` 或瀏覽器語言切換）＋主要按鈕「回遊戲主頁」（`notfound_hub`）＋次要按鈕「到編織日和主站」（`notfound_main`）＋推薦遊戲**最多 3 張**（`notfound_card`，帶 `game_id`）。卡片在瀏覽器讀遊戲主頁的 `a.card` 產生，有該語言版本的排前面；讀不到時用頁面裡寫死的 3 張備用。`noindex, follow`、不放 AdSense、有 GA4（page_title `遊戲\|404\|找不到頁面`）、頁尾 `.kh-legal`；卡片下方有**跨站連結一行**「也可以逛逛：故事、詩、小工具、學習筆記」（`notfound_site`，2026-10-12 起，Zoe 要求；做法同 study 的 404） |
 | 共用引擎 | `/lib/hy-trainer/`（實證訓練法系列共用：階段、門檻解鎖、交錯與間隔複習、進度紀錄）；內容包放各遊戲資料夾。改引擎前要確認所有使用中的遊戲都相容，存檔格式要能讀舊版 |
 | og 圖 | 左上角品牌列：正式 logo（約 56px）＋「編織日和・小遊戲」（英：編織日和 · Games／日：編織日和・ミニゲーム），和頁面頂端品牌列一致；圖上網址寫到該遊戲（含語言）路徑，例 `games.knittinghiyori.com/absolute-pitch/en`。**換圖一律用新檔名**（`og-2.png`、`og-3.png`…，FB／LINE 才會重抓），og:image、twitter:image、JSON-LD 三處一起改；`og:image:alt` 開頭寫品牌名 |
-| 多語 | 英日放在遊戲資料夾裡：`/<slug>/en/`、`/<slug>/ja/`（core §7 例外）；三語共用同一個 localStorage key；交付 zip 的最外層就是中文版 |
+| 多語 | 英日放在遊戲資料夾裡：`/<slug>/en/`、`/<slug>/ja/`（core §7 例外）；各語言共用同一個 localStorage key；交付 zip 的最外層就是中文版。**西文**（v1.10，core v1.8）：`/<slug>/es/`、`<html lang="es">`、`page_lang` 送 `es`，頁首語言切換標 `ES`；共用的 `/lib/hy-fav.js` 已有西文字串。2026-11-01 起絕對音感有西文版 |
 | slug／game_id | 資料夾用連字號、`game_id` 用底線，兩者對應（`jlpt-mishitsu` ↔ `jlpt_mishitsu`） |
 | 品牌圖示 | `/icons/`（全站 favicon 以此為準，core §7） |
 | 介紹文 | 每款遊戲在部落格有一篇 SEO 介紹文，英文代稱；遊戲頁與文章互連 |
@@ -58,7 +58,7 @@ gtag('set',{content_group:'game',game_id:'sql_detective',page_lang:'zh-Hant',pag
 body 底部放標準 hyGame 追蹤碼：
 - `HY_GAME_ID`＝game_id
 - `HY_GAME_ROOT`＝遊戲區的選擇器（**不含**聯盟區與分享列），例：`'#app'`、`'#stage, #finale'`
-- `HY_GAME_LANG`＝回傳 `zh`／`en`／`ja`（多語遊戲每頁不同）；頁首語言切換送 `lang_switch`（`source=header`、`from_lang`＝目前 page_lang）
+- `HY_GAME_LANG`＝回傳 `zh`／`en`／`ja`／`es`（多語遊戲每頁不同；西文頁的 `LANG_MAP` 要加 `es:'es'`）；頁首語言切換送 `lang_switch`（`source=header`、`from_lang`＝目前 page_lang）
 
 ### 3-2 遊戲共用事件（hyGame）
 

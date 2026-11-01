@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-01｜games v1.10、core（說明補充）、registry（說明補充）｜Zoe｜絕對音感加西文網頁版 /absolute-pitch/es/，中英日西互設 hreflang 與語言切換；`/lib/hy-fav.js` 加西文；games.md 多語與 HY_GAME_LANG 加 es｜App 1.1 的 App Store 頁已有西文，接著要讓 App 有西文介面（App 畫面來自網頁版）
+
 - 2026-10-31｜registry v1.4.9｜Zoe｜新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，中英日，前綴 `ysub_`）｜Zoe 新做的小工具（tools#26）
 - 2026-10-31｜core v1.8｜Zoe 決定（2026-10-31，西文頁由 Zoe 這邊直接上架）｜多語網址加西文 `/es/`、`<html lang>`／hreflang 用 `es`；`page_lang` 值域加 es；先只用在主站 App 介紹頁，App Store 連結不帶國家碼｜絕對音感養成所 1.1 的 App Store 頁新增西文，Alison 10/31 交了西文介紹頁內容
 
