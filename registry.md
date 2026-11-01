@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4.9｜2026-10-31｜Zoe＋Alison**（v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.4.10｜2026-11-01｜Zoe＋Alison**（v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -129,6 +129,22 @@ page_title 用 `頁面|<App 全名>`（blog.md §4）。版型共用（knittingh
 - 頁面上的互動示範（focus. 的計時器、主題、環境音；絕對音感的音名輪、「是不是 C」小題）**不送事件**。
 - 連到 App Store 的 `cta_type` 暫填 `other`；core 值域若加 `app`，改版日寫進 CHANGELOG，GA4 長期趨勢要合併舊值。
 - 介紹文裡的 App 卡片用部落格的 `article_body`；`/apps/` 總覽頁卡片的「看 App 介紹」用 `app_intro`。
+
+## /apps/ 總覽頁卡片（主站 /apps/，2026-11-01 起）
+
+每張 App 卡片的按鈕照這個順序排（Zoe 2026-11-01 決定，以後每支 App 都一樣）：
+
+| 順序 | 按鈕 | 連到 | cta_id | cta_type |
+|---|---|---|---|---|
+| 1 | 到 App Store 免費下載 | App Store 追蹤連結 `ct=webpage-<代號>`（連結簿） | `app_store` | other |
+| 1（還沒上架） | 上架時通知我（訂閱電子報） | /subscribe/ | `app_notify` | newsletter |
+| 2 | 看〇〇與 App 介紹 → | /apps/<slug>/ | `app_intro` | article |
+| 3 | 先玩網頁試玩版 → | games／tools 的網頁版 | `app_web` | 依網址自動判斷（game、tool） |
+
+- 還沒有的就不放（例如介紹頁還沒上線就沒有第 2 顆），不要兩顆按鈕連到同一頁。
+- App 上架、介紹頁上線時，同一個改版就把總覽頁卡片補上對應按鈕。
+- 2026-10-31 以前網頁版按鈕用 `app_page`，2026-11-01 起改成 `app_web`；看 GA4 長期趨勢時兩個要合併。
+- App 圖示放主站 `public/icons/apps/<代號>.webp`（`/images/` 底下的新資料夾線上會 404）。
 
 ## 待修清單（改版時處理，修完把狀態改回「已上線」並寫 CHANGELOG）
 
