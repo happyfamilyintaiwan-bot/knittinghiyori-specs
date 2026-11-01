@@ -4,6 +4,7 @@
 
 ---
 
+- 2026-11-01｜registry v1.4.10｜Zoe｜新增「/apps/ 總覽頁卡片」一節：按鈕順序 App Store（`app_store`，未上架用 `app_notify`）→ 介紹頁（`app_intro`）→ 網頁試玩版（`app_web`，取代 `app_page`）｜Zoe 2026-11-01 指定絕對音感卡片照這個順序，以後每支 App 都一樣（knittinghiyori-site #30）
 - 2026-11-01｜games v1.10、core（說明補充）、registry（說明補充）｜Zoe｜絕對音感加西文網頁版 /absolute-pitch/es/，中英日西互設 hreflang 與語言切換；`/lib/hy-fav.js` 加西文；games.md 多語與 HY_GAME_LANG 加 es｜App 1.1 的 App Store 頁已有西文，接著要讓 App 有西文介面（App 畫面來自網頁版）
 
 - 2026-10-31｜registry v1.4.9｜Zoe｜新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，中英日，前綴 `ysub_`）｜Zoe 新做的小工具（tools#26）
