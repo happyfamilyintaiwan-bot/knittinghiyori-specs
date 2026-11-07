@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-07｜core v1.9.1｜Zoe｜wedding §7-1：加英日西（/en/ /ja/ /es/，海外只賣數位、美元、PayPal／Wise，西文拉丁美洲用語）；成品喜帖改「交付當天起維護 3 個月、延長每月 NT$600／US$20」；書約只有台灣格式、印刷郵局掛號寄台灣｜Zoe 2026-11-07 決定（wedding#5、specs#29）
+
 - 2026-11-07｜blog v1.2｜Zoe｜新增 §4-1 文章主題與分類：外語版與中文版同主題、追劇類＝劇評且分類有 Story、外語版 html_lang 對應網址、上架前跑 `scripts/check_topics.py`｜GA4 發現《今天是太陽雨》英日版、《歡迎回來，初戀。》三篇記成「全站」不是「劇評」，追劇系列報表會漏算
 
 - 2026-11-07｜poem（說明補充，不升版）｜Zoe｜poem 頁面 spec-version 改成 `core-v1.9/poem-v0.7`（原本停在 core-v1.5）｜逐條對過 core v1.6–v1.9：newsletter cta_type、分享附網址已符合；read_depth 只限部落格；西文、wedding 與 poem 無關
