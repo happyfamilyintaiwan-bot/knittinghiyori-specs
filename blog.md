@@ -1,6 +1,6 @@
 # knittinghiyori.com（WordPress 部落格）規範
 
-**版本：blog-v1.1｜2026-10-10**（v1.1：新增 §4 GA4 追蹤，給搬到 Astro 的新站用）
+**版本：blog-v1.2｜2026-11-07**（v1.2：新增 §4-1 文章主題與分類；v1.1：新增 §4 GA4 追蹤，給搬到 Astro 的新站用）
 負責人：Zoe＋Alison（兩人都會寫文章；改本檔規則時通知對方）。先讀 `core.md`。
 
 ---
@@ -68,6 +68,15 @@
 - `faq_open`：內文裡的 `<details>`（不含本篇目錄），`option` 用 `q1`、`q2`…。
 - `share`：新站目前沒有分享按鈕，加了按鈕再照 core §3-2 送。
 - 除錯：網址加 `?hy_debug=1`，Console 印 `[hy-blog]`。
+
+## 4-1. 文章主題與分類（初步規範，2026-11-07）
+
+主題寫在 knittinghiyori-site 的 `src/data/newsletter-plan.json`（`topic`），同時決定 GA4 `page_title` 的第二段和文末訂閱框。新增文章時一起填，不要留給自動規則。
+
+1. **外語版跟中文版同一個主題。** `-en`、`-ja`、`-ko`、`-pt`、`-id`、`-es` 結尾的網址，主題照拿掉語言後的中文版。不用「全站（勾選興趣）」代替。
+2. **追劇日曆、劇評、原著解析＝`劇評`，分類要有 `Story`。** 反過來，分類有 `Story` 的文章主題就是 `劇評`；真的不是（例如遊戲、字帖借用 Story 分類）要寫進檢查腳本的例外並附原因。
+3. **外語版的 `html_lang` 跟網址語言一致**（`-en`→`en`、`-ja`→`ja`…），hreflang 各語言互設、`x-default` 指中文版。
+4. **上架前跑** `python3 scripts/check_topics.py`：第 1、2 條有問題時會失敗（exit 1），第 3、4 條列出來提醒。
 
 ## 5. ⚠ 待補
 

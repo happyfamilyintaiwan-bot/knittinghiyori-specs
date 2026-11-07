@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-07｜blog v1.2｜Zoe｜新增 §4-1 文章主題與分類：外語版與中文版同主題、追劇類＝劇評且分類有 Story、外語版 html_lang 對應網址、上架前跑 `scripts/check_topics.py`｜GA4 發現《今天是太陽雨》英日版、《歡迎回來，初戀。》三篇記成「全站」不是「劇評」，追劇系列報表會漏算
+
 - 2026-11-07｜poem（說明補充，不升版）｜Zoe｜poem 頁面 spec-version 改成 `core-v1.9/poem-v0.7`（原本停在 core-v1.5）｜逐條對過 core v1.6–v1.9：newsletter cta_type、分享附網址已符合；read_depth 只限部落格；西文、wedding 與 poem 無關
 
 - 2026-11-07｜core v1.9、registry v1.5｜Zoe（依 Alison 2026-11-05 提案；Zoe 2026-11-07 起完全接手 wedding，由 Zoe 確認）｜新增 wedding 子網域：分工表加一列（Zoe 負責，從 Alison 接手）、§1 不放 AdSense 與 Travelpayouts、§2 例外、content_group 與 cta_type 加 `wedding`、新增 §7-1（範例頁與成品喜帖 noindex、robots.txt 不擋、成品喜帖放 Cloudflare Pages 專案 hiyori-invite 直接上傳且不放 GA4、到期刪除）；registry 新增「似顏繪喜帖」一節登記 8 個 cta_id｜Alison 要開始接似顏繪喜帖案；成品喜帖有新人個資，不能放公開 GitHub repo（Zoe 2026-11-06 選 Cloudflare 直傳）
