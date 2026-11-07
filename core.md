@@ -1,6 +1,6 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.9｜2026-11-07｜Zoe＋Alison**（v1.9：新增 wedding 子網域（似顏繪喜帖介紹頁，不放廣告與聯盟）、content_group 與 cta_type 加 wedding、成品喜帖放 Cloudflare Pages 不公開。v1.8：多語網址與 `page_lang` 加西文 es，先用在 App 介紹頁。v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.9.1｜2026-11-07｜Zoe＋Alison**（v1.9.1：wedding 加英日西（海外只賣數位、美元計價）；成品喜帖改交付起 3 個月。v1.9：新增 wedding 子網域（似顏繪喜帖介紹頁，不放廣告與聯盟）、content_group 與 cta_type 加 wedding、成品喜帖放 Cloudflare Pages 不公開。v1.8：多語網址與 `page_lang` 加西文 es，先用在 App 介紹頁。v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
 適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study／wedding 六個子網域。wedding 目前只有一個介紹頁，不另開站別檔，規則寫在本檔（§1、§2、§3、§7-1）。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
@@ -228,15 +228,16 @@ wedding.knittinghiyori.com（公開，GitHub Pages，做 SEO）
 └── /a/ /b/ /c/ 範例喜帖（noindex，不放 GA4）
 
 invite.knittinghiyori.com（不公開，Cloudflare Pages 直接上傳）
-└── /<亂碼>/   一對新人一個資料夾，交付後使用 6 個月
+└── /<亂碼>/   一對新人一個資料夾，交付當天起維護 3 個月（延長每月 NT$600／US$20）
 ```
 
+- **多語**：中文在根目錄，英日西在 `/en/ /ja/ /es/`（互設 hreflang，`x-default` 指中文）。海外版只賣數位（似顏繪＋網頁電子喜帖），美元計價，PayPal／Wise 付款；結婚書約只有台灣格式、印刷版只用郵局掛號寄台灣地址。英日西頁由 wedding repo 的 `tools/build_intl.py` 產生，改文字與價格只改 `tools/intl_strings.py`。西文以拉丁美洲用語（ustedes）為主。
 - **介紹頁**照一般子網域規範（品牌列「編織日和・似顏繪喜帖」、404、OG、GA4），但不放廣告與聯盟（§1）。範例頁 `/a/ /b/ /c/` 用 `noindex, nofollow`，**robots.txt 不擋這三個路徑**（擋了 Google 讀不到 noindex），sitemap 只放首頁。
 - **成品喜帖不放 GitHub**（公開 repo 會露出新人全名、家長名字、婚宴地址）：用 Cloudflare Pages 專案 `hiyori-invite` **直接上傳**（`wrangler pages deploy`，不連 repo），網址 `invite.knittinghiyori.com/<亂碼>/`。
   - 根目錄 `_headers` 對所有路徑送 `X-Robots-Tag: noindex, nofollow`，每頁也保留 `<meta name="robots" content="noindex, nofollow">`；`robots.txt` 不擋（理由同上）。根目錄 `/` 不列出任何喜帖。
   - 資料夾名稱用 16 字元以上的亂碼，不含新人名字或日期。
   - **不放 GA4**，也不載任何第三方追蹤（賓客名單、`?to=` 的名字都是個資）。
-  - 原始檔只存在 Zoe 的電腦（不 commit 到任何 GitHub repo）。到期（交付後 6 個月，或延長期滿）從專案刪掉該資料夾再部署一次，並在接案紀錄寫下刪除日期。
+  - 原始檔只存在 Zoe 的電腦（不 commit 到任何 GitHub repo）。到期（交付當天起 3 個月，或延長期滿）從專案刪掉該資料夾再部署一次，並在接案紀錄寫下刪除日期。
 
 ---
 
