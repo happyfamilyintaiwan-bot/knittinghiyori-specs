@@ -4,7 +4,7 @@
 
 ---
 
-- 2026-11-07｜core v1.9、registry v1.5｜Zoe 提案（依 Alison 2026-11-05 提案），待 Alison 確認（共管）｜新增 wedding 子網域：分工表加一列（Alison 內容）、§1 不放 AdSense 與 Travelpayouts、§2 例外、content_group 與 cta_type 加 `wedding`、新增 §7-1（範例頁與成品喜帖 noindex、robots.txt 不擋、成品喜帖放 Cloudflare Pages 專案 hiyori-invite 直接上傳且不放 GA4、到期刪除）；registry 新增「似顏繪喜帖」一節登記 8 個 cta_id｜Alison 要開始接似顏繪喜帖案；成品喜帖有新人個資，不能放公開 GitHub repo（Zoe 2026-11-06 選 Cloudflare 直傳）
+- 2026-11-07｜core v1.9、registry v1.5｜Zoe（依 Alison 2026-11-05 提案；Zoe 2026-11-07 起完全接手 wedding，由 Zoe 確認）｜新增 wedding 子網域：分工表加一列（Zoe 負責，從 Alison 接手）、§1 不放 AdSense 與 Travelpayouts、§2 例外、content_group 與 cta_type 加 `wedding`、新增 §7-1（範例頁與成品喜帖 noindex、robots.txt 不擋、成品喜帖放 Cloudflare Pages 專案 hiyori-invite 直接上傳且不放 GA4、到期刪除）；registry 新增「似顏繪喜帖」一節登記 8 個 cta_id｜Alison 要開始接似顏繪喜帖案；成品喜帖有新人個資，不能放公開 GitHub repo（Zoe 2026-11-06 選 Cloudflare 直傳）
 
 - 2026-11-01｜registry v1.4.11｜Zoe 提案，待 Alison 確認（改既有列備註）｜`morse_code` 備註「只有中文」改成中英：英文頁 `/morse-code/en/`、英文名 Lighthouse Morse（games#18）；註記 iPhone App 製作中｜摩斯 App 主攻英文市場，App 畫面來自網頁版，要先有英文網頁
 

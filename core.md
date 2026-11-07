@@ -23,7 +23,7 @@
 | study 子網域（學習筆記） | Alison | study.md |
 | games 子網域 | Zoe | games.md |
 | poem 子網域 | Zoe | poem.md |
-| wedding 子網域（似顏繪喜帖介紹頁）與成品喜帖 | Alison | core.md §7-1 |
+| wedding 子網域（似顏繪喜帖介紹頁）與成品喜帖 | Zoe（2026-11-07 從 Alison 接手） | core.md §7-1 |
 | 部落格文章 | 兩人 | blog.md |
 | core.md、registry.md、story 首頁 hub 外框、story.md 共用段落 | 兩人共管 | — |
 | 上架：repo、分支、PR、build、驗收、合併、發布、DNS／GA4／GSC／AdSense 後台、本規範 repo | Zoe | — |
@@ -70,7 +70,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | study | `7499102019` | `emrld.ltd/NTgzNjI3.js?t=583627` | 不開 |
 | wedding | 不放 | 不放 | 不開 |
 
-- **wedding 不放 AdSense、不放 Travelpayouts**（Alison 2026-11-05 決定）：接案介紹頁，廣告會分散詢價。§2 的第 1、3 項對 wedding 不適用，§9 的 Drive、AdSense 驗收項也跳過。
+- **wedding 不放 AdSense、不放 Travelpayouts**（Alison 2026-11-05 提出，Zoe 2026-11-07 確認）：接案介紹頁，廣告會分散詢價。§2 的第 1、3 項對 wedding 不適用，§9 的 Drive、AdSense 驗收項也跳過。
 
 ---
 
