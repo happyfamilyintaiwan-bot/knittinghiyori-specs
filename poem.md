@@ -13,7 +13,7 @@
 - **頁面由 `build.py` 從 `poems.json` 產生（需 Python 3.12+）**。改版面要改 `build.py` 再重跑；直接改 `index.html` 會被覆蓋。
 - 根目錄 `llms.txt`（給 AI 搜尋與助理讀的網站摘要）也由 `build.py` 產生，依 `poems.json` 自動列出全部的詩，不手改（2026-10-15 起）。
 - Drive（`emrld.ltd/NTc4NjIw.js?t=578620`）寫在 `build.py` 的 `DRIVE`，所有頁面（含 404）head 第一個 script。
-- 常數都在 `build.py` 開頭：`DRIVE`、`AD_CLIENT`／`AD_SLOT`、`AD_SLOT_HOME`／`AD_SLOT_POEM`、`SPEC`（spec-version，目前 `core-v1.5/poem-v0.6`）、`PRIVACY`。升版時改 `SPEC` 再重跑 build。
+- 常數都在 `build.py` 開頭：`DRIVE`、`AD_CLIENT`／`AD_SLOT`、`AD_SLOT_HOME`／`AD_SLOT_POEM`、`SPEC`（spec-version，目前 `core-v1.9/poem-v0.7`）、`PRIVACY`。升版時改 `SPEC` 再重跑 build。
 - 頁面一律經 `write()` 寫出：自動在所有 `<a>` 加 `data-google-vignette="false"`（靜態 HTML，不靠 JS）。新增頁面也要用 `write()`。
 - 每頁最下方有 `.kh-legal`（三語，`legal()` 產生，文字照 core §6）。
 - `404.html` 由 `build_404()` 產生（core §7）：`noindex, follow`、不放 canonical／hreflang／OG、不放 AdSense；GA4 `story_id` = `poem-404`、`page_title` = `詩|404|找不到頁面`（`head(..., page_title=)`，只有 404 送）。由上到下：品牌列 →〈此路不通〉小詩 → 回目錄按鈕 `notfound_hub` → 到主站文字連結 `notfound_main`（`.nf-main`，高 44px、`--pencil`）→ 最近 3 首 `notfound_card` → 跨站連結一行 `notfound_site`（`NF_SITES`：故事、小遊戲、小工具、學習筆記，不含詩，`cta_type` 填目的地 story／game／tool／study）。前三個的 `cta_type` 是 `poem`。最近 3 首在 build 時從 `poems.json` 產生（和首頁同一份資料），不另外維護清單。
