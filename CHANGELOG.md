@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-01｜registry v1.4.11｜Zoe 提案，待 Alison 確認（改既有列備註）｜`morse_code` 備註「只有中文」改成中英：英文頁 `/morse-code/en/`、英文名 Lighthouse Morse（games#18）；註記 iPhone App 製作中｜摩斯 App 主攻英文市場，App 畫面來自網頁版，要先有英文網頁
+
 - 2026-11-01｜registry v1.4.10｜Zoe｜新增「/apps/ 總覽頁卡片」一節：按鈕順序 App Store（`app_store`，未上架用 `app_notify`）→ 介紹頁（`app_intro`）→ 網頁試玩版（`app_web`，取代 `app_page`）｜Zoe 2026-11-01 指定絕對音感卡片照這個順序，以後每支 App 都一樣（knittinghiyori-site #30）
 - 2026-11-01｜games v1.10、core（說明補充）、registry（說明補充）｜Zoe｜絕對音感加西文網頁版 /absolute-pitch/es/，中英日西互設 hreflang 與語言切換；`/lib/hy-fav.js` 加西文；games.md 多語與 HY_GAME_LANG 加 es｜App 1.1 的 App Store 頁已有西文，接著要讓 App 有西文介面（App 畫面來自網頁版）
 
