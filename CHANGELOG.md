@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-07｜poem（說明補充，不升版）｜Zoe｜poem 頁面 spec-version 改成 `core-v1.9/poem-v0.7`（原本停在 core-v1.5）｜逐條對過 core v1.6–v1.9：newsletter cta_type、分享附網址已符合；read_depth 只限部落格；西文、wedding 與 poem 無關
+
 - 2026-11-07｜core v1.9、registry v1.5｜Zoe（依 Alison 2026-11-05 提案；Zoe 2026-11-07 起完全接手 wedding，由 Zoe 確認）｜新增 wedding 子網域：分工表加一列（Zoe 負責，從 Alison 接手）、§1 不放 AdSense 與 Travelpayouts、§2 例外、content_group 與 cta_type 加 `wedding`、新增 §7-1（範例頁與成品喜帖 noindex、robots.txt 不擋、成品喜帖放 Cloudflare Pages 專案 hiyori-invite 直接上傳且不放 GA4、到期刪除）；registry 新增「似顏繪喜帖」一節登記 8 個 cta_id｜Alison 要開始接似顏繪喜帖案；成品喜帖有新人個資，不能放公開 GitHub repo（Zoe 2026-11-06 選 Cloudflare 直傳）
 
 - 2026-11-06｜poem v0.7｜Zoe｜三語各有自己的網址：日文維持根目錄，中文 `/zh/<編號>/`、英文 `/en/<編號>/`，各自 html lang、title、description、canonical，互設 hreflang（x-default 日文）；舊 `?lang=` 由 script 轉址；語言切換同時換網址｜SEO 健檢發現 `?lang=` 版本 canonical 都指日文，中英版不會被 Google 收錄
