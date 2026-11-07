@@ -4,8 +4,12 @@
 
 ---
 
+- 2026-11-07｜core v1.9、registry v1.5｜Zoe（依 Alison 2026-11-05 提案；Zoe 2026-11-07 起完全接手 wedding，由 Zoe 確認）｜新增 wedding 子網域：分工表加一列（Zoe 負責，從 Alison 接手）、§1 不放 AdSense 與 Travelpayouts、§2 例外、content_group 與 cta_type 加 `wedding`、新增 §7-1（範例頁與成品喜帖 noindex、robots.txt 不擋、成品喜帖放 Cloudflare Pages 專案 hiyori-invite 直接上傳且不放 GA4、到期刪除）；registry 新增「似顏繪喜帖」一節登記 8 個 cta_id｜Alison 要開始接似顏繪喜帖案；成品喜帖有新人個資，不能放公開 GitHub repo（Zoe 2026-11-06 選 Cloudflare 直傳）
+
 - 2026-11-06｜poem v0.7｜Zoe｜三語各有自己的網址：日文維持根目錄，中文 `/zh/<編號>/`、英文 `/en/<編號>/`，各自 html lang、title、description、canonical，互設 hreflang（x-default 日文）；舊 `?lang=` 由 script 轉址；語言切換同時換網址｜SEO 健檢發現 `?lang=` 版本 canonical 都指日文，中英版不會被 Google 收錄
   - **改版日 2026-11-06**：GA4 看 poem 的 page_lang＝zh-Hant／en 的自然搜尋進站，約 4 週後比較
+
+- 2026-11-01｜registry v1.4.11｜Zoe 提案，待 Alison 確認（改既有列備註）｜`morse_code` 備註「只有中文」改成中英：英文頁 `/morse-code/en/`、英文名 Lighthouse Morse（games#18）；註記 iPhone App 製作中｜摩斯 App 主攻英文市場，App 畫面來自網頁版，要先有英文網頁
 
 - 2026-11-01｜registry v1.4.10｜Zoe｜新增「/apps/ 總覽頁卡片」一節：按鈕順序 App Store（`app_store`，未上架用 `app_notify`）→ 介紹頁（`app_intro`）→ 網頁試玩版（`app_web`，取代 `app_page`）｜Zoe 2026-11-01 指定絕對音感卡片照這個順序，以後每支 App 都一樣（knittinghiyori-site #30）
 - 2026-11-01｜games v1.10、core（說明補充）、registry（說明補充）｜Zoe｜絕對音感加西文網頁版 /absolute-pitch/es/，中英日西互設 hreflang 與語言切換；`/lib/hy-fav.js` 加西文；games.md 多語與 HY_GAME_LANG 加 es｜App 1.1 的 App Store 頁已有西文，接著要讓 App 有西文介面（App 畫面來自網頁版）

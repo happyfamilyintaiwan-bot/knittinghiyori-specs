@@ -1,8 +1,8 @@
 # knittinghiyori 共用規範（core）
 
-**版本：core-v1.8｜2026-10-31｜Zoe＋Alison**（v1.8：多語網址與 `page_lang` 加西文 es，先用在 App 介紹頁。v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
+**版本：core-v1.9｜2026-11-07｜Zoe＋Alison**（v1.9：新增 wedding 子網域（似顏繪喜帖介紹頁，不放廣告與聯盟）、content_group 與 cta_type 加 wedding、成品喜帖放 Cloudflare Pages 不公開。v1.8：多語網址與 `page_lang` 加西文 es，先用在 App 介紹頁。v1.7：分享與匯出的內容都要附出處網址。v1.6：cta_type 加 newsletter、新增 read_depth 事件、content_group 加 article（部落格搬 Astro）。v1.5：content_type 加 study、invite（2026-10-10）；404 頁加跨站連結、語言切換與 GA4 分類、分頁圖示改用正式 logo（2026-10-12）。v1.4：§7 新增每個子網域的 404 頁、統一 404 的 cta_id。v1.3.1：OG 圖與部落格首圖不放浮水印。v1.3：新增 study 子網域、cta_type 加 study；分工改為 Alison 只交內容、上架全部由 Zoe 處理。v1.2：cta_type 加 story、頁尾聯盟文字不限旅遊、§7 新增頁首品牌列。v1.1：新增負責分工、story 自動廣告範圍、games 多語網址例外。標 ⚠ 處待以 GA4 Custom definitions 匯出表或 DebugView 核對，核對後升 v1.1.1）
 
-適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study 五個子網域。
+適用：部落格（knittinghiyori.com）與 tools／games／story／poem／study／wedding 六個子網域。wedding 目前只有一個介紹頁，不另開站別檔，規則寫在本檔（§1、§2、§3、§7-1）。
 各站的差異寫在 `tools.md`／`games.md`／`story.md`／`poem.md`／`study.md`／`blog.md`。**core 與各站檔案衝突時，以 core 為準**；各站需要例外時，先改 core 說明例外，不要在各站檔案自行推翻。
 
 ---
@@ -23,6 +23,7 @@
 | study 子網域（學習筆記） | Alison | study.md |
 | games 子網域 | Zoe | games.md |
 | poem 子網域 | Zoe | poem.md |
+| wedding 子網域（似顏繪喜帖介紹頁）與成品喜帖 | Zoe（2026-11-07 從 Alison 接手） | core.md §7-1 |
 | 部落格文章 | 兩人 | blog.md |
 | core.md、registry.md、story 首頁 hub 外框、story.md 共用段落 | 兩人共管 | — |
 | 上架：repo、分支、PR、build、驗收、合併、發布、DNS／GA4／GSC／AdSense 後台、本規範 repo | Zoe | — |
@@ -67,6 +68,9 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 | poem | `6629751780` | `emrld.ltd/NTc4NjIw.js?t=578620` | 不開 |
 | story | `2285424505` | `emrld.ltd/NTc4NjI0.js?t=578624` | 首頁開；小說、追劇、漫畫頁（含 5 部原創追劇）**不開**（不帶 `?client=`＋AdSense 後台網頁排除，見 story.md） |
 | study | `7499102019` | `emrld.ltd/NTgzNjI3.js?t=583627` | 不開 |
+| wedding | 不放 | 不放 | 不開 |
+
+- **wedding 不放 AdSense、不放 Travelpayouts**（Alison 2026-11-05 提出，Zoe 2026-11-07 確認）：接案介紹頁，廣告會分散詢價。§2 的第 1、3 項對 wedding 不適用，§9 的 Drive、AdSense 驗收項也跳過。
 
 ---
 
@@ -79,6 +83,8 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 5. JSON-LD
 6. `spec-version` meta
 
+- wedding 例外：沒有第 1、3 項（見 §1）。
+
 ---
 
 ## 3. GA4 統一追蹤
@@ -88,7 +94,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 ### 3-1 設計原則
 1. 一個參數名稱＝一種意思，全站通用。
 2. 內容 id 各用各的：工具 `tool_id`、遊戲 `game_id`、故事／小說／追劇 `work`，不互相借用。工具與遊戲的 id 用**底線**（`travel_split`）；**story 的 `work` 例外用連字號**，直接等於作品資料夾名（`a-gentleman-in-moscow`），不要改成底線。**study 的 `topic` 同樣用連字號**，直接等於主題資料夾名（`claude-ai`）。工具若放在 games 子網域，仍送 `tool_id`。
-3. `content_group`：部落格文章＝`article`（部落格上的工具頁＝`tool`）、工具＝`tool`、遊戲＝`game`、故事＝`story`（⚠ 待核對既有作品）、學習筆記＝`study`、詩＝⚠ 待確認。
+3. `content_group`：部落格文章＝`article`（部落格上的工具頁＝`tool`）、工具＝`tool`、遊戲＝`game`、故事＝`story`（⚠ 待核對既有作品）、學習筆記＝`study`、似顏繪喜帖＝`wedding`（v1.9）、詩＝⚠ 待確認。
 4. **參數值只能是固定的英文代碼**：不送讀者輸入的文字、中文句子或個資。
 5. 不逐次送高頻動作（按鍵、輸入），結果彙總在一個事件。
 6. 名稱 40 字元內；參數值 100 字元內；每事件 25 個參數內。
@@ -123,7 +129,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 |---|---|
 | `method`（share） | native、line、facebook、threads、x、telegram、copy_link、copy_text |
 | `content_type` | result、tool、game、story、study、invite（邀請朋友加入，連結帶進度）（⚠ 詩待補） |
-| `cta_type` | tool、article、game、story、study、poem、newsletter（去訂閱電子報：Kit 表單或訂閱中心）、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
+| `cta_type` | tool、article、game、story、study、poem、wedding（v1.9，似顏繪喜帖介紹頁與範例）、newsletter（去訂閱電子報：Kit 表單或訂閱中心）、trip、agoda、booking、klook、kkday、shopee、affiliate、other |
 | `entry_point` | direct、shared、saved |
 | `page_lang` | zh-Hant、en、ja、es（v1.8；App 介紹頁、games 絕對音感） |
 
@@ -196,7 +202,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 - **頁首品牌列**（2026-10-04 起）：所有子網域（story、tools、games、poem、study）的每一頁，**最上方**都放「正式 logo＋『編織日和・站名』文字」，點了回**該子網域的首頁**。作品／工具／遊戲名稱放在品牌列下方，不取代品牌。寫法以 games 的 `_template/` 為準（`.kh-brand-row`、`.kh-brand`）。
   - logo 用正式 logo（方形「編織日和 Knitting Hiyori」棒針底圖），檔案以 games 的 `/icons/logo-knitting-120.webp` 為準（高解析度用 `logo-knitting-240.webp`），顯示 40px；旁邊已寫出「編織日和」時 `alt=""`。
   - 文字用靜態 HTML（§8-1），不能只放在圖片裡。站名例：小遊戲、工具、故事、學習筆記（英：編織日和 · Games；日：編織日和・ミニゲーム）。窄螢幕放不下時，先藏站名，「編織日和」不藏。
-  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`、study `study`、poem `poem`）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
+  - 追蹤：`data-cta="brand_hub"`，`data-cta-type` 填該站類型（games `game`、tools `tool`、story `story`、study `study`、poem `poem`、wedding `wedding`）。不開自動廣告的頁面，連結要有 vignette 標記（§9）。
   - 既有頁面列在 registry 待修清單，改版時補上。
 - 每個頁面都要有：**SEO 標題、meta description、英文 slug**、canonical、OG（1200×630 圖）。
 - OG 圖與部落格文章首圖共用同一張橫式設計（1200×630），**不放浮水印**；浮水印只用在社群貼文圖與成績卡／進度圖卡這類會被轉傳的圖。
@@ -213,6 +219,24 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
   - **GA4 分類**（v1.5）：`config` 前先 `gtag('set', {content_group: <該站的值>, page_lang, page_title})`，page_title 用 `類別|404|找不到頁面`（例：`遊戲|404|找不到頁面`、`故事|404|找不到頁面`），報表才分得出是哪一站的 404。
   - 各站寫法見站別檔（story §5、games §1、study §1、poem）。部落格（WordPress）等搬到 Astro 時一起做。
 - 中文內容使用全形標點；版面以手機閱讀為優先（390px 先做對）。
+
+### 7-1 wedding 子網域與成品喜帖（v1.9）
+
+```
+wedding.knittinghiyori.com（公開，GitHub Pages，做 SEO）
+├── /          介紹頁（價格、書約方案、三種喜帖風格、估價與詢價信）
+└── /a/ /b/ /c/ 範例喜帖（noindex，不放 GA4）
+
+invite.knittinghiyori.com（不公開，Cloudflare Pages 直接上傳）
+└── /<亂碼>/   一對新人一個資料夾，交付後使用 6 個月
+```
+
+- **介紹頁**照一般子網域規範（品牌列「編織日和・似顏繪喜帖」、404、OG、GA4），但不放廣告與聯盟（§1）。範例頁 `/a/ /b/ /c/` 用 `noindex, nofollow`，**robots.txt 不擋這三個路徑**（擋了 Google 讀不到 noindex），sitemap 只放首頁。
+- **成品喜帖不放 GitHub**（公開 repo 會露出新人全名、家長名字、婚宴地址）：用 Cloudflare Pages 專案 `hiyori-invite` **直接上傳**（`wrangler pages deploy`，不連 repo），網址 `invite.knittinghiyori.com/<亂碼>/`。
+  - 根目錄 `_headers` 對所有路徑送 `X-Robots-Tag: noindex, nofollow`，每頁也保留 `<meta name="robots" content="noindex, nofollow">`；`robots.txt` 不擋（理由同上）。根目錄 `/` 不列出任何喜帖。
+  - 資料夾名稱用 16 字元以上的亂碼，不含新人名字或日期。
+  - **不放 GA4**，也不載任何第三方追蹤（賓客名單、`?to=` 的名字都是個資）。
+  - 原始檔只存在 Zoe 的電腦（不 commit 到任何 GitHub repo）。到期（交付後 6 個月，或延長期滿）從專案刪掉該資料夾再部署一次，並在接案紀錄寫下刪除日期。
 
 ---
 

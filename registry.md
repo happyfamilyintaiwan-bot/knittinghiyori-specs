@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.4.10｜2026-11-01｜Zoe＋Alison**（v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.5｜2026-11-07｜Zoe＋Alison**（v1.5：新增「似顏繪喜帖」一節（wedding 子網域介紹頁的 page_title 與 cta_id）。v1.4.11：morse_code 加英文頁、英文名 Lighthouse Morse。v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -60,7 +60,7 @@
 | `swiftui_detective` | 雨夜懷錶案（SwiftUI 偵探） | `swiftui_` | 已上線 | 只有中文；level＝l00–l07（章節）、l08（結案指認）；option＝case01；專屬事件 `swiftui_hint_open`、`swiftui_solution_view`；聯盟只在結案畫面：`dadaocheng_result`、`escape_room_result`（klook，2026-10-10 起；之前是 affiliate）；存檔 localStorage swiftui-noir-v2；介紹文 knittinghiyori.com/swiftui-tutorial-detective-game/ |
 | `absolute_pitch` | 絕對音感養成所（en：Absolute Pitch Training Lab／ja：絶対音感養成所） | `ap_` | 已上線 | 四語：/absolute-pitch/、/absolute-pitch/en/、/absolute-pitch/ja/、/absolute-pitch/es/（西文 2026-11-01 起，名稱 Oído Absoluto: Entrenador）；專屬事件 `ap_daily_goal`、`ap_pair_fixed`、`ap_progress_reset`；聯盟：中文頁蝦皮練習用耳機（`below_game`／shopee，2026-10-04 起）；介紹文 knittinghiyori.com/absolute-pitch-training-game/（2026-10-04 發布）；**App**（2026-10-31 補）：App Store id6822936709，iPhone／iPad／Mac／Apple Vision Pro，2026-10-24 起 175 個國家或地區；英文名 2026-10-30 起 Absolute Pitch Training Lab（原 Absolute Pitch Trainer 已被別的 App 使用）；中文頁下載連結帶 `ct=webpage-pitch`，「看 App 介紹」`app_intro`（cta_type article）連主站 /apps/absolute-pitch/ |
 | `flower_shop` | ひより花店 | `flower_` | 已上線 | 只有中文；目前無專屬事件（前綴保留）；option＝kana／flower_quiz／hana_quiz／typing_hana／typing_<語言>；level＝relaxed／standard／challenge／review（測驗）、small／medium／large＋_<計時模式>（打字）；聯盟 `flower_trip`（klook，2026-10-10 起；之前是 affiliate），cta_click 另帶 option＝花的英文名（2026-10-10 前沒送到）；頁尾 `footer_hub`（game）、`footer_main`（article）（之前都是 `footer`，到主站那個之前 cta_type 是 `mainsite`）；介紹文連結 `about_article`（之前是 `article_link`）；介紹文 knittinghiyori.com/japanese-kana-game/ |
-| `morse_code` | 守燈人摩斯日誌 | `morse_` | 已上線 | 實證訓練法系列第 1 款；只有中文；共用引擎 /lib/hy-trainer/；level＝Koch 課數 l01–l40；option＝koch／group；專屬事件 morse_skip_intro、morse_daily_goal（streak）、morse_pair_play、morse_progress_reset；聯盟 cta_id=lighthouse_trip（klook）、gear_card（shopee，AirPods，2026-10-09 起）；2026-10-09 上線；介紹文 knittinghiyori.com/morse-code-training-game/（2026-10-09 發布） |
+| `morse_code` | 守燈人摩斯日誌 | `morse_` | 已上線 | 實證訓練法系列第 1 款；中英（英文頁 `/morse-code/en/`、英文名 Lighthouse Morse，2026-11-01 上線，games#18；iPhone App 製作中）；共用引擎 /lib/hy-trainer/；level＝Koch 課數 l01–l40；option＝koch／group；專屬事件 morse_skip_intro、morse_daily_goal（streak）、morse_pair_play、morse_progress_reset；聯盟 cta_id=lighthouse_trip（klook）、gear_card（shopee，AirPods，2026-10-09 起）；2026-10-09 上線；介紹文 knittinghiyori.com/morse-code-training-game/（2026-10-09 發布） |
 | `sleep_rhythm` | 固定作息燈塔 | `sleep_` | 已上線 | 規律作息養成；只有中文；一局＝一次打卡（option=wake／sleep，level＝燈靈階段 l01–l06）；不送打卡時間、差距、準不準時或城市；專屬事件 sleep_skip_intro、sleep_backfill、sleep_morning_light、sleep_report_open、sleep_fleet_open、sleep_diary_open、sleep_diary_answer（option＝手記頁 id）、sleep_signal_send（option=gm／gn／tg／ch）、sleep_friend_add（result=new／update、source=link／paste）、sleep_progress_reset；game_unlock 含 spirit_l02–l06、diary_d01–d21、diary_d30–d100（每 10 天）、diary_f01／f03／f05／f10（聯盟的信）；邀請朋友 share content_type=invite；邀請資料放網址 #f= 片段，GA4 載入前移除；聯盟 cta_id=lighthouse_trip（klook）；存檔 localStorage hy_sleep_v1；2026-10-10 上線；介紹文 knittinghiyori.com/sleep-schedule-habit-game/ |
 | `hiyori_pet` | 日和毛孩（網頁電子寵物） | `pet_` | 已上線 | 網址 /hiyori-pet/，**2026-10-14 上線**（原預定 11-09，後改 10-19，再提早；Zoe 同意由 Alison 這邊上架）；只有中文；網頁版是 App 版的 MVP（測試、收回饋、導流）；專屬事件 `pet_adopt`、`pet_action`、`pet_stage`、`pet_mail_read`、`pet_pip_open`、`pet_pwa_install`、`pet_move`（option＝export／import）；`pet_walk_ask`（option＝yes／no）、`pet_walk_remind`（option＝notice／block）、`pet_walk_done`（option＝manual／idle）、`pet_walk_snooze`（option＝later／today）；`pet_visit_share`（method＝native／copy_link，同時送 `share` content_type＝invite）／`pet_visit_open`（has_pet）；聯盟 klook（cta_id `trip_result`）、shopee（`below_game`）；電子報 cta_id `newsletter_teen`、`app_waitlist_game`（cta_type newsletter；上線當天的 `newsletter_below`、`app_waitlist_below` 已拿掉／改名）；問卷 `feedback_adult`、`feedback_below`（cta_type other，網址空著不顯示）；localStorage `hiyori-pet:save`、`hiyori-pet:book`（含 `kitAsked`、`fbAsked`）、`hiyori-pet:ios-tip` |
 | `tozai_dojo` | 東西腔道場 | `tozai_` | 已上線 | 只有中文；game_id 已確認；目前無專屬事件（前綴保留）；一局＝一回 10 題，option＝mixed，沒有 level；round_end 帶 score；聯盟 `start_card`、`result_card`（trip，2026-10-10 起；之前是 affiliate）；分享網址 `?ref=share`（之前是 `?via=share`，舊連結仍認；2026-10-10 前 entry_point=shared 沒記到）；存檔 localStorage tozai-best2；介紹文尚未寫 |
@@ -145,6 +145,27 @@ page_title 用 `頁面|<App 全名>`（blog.md §4）。版型共用（knittingh
 - App 上架、介紹頁上線時，同一個改版就把總覽頁卡片補上對應按鈕。
 - 2026-10-31 以前網頁版按鈕用 `app_page`，2026-11-01 起改成 `app_web`；看 GA4 長期趨勢時兩個要合併。
 - App 圖示放主站 `public/icons/apps/<代號>.webp`（`/images/` 底下的新資料夾線上會 404）。
+
+## 似顏繪喜帖（wedding 子網域，content_group=wedding，2026-11-07 起）
+
+不設內容 id 參數（目前只有一個介紹頁）。範例頁 `/a/ /b/ /c/` 與成品喜帖都不放 GA4（core §7-1）。
+
+| 頁面 | 網址 | page_title | 狀態 | 備註 |
+|---|---|---|---|---|
+| 介紹頁 | wedding / | `喜帖\|似顏繪喜帖\|結婚書約與電子喜帖報價` | 規劃中 | Alison 製作，2026-11-07 起 Zoe 接手 |
+
+| cta_id | cta_type | 位置 |
+|---|---|---|
+| `brand_hub` | wedding | 頁首品牌列（回介紹頁首頁） |
+| `hero_quote` | wedding | 首屏「馬上估價」（頁內跳到估價區） |
+| `hero_price` | wedding | 首屏「看價格」（頁內跳到價格區） |
+| `style_a`、`style_b`、`style_c` | wedding | 開啟 A 書約手繪風、B 日系清新、C 雪景範例 |
+| `quote_copy` | other | 複製詢價信 |
+| `quote_email` | other | 用 Email 開啟詢價信（mailto） |
+
+- 404 照 core §7 用 `notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`；page_title `喜帖|404|找不到頁面`。
+
+---
 
 ## 待修清單（改版時處理，修完把狀態改回「已上線」並寫 CHANGELOG）
 
