@@ -1,6 +1,6 @@
 # games.knittinghiyori.com 規範
 
-**版本：games-v1.11｜2026-11-10｜Alison**（v1.11：§7-1 絕對音感三頁 SEO 分工（遊戲頁＝絕對音感測試／線上測試，介紹文＝可以練嗎、訓練方法，App 介紹頁＝絕對音感訓練 App）；中文頁第一次來先測試、結果直接回答。v1.10：多語可加西文 `/<slug>/es/`，先用在絕對音感。v1.9：共用 /lib/hy-next.js：遊戲頁「下一款」推薦列（next_game）、主頁「繼續上次的遊戲」（continue_game）、localStorage hy_recent。v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
+**版本：games-v1.11.1｜2026-11-10｜Alison**（v1.11.1：§7-1 絕對音感三頁分工補英日西字組。v1.11：§7-1 絕對音感三頁 SEO 分工（遊戲頁＝絕對音感測試／線上測試，介紹文＝可以練嗎、訓練方法，App 介紹頁＝絕對音感訓練 App）；中文頁第一次來先測試、結果直接回答。v1.10：多語可加西文 `/<slug>/es/`，先用在絕對音感。v1.9：共用 /lib/hy-next.js：遊戲頁「下一款」推薦列（next_game）、主頁「繼續上次的遊戲」（continue_game）、localStorage hy_recent。v1.8.4：404 頁加跨站連結一行（notfound_site）。v1.8.3：§7-1 遊戲頁與介紹文的 SEO 字組分開。v1.8.2：§3-6 GA4 自訂定義核對並補登記 8 個。v1.8.1：主頁 NEW 只標最新三款；主頁 game_id 確認為 hub；主頁預覽圖 /assets/og-hub.png。v1.8：分享列加「加到我的最愛」按鈕（共用 /lib/hy-fav.js，事件 bookmark_shortcut）；篩選代碼 habit／sleep。v1.7：404 頁照 core v1.4，cta_id 改 notfound_card。v1.6.1：morse_code 進度圖卡。v1.6：共用引擎 /lib/hy-trainer/、篩選代碼 morse。v1.5：每款遊戲都可放少量主題相符的聯盟。v1.4.1：404 依語言切換。v1.4：分頁圖示換正式 logo、404 頁、主頁品牌列。v1.3.1：og 圖加品牌列。v1.3：結算畫面成績卡圖片。v1.2：頂端品牌列＋`brand_hub`；v1.2.1：品牌列換正式 logo。由各遊戲 README 整理，皆依《遊戲 GA4 v1.0》實作；原文未找到，標 ⚠ 處待 hyGame 程式碼或 DebugView 核對，核對後升 v1.1.1）
 負責人：Zoe。先讀 `core.md`；本檔只寫 games 專屬的部分。
 
 ---
@@ -230,6 +230,15 @@ body 底部放標準 hyGame 追蹤碼：
 - 寫法：`主攻字｜一句說明｜遊戲名`，主攻字放最前面；`meta description` 第一句也用同一個字。
 - 只改 `<title>` 和 `meta description`；`og:title`、頁面大標、GA4 的 `page_title` 不動（報表不會斷）。
 - **有 App 介紹頁的遊戲（三頁分工，2026-11-09 起，絕對音感試行）**：遊戲頁＝測試、線上測試；介紹文＝可以練嗎、怎麼練、訓練方法，加上人口比例、英文這類知識字；主站 App 介紹頁（`/apps/<slug>/`）＝「〇〇訓練 App」「〇〇 App」。三頁互連時，連結文字用「對方」的主攻字（連遊戲頁寫「〇〇線上測試」、連介紹文寫「〇〇可以練嗎」、連 App 介紹頁寫「〇〇訓練 App」）；FAQ 的問題也照這個分，不讓兩頁出現同一題。
+- **絕對音感英日西（2026-11-10 起，依 Google 相關搜尋）**：
+
+| 語言 | 遊戲頁 | 介紹文（`-en`／`-ja`／`-es`） | App 介紹頁 |
+|---|---|---|---|
+| en | perfect pitch test | can adults learn perfect pitch、absolute vs perfect pitch、meaning、vs relative pitch、how rare、who has | perfect pitch training app |
+| ja | 絶対音感テスト | 大人でも身につく、何歳まで、生まれつき、何人に一人、相対音感、英語、ある人の特徴 | 絶対音感トレーニングアプリ |
+| es | test de oído absoluto | qué es、ejemplos、oído absoluto y relativo、cuántas personas、famosos | app para entrenar el oído absoluto |
+
+  不採用：movie／película、Deepwoken、book（搜尋意圖不同）。
 - 沒有介紹文的頁面（東西腔道場、遊戲主頁）不受限。新遊戲上線、或介紹文要改標題時，先對照這張表。
 - 目前分配：絕對音感＝絕對音感測試、絕對音感線上測試；SQL＝SQL 線上練習；SwiftUI＝SwiftUI 線上練習；活用館＝日文動詞變化測驗；日檢＝日文單字測驗 N5～N1；花店＝五十音測驗；摩斯＝摩斯密碼線上練習；燈塔＝作息打卡；東西腔＝關西腔；主頁＝日文小遊戲。
 - 依據與回頭檢查：Search Console 2026-09-12～10-09 的數據；預計 2026-11-01 左右比對兩邊排名（遊戲頁有沒有出現在新字組、介紹文的「遊戲」字有沒有守住）。
