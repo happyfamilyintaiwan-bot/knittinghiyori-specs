@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-11-10｜blog v1.3｜Alison｜§4-1 新增第 5 條：外語頁的介面文字跟著頁面語言，文字集中在主站 `src/data/site-ui.js`（中英日西；韓印葡先用英文）｜外語文章的選單、日期、目錄、訂閱框、作者介紹、頁尾原本全是中文；site #52 已合併，中文頁輸出不變
+  - 沒改：品牌名、GA4 page_title、相關文章的推薦邏輯（外語頁仍可能推薦中文文章，另議）
+  - 同日：絕對音感介紹文英日西封面（site #51），改走 `public/covers/<slug>.webp`
+
 - 2026-11-10｜games v1.11.1、registry v1.6.1｜Alison｜絕對音感英日西 SEO：§7-1 補英日西三頁字組表（依 Alison 提供的 Google 相關搜尋）；registry 補介紹文四語網址、英日西測驗名稱｜games #25、site #50 已合併（Alison 確認不經 Zoe）
   - **改版日 2026-11-10**：英日西遊戲頁 title／description／FAQ、第一次來先測試；主站新增介紹文 -en／-ja／-es（四語互設 hreflang）；App 介紹頁英日西改 seoTitle／seoDesc／intro 小標、加連介紹文
   - 主站 `src/lib/content.js` 的 pageLang 補認 `-es` 結尾網址（blog §4-1 已列 `-es`，原本程式只認 `/es/`）
