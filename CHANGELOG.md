@@ -4,6 +4,11 @@
 
 ---
 
+- 2026-11-10｜games v1.11.1、registry v1.6.1｜Alison｜絕對音感英日西 SEO：§7-1 補英日西三頁字組表（依 Alison 提供的 Google 相關搜尋）；registry 補介紹文四語網址、英日西測驗名稱｜games #25、site #50 已合併（Alison 確認不經 Zoe）
+  - **改版日 2026-11-10**：英日西遊戲頁 title／description／FAQ、第一次來先測試；主站新增介紹文 -en／-ja／-es（四語互設 hreflang）；App 介紹頁英日西改 seoTitle／seoDesc／intro 小標、加連介紹文
+  - 主站 `src/lib/content.js` 的 pageLang 補認 `-es` 結尾網址（blog §4-1 已列 `-es`，原本程式只認 `/es/`）
+  - 已知：外語文章頁首、目錄、發布日期的介面文字全站仍是中文（en、ja 舊文章相同），之後另議
+
 - 2026-11-10｜games v1.11、registry v1.6｜Alison｜絕對音感三頁 SEO 分工寫進 games §7-1（遊戲頁＝絕對音感測試／線上測試；介紹文＝可以練嗎、訓練方法、人口比例、英文；App 介紹頁＝絕對音感訓練 App；互連用對方的主攻字），並新增「有 App 介紹頁的遊戲」這一條；registry absolute_pitch 列補 App 節點小卡 5 個 cta_id（`app_card_streak7` 停用）、英日西搬家代碼、測驗改名「絕對音感測試」與 `#test` 錨點｜依 Google 相關搜尋（測試、人口比例、訓練、可以練嗎、英文、周杰倫、線上測試）避免三頁互搶；早鳥期間把網頁玩家導到 App。Alison 確認不經 Zoe 直接合併（games #22、#23、site #48）
   - **改版日 2026-11-09**：games 絕對音感中文頁 title／description、FAQ 換題、第一次來先測試；介紹文改標題、加三節與 FAQPage；App 介紹頁改 seoTitle／seoDesc。新加的連結沿用規範既有 cta_id：遊戲頁 FAQ 連介紹文用 `about_article`，介紹文連遊戲用 `body_play`（2026-11-10 修正，原本暫用 faq_article、article_test、faq_test 約一天）
   - 2～4 週後回頭比對 Search Console：遊戲頁有沒有出現在「絕對音感測試」、介紹文在「可以練嗎／人口比例／英文」、App 介紹頁在「絕對音感 App」
