@@ -4,6 +4,10 @@
 
 ---
 
+- 2026-11-10｜games v1.11、registry v1.6｜Alison｜絕對音感三頁 SEO 分工寫進 games §7-1（遊戲頁＝絕對音感測試／線上測試；介紹文＝可以練嗎、訓練方法、人口比例、英文；App 介紹頁＝絕對音感訓練 App；互連用對方的主攻字），並新增「有 App 介紹頁的遊戲」這一條；registry absolute_pitch 列補 App 節點小卡 5 個 cta_id（`app_card_streak7` 停用）、英日西搬家代碼、測驗改名「絕對音感測試」與 `#test` 錨點｜依 Google 相關搜尋（測試、人口比例、訓練、可以練嗎、英文、周杰倫、線上測試）避免三頁互搶；早鳥期間把網頁玩家導到 App。Alison 確認不經 Zoe 直接合併（games #22、#23、site #48）
+  - **改版日 2026-11-09**：games 絕對音感中文頁 title／description、FAQ 換題、第一次來先測試；介紹文改標題、加三節與 FAQPage；App 介紹頁改 seoTitle／seoDesc。新加的連結沿用規範既有 cta_id：遊戲頁 FAQ 連介紹文用 `about_article`，介紹文連遊戲用 `body_play`（2026-11-10 修正，原本暫用 faq_article、article_test、faq_test 約一天）
+  - 2～4 週後回頭比對 Search Console：遊戲頁有沒有出現在「絕對音感測試」、介紹文在「可以練嗎／人口比例／英文」、App 介紹頁在「絕對音感 App」
+
 - 2026-11-07｜core v1.9.1｜Zoe｜wedding §7-1：加英日西（/en/ /ja/ /es/，海外只賣數位、美元、PayPal／Wise，西文拉丁美洲用語）；成品喜帖改「交付當天起維護 3 個月、延長每月 NT$600／US$20」；書約只有台灣格式、印刷郵局掛號寄台灣｜Zoe 2026-11-07 決定（wedding#5、specs#29）
 
 - 2026-11-07｜blog v1.2｜Zoe｜新增 §4-1 文章主題與分類：外語版與中文版同主題、追劇類＝劇評且分類有 Story、外語版 html_lang 對應網址、上架前跑 `scripts/check_topics.py`｜GA4 發現《今天是太陽雨》英日版、《歡迎回來，初戀。》三篇記成「全站」不是「劇評」，追劇系列報表會漏算
