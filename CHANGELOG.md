@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-11｜blog v1.3.1｜Zoe｜§4 page_lang、§4-1 外語版網址與 html_lang 加法文 `-fr`；網站程式（pageLang、頁首語言選單、GA4、check_topics）同步支援；§4-1 第 5 條法文頁介面先用英文｜倫敦龍貓攻略新增英、法文版（site#56），日文版沿用舊網址重翻
+
 - 2026-11-10｜registry v1.6.2｜Alison｜absolute_pitch：測試結果畫面加固定 App 一行 `app_download_result`（四語）、中文 Android 行連 Android 測試報名（`app_intro`）、11/24 起中文價格 NT$590（先賣一週原價，之後再決定是否打折）；主站 App 介紹頁與四語介紹文加 Smart App Banner；主站 Base.astro 新增 `data-until`／`data-from` 限時文字自動切換｜提升 App 下載：測完是最有動機的時刻；Alison 確認直接合併
 - 2026-11-10｜blog v1.3｜Alison｜§4-1 新增第 5 條：外語頁的介面文字跟著頁面語言，文字集中在主站 `src/data/site-ui.js`（中英日西；韓印葡先用英文）｜外語文章的選單、日期、目錄、訂閱框、作者介紹、頁尾原本全是中文；site #52 已合併，中文頁輸出不變
   - 沒改：品牌名、GA4 page_title、相關文章的推薦邏輯（外語頁仍可能推薦中文文章，另議）
