@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-12｜games v1.11.2、registry v1.6.3｜Alison｜摩斯：中英日西四語（games#29）；§7-1 遊戲頁主攻改「摩斯密碼練習網站、摩斯電碼線上測驗」，加四語三頁分工表；registry 補日西網址、App 預告卡 cta、App 名稱｜Alison 11/11 決定 App 1.0 就上四語，遊戲頁與介紹文的 FAQ 原本有 4 題重複，分開避免互搶
+
 - 2026-11-11｜blog v1.3.1｜Zoe｜§4 page_lang、§4-1 外語版網址與 html_lang 加法文 `-fr`；網站程式（pageLang、頁首語言選單、GA4、check_topics）同步支援；§4-1 第 5 條法文頁介面先用英文｜倫敦龍貓攻略新增英、法文版（site#56），日文版沿用舊網址重翻
 
 - 2026-11-10｜registry v1.6.2｜Alison｜absolute_pitch：測試結果畫面加固定 App 一行 `app_download_result`（四語）、中文 Android 行連 Android 測試報名（`app_intro`）、11/24 起中文價格 NT$590（先賣一週原價，之後再決定是否打折）；主站 App 介紹頁與四語介紹文加 Smart App Banner；主站 Base.astro 新增 `data-until`／`data-from` 限時文字自動切換｜提升 App 下載：測完是最有動機的時刻；Alison 確認直接合併
