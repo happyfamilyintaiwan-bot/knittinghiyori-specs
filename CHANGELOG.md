@@ -4,6 +4,7 @@
 
 ---
 
+- 2026-11-15｜registry v1.6.4｜Zoe｜App 介紹頁表加 bloom.（/apps/bloom/，`webpage-bloom`）｜bloom. 2026-11-11 上架，介紹頁上線（knittinghiyori-site #72）
 - 2026-11-12｜games v1.11.2、registry v1.6.3｜Alison｜摩斯：中英日西四語（games#29）；§7-1 遊戲頁主攻改「摩斯密碼練習網站、摩斯電碼線上測驗」，加四語三頁分工表；registry 補日西網址、App 預告卡 cta、App 名稱｜Alison 11/11 決定 App 1.0 就上四語，遊戲頁與介紹文的 FAQ 原本有 4 題重複，分開避免互搶
 
 - 2026-11-11｜blog v1.3.1｜Zoe｜§4 page_lang、§4-1 外語版網址與 html_lang 加法文 `-fr`；網站程式（pageLang、頁首語言選單、GA4、check_topics）同步支援；§4-1 第 5 條法文頁介面先用英文｜倫敦龍貓攻略新增英、法文版（site#56），日文版沿用舊網址重翻
