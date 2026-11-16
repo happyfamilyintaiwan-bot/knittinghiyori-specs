@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-17｜registry v1.6.5｜Alison｜新增「字帖全集銷售頁」一節：/handwriting-worksheet-bundle/ 與 8 個 cta_id（`bundle_buy_*` 4 個、`bundle_trial_hero`、`bundle_trial`、`bundle_catalog`、`catalog_bundle`）｜字帖全集 2026-11-17 上線（site#44）：Portaly 贊助頁收款、早鳥 NT$149 到 12/25、付款後 3 個工作天內手動寄出；總目錄「預告」框改「新上架」
+
 - 2026-11-12｜games v1.11.2、registry v1.6.3｜Alison｜摩斯：中英日西四語（games#29）；§7-1 遊戲頁主攻改「摩斯密碼練習網站、摩斯電碼線上測驗」，加四語三頁分工表；registry 補日西網址、App 預告卡 cta、App 名稱｜Alison 11/11 決定 App 1.0 就上四語，遊戲頁與介紹文的 FAQ 原本有 4 題重複，分開避免互搶
 
 - 2026-11-11｜blog v1.3.1｜Zoe｜§4 page_lang、§4-1 外語版網址與 html_lang 加法文 `-fr`；網站程式（pageLang、頁首語言選單、GA4、check_topics）同步支援；§4-1 第 5 條法文頁介面先用英文｜倫敦龍貓攻略新增英、法文版（site#56），日文版沿用舊網址重翻
