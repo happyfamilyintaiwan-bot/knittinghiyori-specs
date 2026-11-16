@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-17｜registry v1.6.7｜Alison｜追劇頁字帖卡片：`drama_hw_week`、`drama_hw_catalog`、`drama_hw_bundle`（8 個中文追劇頁）｜字帖目標每天 NT$750，字帖頁搜尋流量約 80 次／天，追劇頁流量大得多，導到免費字帖與字帖全集（site#76）。2～4 週後看 GA4 這三個 cta 的點擊，決定要不要擴到其他追劇頁
+
 - 2026-11-17｜registry v1.6.6｜Alison｜字帖全集：加 5 個入口 cta_id（`catalog_bundle_table`、`catalog_bundle_bottom`、`article_bundle_top`／`_next`／`_bottom`）；記下寄送與退費說明的位置｜流量多半在總目錄與 Week 1，兩頁加購買入口；銷售頁註明贊助後會寄檔案、不適用退費（site#75）
 
 - 2026-11-17｜registry v1.6.5｜Alison｜新增「字帖全集銷售頁」一節：/handwriting-worksheet-bundle/ 與 8 個 cta_id（`bundle_buy_*` 4 個、`bundle_trial_hero`、`bundle_trial`、`bundle_catalog`、`catalog_bundle`）｜字帖全集 2026-11-17 上線（site#44）：Portaly 贊助頁收款、早鳥 NT$149 到 12/25、付款後 3 個工作天內手動寄出；總目錄「預告」框改「新上架」
