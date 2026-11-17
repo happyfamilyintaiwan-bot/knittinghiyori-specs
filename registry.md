@@ -197,7 +197,7 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 
 ### 成品喜帖（invite.knittinghiyori.com，2026-11-18 起）
 
-`page_title`＝`喜帖|成品喜帖|A書約手繪風`（B日系清新、C雪景），`invite_id`＝網址代號前兩段。
+`page_title`＝`喜帖|成品喜帖<到期日 MMDDYY>|<風格>`，例 `喜帖|成品喜帖022827|A書約手繪風`（上線到 2027/02/28；風格 A書約手繪風、B日系清新、C雪景），到期日來自 `WEDDING.ga.until`；`invite_id`＝網址代號前兩段。
 
 | 事件 | 參數 | 說明 |
 |---|---|---|
