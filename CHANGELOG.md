@@ -4,6 +4,8 @@
 
 ---
 
+- 2026-11-18｜registry v1.6.9｜Zoe｜`kaomoji` 前綴定為 `kao_`，新增事件 `kao_animal`（option＝bunny／cat／dog／whale），記下貓咪、狗狗、鯨魚拿東西的 copy_symbol 區塊名｜顏文字頁上線「先選喜歡的動物」（tools#33），要看大家最喜歡哪種動物，決定網頁與 App 先擴充哪一種
+
 - 2026-11-18｜registry（成品喜帖）說明補充｜Zoe｜page_title 加上線到期日：`喜帖|成品喜帖022827|A書約手繪風`（WEDDING.ga.until）｜Zoe 想在 GA 報表直接看出每份喜帖維持到哪天（wedding#20）
 
 - 2026-11-18｜core v1.10、registry v1.6.8｜Zoe｜成品喜帖可放 GA4（WEDDING.ga 才啟用；不送姓名與 ?to=；page_location 拿掉查詢字串）；新增參數 invite_id；事件 invite_open、invite_section、cta_click（rsvp、map、calendar_google、calendar_ics、transport_link、credit）；仍不放 AdSense、Travelpayouts｜Zoe 想追蹤賓客使用習慣來優化喜帖（wedding#18、specs#42）
