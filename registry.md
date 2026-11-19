@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.6.9｜2026-11-18｜Zoe**（v1.6.9：kaomoji 前綴 kao_、新增 kao_animal。v1.6.8：新增「成品喜帖」GA4 事件與 cta_id。v1.6.7：追劇頁字帖卡片 cta_id 3 個。v1.6.6：字帖全集加總目錄、週次文章的入口 cta_id 5 個、FAQ 第 8 題退費。v1.6.5：新增「字帖全集銷售頁」一節與 8 個 cta_id；v1.6.4 是 Zoe 的 bloom. 介紹頁列，在 `zoe/bloom-landing-row`。v1.6.3：morse_code 改中英日西（`/morse-code/ja/`、`/es/`）、App 預告卡 `app_notify`、App 名稱。v1.6.2：absolute_pitch 加測試結果畫面 App 一行 `app_download_result`、Android 行改連 App 介紹頁 Android 報名（`app_intro`）、11/24 起中文價格文字（NT$590）；主站介紹頁與四語介紹文加 Smart App Banner。v1.6.1：absolute_pitch 補介紹文四語與英日西測驗名稱。v1.6：absolute_pitch 補 App 節點小卡 cta_id、測驗改名與 #test 錨點。v1.5：新增「似顏繪喜帖」一節（wedding 子網域介紹頁的 page_title 與 cta_id）。v1.4.11：morse_code 加英文頁、英文名 Lighthouse Morse。v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.6.10｜2026-11-20｜Alison**（v1.6.10：字帖全集改用 Portaly 數位商品，付款後馬上下載。v1.6.9：kaomoji 前綴 kao_、新增 kao_animal。v1.6.8：新增「成品喜帖」GA4 事件與 cta_id。v1.6.7：追劇頁字帖卡片 cta_id 3 個。v1.6.6：字帖全集加總目錄、週次文章的入口 cta_id 5 個、FAQ 第 8 題退費。v1.6.5：新增「字帖全集銷售頁」一節與 8 個 cta_id；v1.6.4 是 Zoe 的 bloom. 介紹頁列，在 `zoe/bloom-landing-row`。v1.6.3：morse_code 改中英日西（`/morse-code/ja/`、`/es/`）、App 預告卡 `app_notify`、App 名稱。v1.6.2：absolute_pitch 加測試結果畫面 App 一行 `app_download_result`、Android 行改連 App 介紹頁 Android 報名（`app_intro`）、11/24 起中文價格文字（NT$590）；主站介紹頁與四語介紹文加 Smart App Banner。v1.6.1：absolute_pitch 補介紹文四語與英日西測驗名稱。v1.6：absolute_pitch 補 App 節點小卡 cta_id、測驗改名與 #test 錨點。v1.5：新增「似顏繪喜帖」一節（wedding 子網域介紹頁的 page_title 與 cta_id）。v1.4.11：morse_code 加英文頁、英文名 Lighthouse Morse。v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -132,7 +132,7 @@ page_title 用 `頁面|<App 全名>`（blog.md §4）。版型共用（knittingh
 
 ## 字帖全集銷售頁（主站 /handwriting-worksheet-bundle/，content_group=article，2026-11-17 起）
 
-page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/bundle/BundleB.astro`，文案在 `src/data/bundle.js`），Alison 2026-11-17 接手上線（site#44）。收款走 Portaly 贊助頁 https://portaly.cc/knittinghiyori/support ，付款後 3 個工作天內由 Alison 手動寄 Week 1–20。
+page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/bundle/BundleB.astro`，文案在 `src/data/bundle.js`），Alison 2026-11-17 接手上線（site#44）。2026-11-20 起收款改用 Portaly 數位商品（頂級會員）https://portaly.cc/knittinghiyori/product/JNOViXKsu8as5dxZWJV0 （商品 id `JNOViXKsu8as5dxZWJV0`），付款後馬上下載；下載連結指向 Google 雲端硬碟 `00. Master file` 裡的 PDF（知道連結者可檢視），出新版時用「管理版本 → 上傳新版本」換檔，連結不變（site#92）。之前（11/17–11/20）是 Portaly 贊助頁 `/support` ＋手動寄送。
 
 | cta_id | 位置 | cta_type | 備註 |
 |---|---|---|---|
@@ -155,8 +155,8 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 
 - 常見問題送 `faq_open`（`.hb-faq`，option＝q1、q2…）。
 - 追劇頁字帖卡片（2026-11-17，site#76）：/irreplaceable-drama-schedule/（Week 19）、逐玉四篇與 /genius-girlfriend-2026-premiere-guide/、/where-the-mask-ends/（Week 2–4）、/against-the-current/（總目錄）。卡片不寫價格與早鳥日期。新的字帖用到劇中台詞時，在該劇的追劇頁加同一張卡。
-- 寄送與退費說明集中在 `bundle.js` 的 `SEND_NOTE`、`REFUND_NOTE`（贊助後 3 個工作天內寄出；數位檔案不適用退費）；總目錄與 Week 1 的同一段文字寫在各自的 content.html，改天數時三處要一起改。
-- 早鳥 NT$149 到 2026/12/25，12/26 起頁面自動改顯示 NT$199（`EARLY_END_ISO`）；Portaly 選項文字改了，`bundle.js` 的 `EARLY_LABEL` 要一起改。
+- 下載與退費說明集中在 `bundle.js` 的 `SEND_NOTE`、`REFUND_NOTE`（付款後馬上下載；數位檔案不適用退費）；總目錄與 Week 1 的同一段文字寫在各自的 content.html，改交付方式時三處要一起改。
+- 早鳥 NT$149 到 2026/12/25，12/26 起頁面自動改顯示 NT$199（`EARLY_END_ISO`）；Portaly 商品價格要同一天改成 199（連接器 updateProduct 或後台「變現工具 › 商品管理」）。
 - 價格階梯：Week 1–30（2027/1 月底）NT$249、1–40（4 月底）NT$299、1–52（6 月底）NT$399，新版寄出時改 `LADDER` 的 `now`。
 
 ## /apps/ 總覽頁卡片（主站 /apps/，2026-11-01 起）
