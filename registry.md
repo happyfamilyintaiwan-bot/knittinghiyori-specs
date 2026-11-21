@@ -187,7 +187,9 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | 電子喜帖 | wedding /web-invitation/ | `喜帖\|電子喜帖\|似顏繪網頁電子喜帖` | 規劃中 | 同上 |
 | 紙本喜帖 | wedding /paper-invitation/ | `喜帖\|紙本喜帖\|似顏繪紙本喜帖` | 規劃中 | 同上；兩頁設計 NT$2,000＋每份 NT$105（30 份起），只寄台灣 |
 | 關於我們 | wedding /about/ | `喜帖\|關於我們\|同婚伴侶經營的似顏繪喜帖` | 規劃中 | 同上；文字由 Alison 提供 |
-| 部落格 | wedding /blog/ | `喜帖\|部落格\|婚禮筆記` | 規劃中 | 第一篇上線前 noindex |
+| 部落格 | wedding /blog/ | `喜帖\|部落格\|婚禮筆記` | 規劃中 | 有文章才 index（`tools/blog_posts.py`） |
+| 文章：同性結婚登記 | wedding /blog/same-sex-marriage-registration-taiwan/ | `喜帖\|部落格\|同性結婚登記全攻略` | 規劃中 | 主站 /same-sex-marriage-in-taiwan/ 搬來（site#100 301） |
+| 文章：婚禮歌單 | wedding /blog/wedding-songs/ | `喜帖\|部落格\|婚禮歌單` | 規劃中 | 82 首，每首連 YouTube |
 
 | cta_id | cta_type | 位置 |
 |---|---|---|
@@ -199,6 +201,8 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | `quote_email` | other | 用 Email 開啟詢價信（mailto） |
 | `page_quote` | wedding | 分頁的「估價」按鈕（連回首頁估價區，帶入方案） |
 | `home_more` | wedding | 首頁各區塊「看完整介紹 →」（連到分頁） |
+| `blog_card` | wedding | 部落格首頁的文章卡片 |
+| `song_play` | wedding | 婚禮歌單裡點歌名開 YouTube |
 | `bundle_quote` | wedding | 「一次估價全套」（首頁價目表與各分頁底部，連 `/?all=1#quote`） |
 
 - 404 照 core §7 用 `notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`；page_title `喜帖|404|找不到頁面`。

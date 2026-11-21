@@ -4,7 +4,7 @@
 
 ---
 
-- 2026-11-21｜core v1.11、registry v1.6.11｜Zoe＋Alison｜wedding 中文版加分頁：/caricature/ /marriage-certificate/ /web-invitation/ /paper-invitation/ /about/ /blog/（blog 第一篇上線前 noindex），頁首選單改成分頁連結（手機在頁首下方一排）；分頁由 `tools/build_pages.py` 產生；新增紙本喜帖（兩頁設計 NT$2,000＋每份 NT$105、30 份起、只寄台灣）與全套方案；新增 page_title 6 個、cta_id `page_quote`、`home_more`、`bundle_quote`；sitemap 加中文分頁｜SEO 陪跑：「結婚書約 似顏繪」搜尋前 3 名有 2 個是書約專頁，介紹頁一頁很難同時接三種搜尋（wedding#21）
+- 2026-11-21｜core v1.11、registry v1.6.11｜Zoe＋Alison｜wedding 中文版加分頁：/caricature/ /marriage-certificate/ /web-invitation/ /paper-invitation/ /about/ /blog/（blog 第一篇上線前 noindex），頁首選單改成分頁連結（手機在頁首下方一排）；分頁由 `tools/build_pages.py` 產生；新增紙本喜帖（兩頁設計 NT$2,000＋每份 NT$105、30 份起、只寄台灣）與全套方案；新增 page_title 8 個（含部落格兩篇：同性結婚登記、婚禮歌單）、cta_id `page_quote`、`home_more`、`bundle_quote`、`blog_card`、`song_play`；主站同婚文章 301 到 wedding（site#100）；sitemap 加中文分頁｜SEO 陪跑：「結婚書約 似顏繪」搜尋前 3 名有 2 個是書約專頁，介紹頁一頁很難同時接三種搜尋（wedding#21）
 
 - 2026-11-20｜registry v1.6.10｜Alison｜字帖全集收款從 Portaly 贊助頁改成 Portaly 數位商品（付款後馬上下載，下載連結放雲端硬碟）；記下商品 id、換檔方式與 12/26 改價｜Alison 升級 Portaly 頂級會員，免手動寄信；site#92
 

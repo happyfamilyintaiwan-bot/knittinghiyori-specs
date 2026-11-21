@@ -227,7 +227,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 wedding.knittinghiyori.com（公開，GitHub Pages，做 SEO）
 ├── /          介紹頁（價格、書約方案、三種喜帖風格、估價與詢價信；估價工具只放這裡）
 ├── /caricature/ /marriage-certificate/ /web-invitation/ /paper-invitation/ /about/   中文分頁（v1.11）
-├── /blog/     婚禮筆記（第一篇上線前 noindex、不放 sitemap）
+├── /blog/     婚禮筆記；文章寫在 `tools/blog_posts.py`，有文章才 index
 └── /a/ /b/ /c/ 範例喜帖（noindex，不放 GA4）
 
 invite.knittinghiyori.com（不公開，Cloudflare Pages 直接上傳）
