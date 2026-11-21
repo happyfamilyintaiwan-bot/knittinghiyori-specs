@@ -185,6 +185,7 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | 似顏繪 | wedding /caricature/ | `喜帖\|似顏繪\|新人似顏繪客製` | 規劃中 | 2026-11-21 新增（wedding#21） |
 | 結婚書約 | wedding /marriage-certificate/ | `喜帖\|結婚書約\|似顏繪結婚書約客製` | 規劃中 | 同上；含同婚版／一般版法條說明 |
 | 電子喜帖 | wedding /web-invitation/ | `喜帖\|電子喜帖\|似顏繪網頁電子喜帖` | 規劃中 | 同上 |
+| 紙本喜帖 | wedding /paper-invitation/ | `喜帖\|紙本喜帖\|似顏繪紙本喜帖` | 規劃中 | 同上；兩頁設計 NT$2,000＋每份 NT$105（30 份起），只寄台灣 |
 | 關於我們 | wedding /about/ | `喜帖\|關於我們\|同婚伴侶經營的似顏繪喜帖` | 規劃中 | 同上；文字由 Alison 提供 |
 | 部落格 | wedding /blog/ | `喜帖\|部落格\|婚禮筆記` | 規劃中 | 第一篇上線前 noindex |
 
@@ -198,6 +199,7 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | `quote_email` | other | 用 Email 開啟詢價信（mailto） |
 | `page_quote` | wedding | 分頁的「估價」按鈕（連回首頁估價區，帶入方案） |
 | `home_more` | wedding | 首頁各區塊「看完整介紹 →」（連到分頁） |
+| `bundle_quote` | wedding | 「一次估價全套」（首頁價目表與各分頁底部，連 `/?all=1#quote`） |
 
 - 404 照 core §7 用 `notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`；page_title `喜帖|404|找不到頁面`。
 

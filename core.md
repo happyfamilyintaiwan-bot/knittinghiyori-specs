@@ -226,7 +226,7 @@ Alison（claude.ai chat）── 交 4 項 ──→ Zoe 的 Claude Code
 ```
 wedding.knittinghiyori.com（公開，GitHub Pages，做 SEO）
 ├── /          介紹頁（價格、書約方案、三種喜帖風格、估價與詢價信；估價工具只放這裡）
-├── /caricature/ /marriage-certificate/ /web-invitation/ /about/   中文分頁（v1.11）
+├── /caricature/ /marriage-certificate/ /web-invitation/ /paper-invitation/ /about/   中文分頁（v1.11）
 ├── /blog/     婚禮筆記（第一篇上線前 noindex、不放 sitemap）
 └── /a/ /b/ /c/ 範例喜帖（noindex，不放 GA4）
 
@@ -235,7 +235,7 @@ invite.knittinghiyori.com（不公開，Cloudflare Pages 直接上傳）
 ```
 
 - **多語**：中文在根目錄，英日西在 `/en/ /ja/ /es/`（互設 hreflang，`x-default` 指中文）。海外版只賣數位（似顏繪＋網頁電子喜帖），美元計價，PayPal／Wise 付款；結婚書約只有台灣格式、印刷版只用郵局掛號寄台灣地址。英日西頁由 wedding repo 的 `tools/build_intl.py` 產生，改文字與價格只改 `tools/intl_strings.py`。西文以拉丁美洲用語（ustedes）為主。
-- **中文分頁**（v1.11）：由 wedding repo 的 `tools/build_pages.py` 產生，CSS、品牌列、頁尾、首頁選單都沿用 `index.html`；改首頁樣式或分頁文字後重跑一次。分頁的估價按鈕連 `/?sy=1–4#quote`、`/?web=A|B|C#quote`，首頁會帶入方案。英日西目前只有介紹頁，沒有分頁。
+- **中文分頁**（v1.11）：由 wedding repo 的 `tools/build_pages.py` 產生，CSS、品牌列、頁尾、首頁選單都沿用 `index.html`；改首頁樣式或分頁文字後重跑一次。分頁的估價按鈕連 `/?sy=1–4#quote`、`/?web=A|B|C#quote`、`/?paper=1#quote`、全套 `/?all=1#quote`，首頁會帶入方案。紙本喜帖只寄台灣，英日西不賣。估價價格改了要同時改：方案卡、估價工具、首頁 JSON-LD、`tools/build_pages.py`。英日西目前只有介紹頁，沒有分頁。
 - **介紹頁**照一般子網域規範（品牌列「編織日和・似顏繪喜帖」、404、OG、GA4），但不放廣告與聯盟（§1）。範例頁 `/a/ /b/ /c/` 用 `noindex, nofollow`，**robots.txt 不擋這三個路徑**（擋了 Google 讀不到 noindex），sitemap 放四語介紹頁與可收錄的中文分頁（`tools/build_pages.py` 自動更新）。
 - **成品喜帖不放 GitHub**（公開 repo 會露出新人全名、家長名字、婚宴地址）：用 Cloudflare Pages 專案 `hiyori-invite` **直接上傳**（`wrangler pages deploy`，不連 repo），網址 `invite.knittinghiyori.com/<亂碼>/`。
   - 根目錄 `_headers` 對所有路徑送 `X-Robots-Tag: noindex, nofollow`，每頁也保留 `<meta name="robots" content="noindex, nofollow">`；`robots.txt` 不擋（理由同上）。根目錄 `/` 不列出任何喜帖。
