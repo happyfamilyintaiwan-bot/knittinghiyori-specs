@@ -1,6 +1,6 @@
 # 內容 ID 與事件前綴登記表（registry）
 
-**版本：registry-v1.6.10｜2026-11-20｜Alison**（v1.6.10：字帖全集改用 Portaly 數位商品，付款後馬上下載。v1.6.9：kaomoji 前綴 kao_、新增 kao_animal。v1.6.8：新增「成品喜帖」GA4 事件與 cta_id。v1.6.7：追劇頁字帖卡片 cta_id 3 個。v1.6.6：字帖全集加總目錄、週次文章的入口 cta_id 5 個、FAQ 第 8 題退費。v1.6.5：新增「字帖全集銷售頁」一節與 8 個 cta_id；v1.6.4 是 Zoe 的 bloom. 介紹頁列，在 `zoe/bloom-landing-row`。v1.6.3：morse_code 改中英日西（`/morse-code/ja/`、`/es/`）、App 預告卡 `app_notify`、App 名稱。v1.6.2：absolute_pitch 加測試結果畫面 App 一行 `app_download_result`、Android 行改連 App 介紹頁 Android 報名（`app_intro`）、11/24 起中文價格文字（NT$590）；主站介紹頁與四語介紹文加 Smart App Banner。v1.6.1：absolute_pitch 補介紹文四語與英日西測驗名稱。v1.6：absolute_pitch 補 App 節點小卡 cta_id、測驗改名與 #test 錨點。v1.5：新增「似顏繪喜帖」一節（wedding 子網域介紹頁的 page_title 與 cta_id）。v1.4.11：morse_code 加英文頁、英文名 Lighthouse Morse。v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
+**版本：registry-v1.6.11｜2026-11-21｜Zoe＋Alison**（v1.6.11：似顏繪喜帖加 5 個中文分頁的 page_title 與 cta_id `page_quote`、`home_more`。v1.6.10：字帖全集改用 Portaly 數位商品，付款後馬上下載。v1.6.9：kaomoji 前綴 kao_、新增 kao_animal。v1.6.8：新增「成品喜帖」GA4 事件與 cta_id。v1.6.7：追劇頁字帖卡片 cta_id 3 個。v1.6.6：字帖全集加總目錄、週次文章的入口 cta_id 5 個、FAQ 第 8 題退費。v1.6.5：新增「字帖全集銷售頁」一節與 8 個 cta_id；v1.6.4 是 Zoe 的 bloom. 介紹頁列，在 `zoe/bloom-landing-row`。v1.6.3：morse_code 改中英日西（`/morse-code/ja/`、`/es/`）、App 預告卡 `app_notify`、App 名稱。v1.6.2：absolute_pitch 加測試結果畫面 App 一行 `app_download_result`、Android 行改連 App 介紹頁 Android 報名（`app_intro`）、11/24 起中文價格文字（NT$590）；主站介紹頁與四語介紹文加 Smart App Banner。v1.6.1：absolute_pitch 補介紹文四語與英日西測驗名稱。v1.6：absolute_pitch 補 App 節點小卡 cta_id、測驗改名與 #test 錨點。v1.5：新增「似顏繪喜帖」一節（wedding 子網域介紹頁的 page_title 與 cta_id）。v1.4.11：morse_code 加英文頁、英文名 Lighthouse Morse。v1.4.10：新增「/apps/ 總覽頁卡片」一節，固定每張 App 卡片的按鈕順序與 cta_id。v1.4.9：新增 tools `yt_subscribe`（YouTube 訂閱連結產生器，三語，前綴 `ysub_`）。v1.4.8：新增「App 介紹頁」一節（cta_id app_download_hero／bottom／sticky、app_trial、app_contact、app_article、app_waitlist_android）；absolute_pitch 英文名改 Absolute Pitch Training Lab、補 App 資訊與 app_intro。v1.4.7：新增 story `welcome-back-first-love`（日劇互動頁，前綴 `wb_`）。v1.4.6：kaomoji、ig_symbols 搬到 tools 子網域（中英日），主站舊網址由分流程式 301；拿掉「2028 前不搬」。v1.4.5：新增 story `drama-calendar`（追劇日曆計算機）。v1.4.4：phone_wallpaper 加 cta_id feedback_mail、app_waitlist_tool。v1.4.3：新增 phone_wallpaper（日系花卉版，事件值為擺法與底色，加 wall_phrase）。v1.4.2：bill_split 搬到 tools 三語、concert_trip 改已上線、新增 handwriting_compare。v1.4.1（specs#8）：hiyori_pet 改成已上線（2026-10-14），補事件與 cta_id。v1.4：新增 study `artists-way`；待修清單加 404 v1.5 補項。v1.3.10：待修清單 404 cta_id 劃掉 poem。v1.3.9：hub 的 game_id 確認。v1.3.8：swiftui_detective、tozai_dojo、flower_shop 補中文名、值域與聯盟。v1.3.7：新增 sleep_rhythm。v1.3.6：sql_detective 補專屬事件、聯盟與介紹文。v1.3.5：jlpt_mishitsu 補中文名與聯盟。v1.3.4：待修清單加 404 cta_id 統一。v1.3.3：品牌列待修移除 poem。v1.3.2：katsuyo_escape 補中文名與聯盟。v1.3.1：新增 hiyori_pet。v1.3：新增 morse_code。v1.2：新增學習筆記 study 區）
 
 規則：
 - 新工具／遊戲／作品**開工前**先在這裡加一列，前綴不可與表中任何一列重複（工具、遊戲共用前綴空間）。
@@ -177,11 +177,16 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 
 ## 似顏繪喜帖（wedding 子網域，content_group=wedding，2026-11-07 起）
 
-不設內容 id 參數（目前只有一個介紹頁）。範例頁 `/a/ /b/ /c/` 與成品喜帖都不放 GA4（core §7-1）。
+不設內容 id 參數（頁面少，用 page_title 區分）。範例頁 `/a/ /b/ /c/` 與成品喜帖都不放 GA4（core §7-1）。
 
 | 頁面 | 網址 | page_title | 狀態 | 備註 |
 |---|---|---|---|---|
-| 介紹頁 | wedding / | `喜帖\|似顏繪喜帖\|結婚書約與電子喜帖報價` | 規劃中 | Alison 製作，2026-11-07 起 Zoe 接手 |
+| 介紹頁 | wedding / | `喜帖\|似顏繪喜帖\|結婚書約與電子喜帖報價` | 已上線 | Alison 製作，2026-11-07 起 Zoe 接手 |
+| 似顏繪 | wedding /caricature/ | `喜帖\|似顏繪\|新人似顏繪客製` | 規劃中 | 2026-11-21 新增（wedding#21） |
+| 結婚書約 | wedding /marriage-certificate/ | `喜帖\|結婚書約\|似顏繪結婚書約客製` | 規劃中 | 同上；含同婚版／一般版法條說明 |
+| 電子喜帖 | wedding /web-invitation/ | `喜帖\|電子喜帖\|似顏繪網頁電子喜帖` | 規劃中 | 同上 |
+| 關於我們 | wedding /about/ | `喜帖\|關於我們\|同婚伴侶經營的似顏繪喜帖` | 規劃中 | 同上；文字由 Alison 提供 |
+| 部落格 | wedding /blog/ | `喜帖\|部落格\|婚禮筆記` | 規劃中 | 第一篇上線前 noindex |
 
 | cta_id | cta_type | 位置 |
 |---|---|---|
@@ -191,6 +196,8 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | `style_a`、`style_b`、`style_c` | wedding | 開啟 A 書約手繪風、B 日系清新、C 雪景範例 |
 | `quote_copy` | other | 複製詢價信 |
 | `quote_email` | other | 用 Email 開啟詢價信（mailto） |
+| `page_quote` | wedding | 分頁的「估價」按鈕（連回首頁估價區，帶入方案） |
+| `home_more` | wedding | 首頁各區塊「看完整介紹 →」（連到分頁） |
 
 - 404 照 core §7 用 `notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`；page_title `喜帖|404|找不到頁面`。
 
