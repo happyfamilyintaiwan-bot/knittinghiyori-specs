@@ -182,14 +182,14 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | 頁面 | 網址 | page_title | 狀態 | 備註 |
 |---|---|---|---|---|
 | 介紹頁 | wedding / | `喜帖\|似顏繪喜帖\|結婚書約與電子喜帖報價` | 已上線 | Alison 製作，2026-11-07 起 Zoe 接手 |
-| 似顏繪 | wedding /caricature/ | `喜帖\|似顏繪\|新人似顏繪客製` | 規劃中 | 2026-11-21 新增（wedding#21） |
-| 結婚書約 | wedding /marriage-certificate/ | `喜帖\|結婚書約\|似顏繪結婚書約客製` | 規劃中 | 同上；含同婚版／一般版法條說明 |
-| 電子喜帖 | wedding /web-invitation/ | `喜帖\|電子喜帖\|似顏繪網頁電子喜帖` | 規劃中 | 同上 |
-| 紙本喜帖 | wedding /paper-invitation/ | `喜帖\|紙本喜帖\|似顏繪紙本喜帖` | 規劃中 | 同上；兩頁設計 NT$2,000＋每份 NT$105（30 份起），只寄台灣 |
-| 關於我們 | wedding /about/ | `喜帖\|關於我們\|同婚伴侶經營的似顏繪喜帖` | 規劃中 | 同上；文字由 Alison 提供 |
-| 部落格 | wedding /blog/ | `喜帖\|部落格\|婚禮筆記` | 規劃中 | 有文章才 index（`tools/blog_posts.py`） |
-| 文章：同性結婚登記 | wedding /blog/same-sex-marriage-registration-taiwan/ | `喜帖\|部落格\|同性結婚登記全攻略` | 規劃中 | 主站 /same-sex-marriage-in-taiwan/ 搬來（site#100 301） |
-| 文章：婚禮歌單 | wedding /blog/wedding-songs/ | `喜帖\|部落格\|婚禮歌單` | 規劃中 | 82 首，每首連 YouTube |
+| 似顏繪 | wedding /caricature/ | `喜帖\|似顏繪\|新人似顏繪客製` | 已上線 | 2026-11-21 新增（wedding#21） |
+| 結婚書約 | wedding /marriage-certificate/ | `喜帖\|結婚書約\|似顏繪結婚書約客製` | 已上線 | 同上；含同婚版／一般版法條說明 |
+| 電子喜帖 | wedding /web-invitation/ | `喜帖\|電子喜帖\|似顏繪網頁電子喜帖` | 已上線 | 同上 |
+| 紙本喜帖 | wedding /paper-invitation/ | `喜帖\|紙本喜帖\|似顏繪紙本喜帖` | 已上線 | 同上；兩頁設計 NT$2,000＋每份 NT$105（30 份起），只寄台灣 |
+| 關於我們 | wedding /about/ | `喜帖\|關於我們\|同婚伴侶經營的似顏繪喜帖` | 已上線 | 同上；文字由 Alison 提供 |
+| 部落格 | wedding /blog/ | `喜帖\|部落格\|婚禮筆記` | 已上線 | 有文章才 index（`tools/blog_posts.py`） |
+| 文章：同性結婚登記 | wedding /blog/same-sex-marriage-registration-taiwan/ | `喜帖\|部落格\|同性結婚登記全攻略` | 已上線 | 主站 /same-sex-marriage-in-taiwan/ 搬來（site#100 301） |
+| 文章：婚禮歌單 | wedding /blog/wedding-songs/ | `喜帖\|部落格\|婚禮歌單` | 已上線 | 82 首，每首連 YouTube |
 
 | cta_id | cta_type | 位置 |
 |---|---|---|
