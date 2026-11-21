@@ -203,6 +203,7 @@ page_title 用 `頁面|繁體硬筆字帖全集`。Zoe 設計（`src/components/
 | `home_more` | wedding | 首頁各區塊「看完整介紹 →」（連到分頁） |
 | `blog_card` | wedding | 部落格首頁的文章卡片 |
 | `song_play` | wedding | 婚禮歌單裡點歌名開 YouTube |
+| `related_link` | wedding | 文章與服務頁的「延伸閱讀」（文章↔文章、文章↔服務頁） |
 | `bundle_quote` | wedding | 「一次估價全套」（首頁價目表與各分頁底部，連 `/?all=1#quote`） |
 
 - 404 照 core §7 用 `notfound_hub`、`notfound_main`、`notfound_card`、`notfound_site`；page_title `喜帖|404|找不到頁面`。
